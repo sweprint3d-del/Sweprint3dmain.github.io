@@ -5,7 +5,7 @@
     <title>Butik – SwePrint3D</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Samma CSS som i index.html -->
+    <!-- Enkel, responsiv layout -->
     <style>
       body {
         margin: 0;
@@ -34,13 +34,14 @@
         backdrop-filter: blur(8px);
         position: sticky;
         top: 0;
+        z-index: 10;
       }
 
       header img {
         height: 40px;
         width: 40px;
         border-radius: 0.5rem;
-        margin-right: 0.6rem;
+        margin-left: 0.6rem;
       }
 
       .brand {
@@ -88,41 +89,25 @@
         color: #4b5563;
       }
 
-      .btn-row {
-        margin-top: 1.25rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.75rem;
+      h2 {
+        margin-top: 2rem;
+        font-size: 1.3rem;
       }
 
-      .btn {
-        padding: 0.6rem 1.3rem;
-        border-radius: 999px;
-        font-size: 0.9rem;
-        text-decoration: none;
-        display: inline-block;
-      }
-
-      .btn-primary {
-        background: #111827;
-        color: #fff;
-      }
-
-      .btn-outline {
-        border: 1px solid #d1d5db;
-        color: #111827;
-        background: #ffffffaa;
+      h3 {
+        margin-top: 0.75rem;
+        font-size: 1rem;
       }
 
       .cards {
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         display: grid;
         gap: 1rem;
       }
 
       @media (min-width: 768px) {
         .cards {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
+          grid-template-columns: repeat(2, minmax(0, 1fr));
         }
       }
 
@@ -135,63 +120,11 @@
         font-size: 0.9rem;
       }
 
-      h2 {
-        margin-top: 2rem;
-        font-size: 1.3rem;
-      }
-
-      h3 {
-        margin-top: 0.75rem;
-        font-size: 1rem;
-      }
-
-      .grid-2 {
-        margin-top: 1rem;
-        display: grid;
-        gap: 1rem;
-      }
-
-      @media (min-width: 768px) {
-        .grid-2 {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-
       ul {
         margin-top: 0.5rem;
         padding-left: 1.1rem;
         font-size: 0.9rem;
         color: #4b5563;
-      }
-
-      .gallery {
-        margin-top: 2rem;
-        display: grid;
-        gap: 1rem;
-      }
-
-      @media (min-width: 768px) {
-        .gallery {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-      }
-
-      .gallery figure {
-        background: #fff;
-        border-radius: 1rem;
-        border: 1px solid #e5e7eb;
-        padding: 0.75rem;
-        box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
-        margin: 0;
-        font-size: 0.85rem;
-        color: #4b5563;
-      }
-
-      .gallery img {
-        width: 100%;
-        border-radius: 0.75rem;
-        display: block;
-        margin-bottom: 0.5rem;
       }
 
       footer {
@@ -236,54 +169,78 @@
         utan att skicka egen STL‑fil.
       </p>
 
-      <section class="cards">
-        <article class="card">
-          <h3>Helmets & armor</h3>
-          <p>Större cosplayprojekt som hjälmar och rustningsdelar. Läggs in här efterhand med pris och bilder.</p>
-        </article>
-        <article class="card">
-          <h3>Props & stands</h3>
-          <p>Gaming‑ställ, hållare och mindre props till skrivbord, hylla eller verkstad.</p>
-        </article>
-        <article class="card">
-          <h3>STL‑filer</h3>
-          <p>Digitala filer för egen utskrift hemma, där licensen tillåter kommersiell försäljning.</p>
-        </article>
+      <!-- HELMETS & ARMOR -->
+      <section>
+        <h2>Helmets & armor</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3>3D‑printad taggig krigarhjälm – rått kit</h3>
+            <p>
+              En dramatisk, taggig krigarhjälm som levereras som rått, omålat 3D‑printat kit i delar.
+              Designen passar perfekt till mörk fantasy‑cosplay i stil med ringandar och krigarkungar.
+            </p>
+            <ul>
+              <li>3D‑printad i flera delar (ring, front, topp och taggar) som limmas och spacklas ihop, se exempelbild på kitet.</li>
+              <li>Hög, smal krona med utskjutande taggar runt hela ringen för ett aggressivt, mörkt uttryck.</li>
+              <li>Passar de flesta vuxna huvuden; kan skalas efter ditt huvudmått vid beställning.</li>
+              <li>Levereras endast som rå, omålad 3D‑print – all slipning, spackling och målning görs av dig.</li>
+              <li>Avsedd för cosplay och display, inte som skyddsutrustning.</li>
+              <li>3D‑modell av MysteryMakers, 3D‑print och efterarbete av SwePrint3D.</li>
+            </ul>
+            <p><strong>Pris (rått, omålat kit):</strong> från 1&nbsp;499 kr. Endast 3D‑print – målning och annan finish ingår inte.</p>
+            <p>
+              För att beställa: maila
+              <a href="mailto:sweprint3d@gmail.com?subject=Best%C3%A4llning%20taggig%20krigarhj%C3%A4lm">
+                sweprint3d@gmail.com
+              </a>
+              och skriv att du är intresserad av den taggiga krigarhjälmen. Ange huvudomkrets och önskad storlek.
+            </p>
+          </article>
+
+          <!-- Plats för fler hjälmar/rustningar senare -->
+        </div>
       </section>
 
+      <!-- PROPS & STANDS -->
       <section>
         <h2>Props & stands</h2>
 
-        <article class="card">
-          <h3>3D‑printat ställ för handkontroll och headset</h3>
-          <p>
-            3D‑printat ställ som håller både handkontroll och headset samlat på skrivbordet.
-            Designen är inspirerad av sci‑fi‑pistoler och fungerar både som dekoration och praktisk hållare.
-          </p>
-          <ul>
-            <li>Printad i PLA/PETG i svart (ändra till ditt faktiska material).</li>
-            <li>Plats för en vanlig handkontroll (t.ex. PS5/PS4/Xbox) framtill.</li>
-            <li>Båge upptill för headset så att allt står samlat.</li>
-            <li>Stadig bottenplatta med mönster som står stabilt på bordet.</li>
-            <li>Ofunktionell rekvisita – ingen mekanik och inget som kan skjuta.</li>
-            <li>Tillverkad i liten skala i Sverige.</li>
-          </ul>
-          <p><strong>Pris:</strong> t.ex. 349 kr (justera efter ditt pris).</p>
-          <p>
-            För att beställa: maila
-            <a href="mailto:sweprint3d@gmail.com?subject=Best%C3%A4llning%20gaming-st%C3%A4ll">
-              sweprint3d@gmail.com
-            </a>
-            och skriv att du vill beställa stället för handkontroll och headset.
-          </p>
-        </article>
+        <div class="cards">
+          <article class="card">
+            <h3>3D‑printat ställ för handkontroll och headset</h3>
+            <p>
+              3D‑printat ställ som håller både handkontroll och headset samlat på skrivbordet.
+              Designen är inspirerad av sci‑fi‑pistoler och fungerar både som dekoration och praktisk hållare.
+            </p>
+            <ul>
+              <li>Printad i PLA eller PETG (standard svart, andra färger kan diskuteras vid beställning).</li>
+              <li>Plats för en vanlig handkontroll (t.ex. PS5/PS4/Xbox) framtill.</li>
+              <li>Båge upptill för headset så att allt står samlat.</li>
+              <li>Stadig bottenplatta som står stabilt på bordet.</li>
+              <li>Ofunktionell rekvisita – ingen mekanik och inget som kan skjuta.</li>
+              <li>Tillverkad i liten skala i Sverige.</li>
+            </ul>
+            <p><strong>Pris:</strong> från 349 kr beroende på material och färg.</p>
+            <p>
+              För att beställa: maila
+              <a href="mailto:sweprint3d@gmail.com?subject=Best%C3%A4llning%20gaming-st%C3%A4ll">
+                sweprint3d@gmail.com
+              </a>
+              och skriv att du vill beställa stället för handkontroll och headset.
+            </p>
+          </article>
+
+          <!-- Plats för fler props/stands -->
+        </div>
       </section>
 
+      <!-- KONTAKT / ÖVRIGT -->
       <section>
         <h2>Frågor eller annan beställning?</h2>
         <p>
-          Vill du ändra storlek, material eller färg, eller beställa något helt annat?
-          Maila en kort beskrivning eller STL‑fil så återkommer SwePrint3D med pris och leveranstid.
+          Vill du ändra storlek, material eller beställa något helt annat?
+          Skicka en kort beskrivning eller STL‑fil så återkommer SwePrint3D med pris och leveranstid.
         </p>
         <p>
           E‑post:
