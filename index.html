@@ -25,10 +25,6 @@
       }
 
       header {
-              <figure>
-        <img src="vader-helmet-1.jpg" alt="Darth Vader hjälm 1:1 i grå och svart PLA">
-        <figcaption>Darth Vader-hjälm i fullskala (1:1), 3D-printad i PLA+ med tvåfärgad finish.</figcaption>
-      </figure>
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -37,19 +33,20 @@
         backdrop-filter: blur(8px);
         position: sticky;
         top: 0;
+        z-index: 100;
       }
 
       header img {
         height: 40px;
         width: 40px;
         border-radius: 0.5rem;
-        margin-right: 0.6rem;
+        object-fit: cover;
       }
 
       .brand {
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.6rem;
       }
 
       header nav a {
@@ -217,9 +214,10 @@
 
   <body>
     <header>
-     <div class="brand">
-  <img src="image/logo.jpg" alt="SwePrint3D logotyp"> <div class="logo">SwePrint3D</div>
-</div>
+      <div class="brand">
+        <img src="image/logo.jpg" alt="SwePrint3D logotyp">
+        <div class="logo">SwePrint3D</div>
+      </div>
       <nav>
         <a href="index.html">Start</a>
         <a href="butik.html">Butik / färdiga modeller</a>
@@ -299,7 +297,7 @@
         <div class="grid-2">
           <div>
             <ul>
-              <li>Bambu Lab H2S – byggvolym: 340 × 320 × 340 mm.</li>
+              <li>Bambu Lab X1C / H2S – byggvolym: upp till 340 × 320 × 340 mm.</li>
               <li>Creality K1 Max – byggvolym: 300 × 300 × 300 mm.</li>
               <li>Större modeller kan delas upp i flera delar och monteras ihop.</li>
             </ul>
@@ -320,7 +318,7 @@
         </p>
         <ul>
           <li><strong>Material:</strong> vilken plast som används (PLA, PETG, ABS/ASA, TPU) och hur mycket som går åt.</li>
-          <li><strong>Printtid:</strong> hur länge skrivaren behöver köra – större och mer detaljerade modeller tar längre tid.</li>
+          <li><strong>Printtid:</strong> hur länge skrivaren behöver köra – större och mer detaljerade modeller take längre tid.</li>
           <li><strong>Enklare efterarbete:</strong> borttagning av stöd, lätt grundslipning och montering av delar där det behövs.</li>
         </ul>
         <p>
@@ -329,47 +327,19 @@
       </section>
 
       <section>
-        <h2>Så går en beställning till</h2>
-        <div class="grid-2">
-          <div>
-            <h3>1. Skicka modell & önskemål</h3>
-            <ul>
-              <li>Maila STL‑fil eller länk till modellen och beskriv vad den ska användas till.</li>
-              <li>Berätta gärna önskad storlek och vilket material du funderar på.</li>
-            </ul>
-
-            <h3>2. Du får prisförslag</h3>
-            <ul>
-              <li>Jag räknar på materialåtgång, uppskattad printtid och efterarbete.</li>
-              <li>Du får ett tydligt prisförslag och ungefärlig leveranstid innan utskriften startar.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>3. Utskrift & leverans</h3>
-            <ul>
-              <li>Modellen skrivs ut, stöd tas bort och delar monteras vid behov.</li>
-              <li>Packning sker omsorgsfullt, och frakt sker spårbart där det är möjligt.</li>
-              <li>Betalning enligt överenskommelse, till exempel via Swish.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
         <h2>Galleri – exempel på utskrifter</h2>
         <p>Ett urval av utskrifter från SwePrint3D.</p>
         <div class="gallery">
           <figure>
-            <img src="bilder/1000031716.jpg" alt="Iron Man-hjälm 3D-printad, målad och monterad">
+            <img src="image/1000031716.jpg" alt="Iron Man-hjälm 3D-printad, målad och monterad">
             <figcaption>Iron Man‑hjälm i PLA – 3D‑printad, monterad och målad med hög glans.</figcaption>
           </figure>
           <figure>
-            <img src="bilder/DSC_7350_e444f43c-ad02-4962-8742-ef9fcc967808.jpg" alt="3D-printade batterihållare på verktygsvägg">
+            <img src="image/DSC_7350_e444f43c-ad02-4962-8742-ef9fcc967808.jpg" alt="3D-printade batterihållare på verktygsvägg">
             <figcaption>Batterihållare till verktygsvägg, 3D‑printade för stabil förvaring av maskinbatterier.</figcaption>
           </figure>
           <figure>
-            <img src="bilder/2024-10-25_gveaqgb5ys2l.jpg" alt="Detaljerade 3D-printade figurer">
+            <img src="image/2024-10-25_gveaqgb5ys2l.jpg" alt="Detaljerade 3D-printade figurer">
             <figcaption>Detaljerade figurer, 3D‑printade med fokus på skarpa detaljer och ren yta.</figcaption>
           </figure>
         </div>
