@@ -24,10 +24,14 @@
     <main class="product-page">
         <div class="product-container">
             <div class="product-image">
-                <img src="images/the-mandalorian-helmet1.webp" alt="Mandalorian Hjälm">
+                <img src="images/the-mandalorian-helmet1.webp" alt="Mandalorian Hjälm">            <div class="product-image">
+                <img id="mainImage" src="images/the-mandalorian-helmet1.webp" alt="Mandalorian Hjälm">
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="images/the-mandalorian-helmet1.webp" alt="Bild 1" onclick="changeImage('images/the-mandalorian-helmet1.webp', this)">
+                    <img class="thumbnail" src="images/the-mandalorian-helmet2.webp" alt="Bild 2" onclick="changeImage('images/the-mandalorian-helmet2.webp', this)">
+                    <img class="thumbnail" src="images/the-mandalorian-helmet3.webp" alt="Bild 3" onclick="changeImage('images/the-mandalorian-helmet3.webp', this)">
+                </div>
             </div>
-            
-            <div class="product-details">
                 <h1>Mandalorian Hjälm</h1>
                 <p class="product-description">
                     Den berömda hjälmen från The Mandalorian-serien. This is the Way. En modern klassiker med distinktiv Beskar-look. 3D-printad med högsta precision och uppmärksamhet på detaljer.
@@ -56,6 +60,8 @@
                         <label for="quantity">Antal:</label>
                         <input type="number" id="quantity" value="1" min="1">
                     </div>
+
+                                <p class="product-price">från 1 300 kr</p>
                 </div>
 
                 <div class="product-pricing">
@@ -73,12 +79,20 @@
                         <li>Leveranstid: 2-4 veckor</li>
                     </ul>
                 </div>
-            </div>
-        </div>
+                    <li>Efterbehandling: Support borttagning tillgänglig</li>        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 SwePrint3D. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <script>
+        function changeImage(imageSrc, thumbnail) {
+            document.getElementById('mainImage').src = imageSrc;
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+    </script>
 </body>
 </html>
