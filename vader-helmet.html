@@ -1,96 +1,140 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
     <title>Darth Vader Hjälm – SwePrint3D</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: linear-gradient(to bottom, #ffffff, #f3f4f6);
+        color: #111827;
+      }
+
+      header, main, footer {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 1.5rem;
+      }
+
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #e5e7eb;
+        background: #ffffffcc;
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+      }
+
+      header img {
+        height: 40px;
+        width: 40px;
+        border-radius: 0.5rem;
+        object-fit: cover;
+      }
+
+      .logo {
+        font-weight: 700;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        color: #4b5563;
+        text-decoration: none;
+        padding: 0.35rem 0.8rem;
+        border-radius: 999px;
+      }
+
+      nav a:hover {
+        background: #f3f4f6;
+      }
+
+      /* FIX FÖR STORA BILDER HÄR */
+      main img {
+        max-width: 100%; /* Hindrar bilden från att gå utanför skärmen */
+        height: auto;     /* Behåller proportionerna */
+        border-radius: 0.75rem;
+        display: block;
+        margin: 1.5rem 0; /* Ger lite luft mellan bilderna */
+        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      }
+
+      .price-tag {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #059669;
+        margin: 1rem 0;
+      }
+
+      .btn-buy {
+        background: #111827;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+      }
+
+      footer {
+        margin-top: 3rem;
+        border-top: 1px solid #e5e7eb;
+        color: #6b7280;
+        font-size: 0.85rem;
+      }
+    </style>
+  </head>
+
+  <body>
     <header>
-        <div class="logo">
-            <img src="images/logo.jpg" alt="SwePrint3D Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="butik.html">Butik</a></li>
-                <li><a href="galleri.html">Galleri</a></li>
-                <li><a href="priser-och-faq.html">Priser & FAQ</a></li>
-            </ul>
-        </nav>
+      <div class="brand">
+        <img src="images/logo.jpg" alt="SwePrint3D logotyp">
+        <div class="logo">SwePrint3D</div>
+      </div>
+      <nav>
+        <a href="index.html">Start</a>
+        <a href="butik.html">Butik</a>
+        <a href="priser-och-faq.html">Priser & FAQ</a>
+      </nav>
     </header>
 
-    <main class="product-page">
-        <div class="product-container">
-                        <div class="product-image">
-                <img id="mainImage" src="images/vader-helmet-1.jpg" alt="Darth Vader Hjälm">
-                <div class="thumbnail-container">
-                    <img class="thumbnail active" src="images/vader-helmet-1.jpg" alt="Bild 1" onclick="changeImage('images/vader-helmet-1.jpg', this)">
-                    <img class="thumbnail" src="images/vader-helmet-2.jpg" alt="Bild 2" onclick="changeImage('images/vader-helmet-2.jpg', this)">
-                    <img class="thumbnail" src="images/vader-helmet-3.jpg" alt="Bild 3" onclick="changeImage('images/vader-helmet-3.jpg', this)">
-                </div>
-            </div>
-            <div class="product-details">
-                <h1>Darth Vader Hjälm</h1>
-                <p class="product-description">Den legendariska Darth Vader-hjälmen. En av de mest ikoniska hjälmarna i Star Wars-universumet. Fullskalig 1:1 replica perfekt för samlare och cosplay.</p>
+    <main>
+      <a href="butik.html" style="text-decoration:none; color:#6b7280; font-size:0.9rem;">← Tillbaka till butiken</a>
+      
+      <h1>Darth Vader-hjälm (1:1 Replica)</h1>
+      <p>Detaljerad fullskalig hjälm för cosplay eller utställning.</p>
+      
+      <div class="price-tag">från 1 500 kr</div>
+      <a href="mailto:sweprint3d@gmail.com?subject=Beställning: Vader-hjälm" class="btn-buy">Beställ / Förfrågan</a>
 
-                <div class="option-group">
-                    <label for="color">Färg:</label>
-                    <select id="color">
-                        <option value="svart-gra">Svart/Grå (Klassisk)</option>
-                        <option value="svart">Helt Svart</option>
-                        <option value="anpassad">Anpassad färg (kontakta oss)</option>
-                    </select>
-                </div>
+      <img src="images/vader-helmet-1.jpg" alt="Darth Vader hjälm front">
+      <img src="images/vader-helmet-2.jpg" alt="Darth Vader hjälm sida">
+      <img src="images/vader-helmet-3.jpg" alt="Darth Vader hjälm detalj">
 
-                <div class="option-group">
-                    <label for="size">Storlek:</label>
-                    <select id="size">
-                        <option value="standard">Standard (vuxen)</option>
-                        <option value="barn">Barn</option>
-                        <option value="display">Display (50%)</option>
-                    </select>
-                </div>
-
-                <div class="option-group">
-                    <label for="quantity">Antal:</label>
-                    <input type="number" id="quantity" min="1" value="1">
-                </div>
-
-                            <p class="product-price">från 1 500 kr</p>
-
-                <p class="pricing-note">Pris baseras på storlek, material och färgval. Kontakta oss för exakt prisuppgift.</p>
-
-                <button class="contact-button" onclick="location.href='priser-och-faq.html'">Kontakta oss för beställning</button>
-
-                <div class="product-info">
-                    <h3>Produktinformation</h3>
-                    <ul>
-                        <li>Material: PLA/PETG/ABS</li>
-                        <li>Printtid: 40-60 timmar (beroende på storlek)</li>
-                    <li>Efterbehandling: Support borttagning tillgänglig</li>                        <li>Leveranstid: 2-4 veckor</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      <section>
+        <h2>Om modellen</h2>
+        <p>Denna hjälm skrivs ut i flera delar för maximal detaljrikedom. Vi använder oftast PLA+ för stabilitet eller ABS om du vill ha extra värmetålighet.</p>
+        <ul>
+          <li>Skala: 1:1 (Fullstorlek)</li>
+          <li>Material: PLA+ / ABS</li>
+          <li>Finish: Levereras som rå utskrift (redo för slipning/målning)</li>
+        </ul>
+      </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 SwePrint3D. Alla rättigheter förbehållna.</p>
+      <p>© 2025 SwePrint3D - 3D-print på beställning</p>
     </footer>
-</body>
-
-        <script>
-        function changeImage(imageSrc, thumbnail) {
-            document.getElementById('mainImage').src = imageSrc;
-            
-            // Ta bort active class från alla miniatyrbilder
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            thumbnails.forEach(thumb => thumb.classList.remove('active'));
-            
-            // Lägg till active class på den klickade miniatyrbilden
-            thumbnail.classList.add('active');
-        }
-    </script>
+  </body>
 </html>
