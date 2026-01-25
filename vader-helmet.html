@@ -1,428 +1,78 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-  <meta charset="utf-8">
-  <title>Darth Vader-hjälm – SwePrint3D</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: system-ui, -apple-system, sans-serif;
-      background: #f9fafb;
-      color: #111827;
-    }
-
-    header {
-      background: white;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 1rem 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    .header-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand {
-      display: flex;
-      gap: 0.75rem;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: #111827;
-    }
-
-    .brand img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-    }
-
-    nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #6b7280;
-      font-size: 0.95rem;
-    }
-
-    nav a:hover {
-      color: #111827;
-    }
-
-    .product-page {
-      max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-    }
-
-    @media (max-width: 768px) {
-      .product-page {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-    }
-
-    .product-images {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .main-image {
-      width: 100%;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      background: white;
-      border: 1px solid #e5e7eb;
-    }
-
-    .main-image img {
-      width: 100%;
-      display: block;
-    }
-
-    .thumbnail-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
-    }
-
-    .thumbnail {
-      border-radius: 0.5rem;
-      overflow: hidden;
-      border: 2px solid #e5e7eb;
-      cursor: pointer;
-      transition: border-color 0.2s;
-    }
-
-    .thumbnail:hover {
-      border-color: #111827;
-    }
-
-    .thumbnail img {
-      width: 100%;
-      display: block;
-    }
-
-    .product-info {
-      padding-top: 0.5rem;
-    }
-
-    .breadcrumb {
-      font-size: 0.85rem;
-      color: #6b7280;
-      margin-bottom: 1rem;
-    }
-
-    .breadcrumb a {
-      color: #6b7280;
-      text-decoration: none;
-    }
-
-    .breadcrumb a:hover {
-      color: #111827;
-    }
-
-    h1 {
-      font-size: 1.875rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-
-    .price {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #111827;
-      margin-bottom: 2rem;
-    }
-
-    .option-group {
-      margin-bottom: 1.5rem;
-    }
-
-    .option-label {
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-
-    .option-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-    }
-
-    .option-btn {
-      padding: 0.625rem 1.25rem;
-      border: 2px solid #e5e7eb;
-      border-radius: 2rem;
-      background: white;
-      color: #374151;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: all 0.2s;
-    }
-
-    .option-btn:hover {
-      border-color: #111827;
-    }
-
-    .option-btn.selected {
-      background: #111827;
-      color: white;
-      border-color: #111827;
-    }
-
-    .quantity {
-      margin-bottom: 1.5rem;
-    }
-
-    .quantity-controls {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 0.75rem;
-    }
-
-    .quantity-btn {
-      width: 2.5rem;
-      height: 2.5rem;
-      border: 1px solid #d1d5db;
-      background: white;
-      border-radius: 0.375rem;
-      cursor: pointer;
-      font-size: 1.125rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .quantity-btn:hover {
-      background: #f3f4f6;
-    }
-
-    .quantity-input {
-      width: 4rem;
-      height: 2.5rem;
-      text-align: center;
-      border: 1px solid #d1d5db;
-      border-radius: 0.375rem;
-      font-size: 1rem;
-    }
-
-    .contact-btn {
-      width: 100%;
-      padding: 0.875rem;
-      background: #111827;
-      color: white;
-      border: none;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      font-weight: 600;
-      cursor: pointer;
-      margin-bottom: 1rem;
-      transition: background 0.2s;
-    }
-
-    .contact-btn:hover {
-      background: #1f2937;
-    }
-
-    .description {
-      margin-top: 2rem;
-      padding-top: 2rem;
-      border-top: 1px solid #e5e7eb;
-    }
-
-    .description h2 {
-      font-size: 1.25rem;
-      margin-bottom: 1rem;
-    }
-
-    .description p {
-      line-height: 1.6;
-      color: #4b5563;
-      margin-bottom: 1rem;
-    }
-
-    .description ul {
-      list-style: disc;
-      margin-left: 1.5rem;
-      color: #4b5563;
-      line-height: 1.8;
-    }
-
-    footer {
-      margin-top: 4rem;
-      padding: 2rem 1.5rem;
-      border-top: 1px solid #e5e7eb;
-      background: white;
-      text-align: center;
-      color: #6b7280;
-      font-size: 0.875rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darth Vader Hjälm – SwePrint3D</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header>
-    <div class="header-content">
-      <div class="brand">
-        <div class="logo">SwePrint3D</div>
-        <img src="images/logo.jpg" alt="SwePrint3D logotyp">
-      </div>
-      <nav>
-        <a href="index.html">Start</a>
-        <a href="butik.html">Butik</a>
-        <a href="priser-och-faq.html">Priser & FAQ</a>
-        <a href="https://www.tradera.com/profile/items/1577517/sweprint3d">Tradera</a>
-      </nav>
-    </div>
-  </header>
-
-  <div class="product-page">
-    <!-- Produktbilder -->
-    <div class="product-images">
-      <div class="main-image">
-        <img src="src="images/limages/vader-helmet-ogo.jpg"1.jpg" alt="Darth Vader-hjälm" id="mainImage">
-      </div>
-      <div class="thumbnail-grid">
-        <div class="thumbnail" onclick="changeImage('src="images/limages/vader-helmet-ogo.jpg"1.jpg')">
-          <img src="src="images/limages/vader-helmet-ogo.jpg"1.jpg" alt="Framifrån">
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="SwePrint3D Logo">
         </div>
-        <div class="thumbnail" onclick="changeImage('src="images/limages/vader-helmet-ogo.jpg"2.jpg')">
-          <img src="src="images/limages/vader-helmet-ogo.jpg"2.jpg" alt="Från sidan">
+        <nav>
+            <ul>
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="butik.html">Butik</a></li>
+                <li><a href="galleri.html">Galleri</a></li>
+                <li><a href="priser-och-faq.html">Priser & FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-page">
+        <div class="product-container">
+            <div class="product-image">
+                <img src="images/vader-helmet-1.jpg" alt="Darth Vader Hjälm">
+            </div>
+
+            <div class="product-details">
+                <h1>Darth Vader Hjälm</h1>
+                <p class="product-description">Den legendariska Darth Vader-hjälmen. En av de mest ikoniska hjälmarna i Star Wars-universumet. Fullskalig 1:1 replica perfekt för samlare och cosplay.</p>
+
+                <div class="option-group">
+                    <label for="color">Färg:</label>
+                    <select id="color">
+                        <option value="svart-gra">Svart/Grå (Klassisk)</option>
+                        <option value="svart">Helt Svart</option>
+                        <option value="anpassad">Anpassad färg (kontakta oss)</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <label for="size">Storlek:</label>
+                    <select id="size">
+                        <option value="standard">Standard (vuxen)</option>
+                        <option value="barn">Barn</option>
+                        <option value="display">Display (50%)</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <label for="quantity">Antal:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+
+                <p class="pricing-note">Pris baseras på storlek, material och färgval. Kontakta oss för exakt prisuppgift.</p>
+
+                <button class="contact-button" onclick="location.href='priser-och-faq.html'">Kontakta oss för beställning</button>
+
+                <div class="product-info">
+                    <h3>Produktinformation</h3>
+                    <ul>
+                        <li>Material: PLA/PETG/ABS</li>
+                        <li>Printtid: 40-60 timmar (beroende på storlek)</li>
+                        <li>Efterbehandling: Slipning och målning tillgänglig</li>
+                        <li>Leveranstid: 2-4 veckor</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="thumbnail" onclick="changeImage('src="images/limages/vader-helmet-ogo.jpg"3.jpg')">
-          <img src="src="images/limages/vader-helmet-ogo.jpg"3.jpg" alt="Frontal vy">
-        </div>
-      </div>
-    </div>
+    </main>
 
-    <!-- Produktinformation -->
-    <div class="product-info">
-      <div class="breadcrumb">
-        <a href="butik.html">← Tillbaka till butiken</a>
-      </div>
-
-      <h1>Darth Vader-hjälm – Life Size Replica</h1>
-      
-      <div class="price">från 1 500 kr</div>
-
-      <!-- Material -->
-      <div class="option-group">
-        <label class="option-label">Material</label>
-        <div class="option-buttons">
-          <button class="option-btn selected">PLA+</button>
-          <button class="option-btn">ABS</button>
-        </div>
-      </div>
-
-      <!-- Finish -->
-      <div class="option-group">
-        <label class="option-label">Finish</label>
-        <div class="option-buttons">
-          <button class="option-btn selected">Rått kit (1 500 kr)</button>
-          <button class="option-btn">Med grundslipning (1 800 kr)</button>
-        </div>
-      </div>
-
-      <!-- Kvantitet -->
-      <div class="quantity">
-        <label class="option-label">Kvantitet</label>
-        <div class="quantity-controls">
-          <button class="quantity-btn">−</button>
-          <input type="number" class="quantity-input" value="1" min="1">
-          <button class="quantity-btn">+</button>
-        </div>
-      </div>
-
-      <!-- Kontaktknapp -->
-      <button class="contact-btn" onclick="contactOrder()">Kontakta för beställning</button>
-
-      <!-- Produktbeskrivning -->
-      <div class="description">
-        <h2>Beskrivning</h2>
-        <p>
-          Fullskalig (1:1) replica av den ikoniska Darth Vader-hjälmen från Star Wars. 
-          Printad i premium src="images/lPLA+, PETG eller ABSimages/images/vader-helmet-ogo.jpg" för hållbarhet och professionell finish. 
-          Perfekt för samlare, cosplay eller display.
-        </p>
-
-        <h2>Specifikationer</h2>
-        <ul>
-          <li>3D-printad i flera delar som monteras och limmas ihop</li>
-          <li>Skala: 1:1 (life-size, passar de flesta vuxna huvuden)</li>
-          <li>Material: src="images/lPLA+, PETG eller ABSimages/images/vader-helmet-ogo.jpg" (välj vid beställning)</li>
-          <li>Färg: Grå och svart (tvåfärgad finish)</li>
-          <li>Levereras som rå print – slipning och spackling kan göras på beställning</li>
-          <li>Avsedd för cosplay och display, inte som skyddsutrustning</li>
-          <li>3D-modell från Galactic Armory</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <p><strong>SwePrint3D</strong> – 3D-printade modeller och tjänster</p>
-    <p>Kontakt: sweprint3d@gmail.com</p>
-    <p>© 2025 SwePrint3D</p>
-  </footer>
-
-  <script>
-    function changeImage(src) {
-      document.getElementById('mainImage').src = src;
-    }
-
-    function contactOrder() {
-      const material = document.querySelector('.option-group:nth-of-type(1) .option-btn.selected').textContent;
-      const finish = document.querySelector('.option-group:nth-of-type(2) .option-btn.selected').textContent;
-      const quantity = document.querySelector('.quantity-input').value;
-      
-      const subject = encodeURIComponent('Beställning Darth Vader-hjälm');
-      const body = encodeURIComponent(`Hej!\n\nJag vill beställa:\n\nProdukt: Darth Vader-hjälm\nMaterial: ${material}\nFinish: ${finish}\nAntal: ${quantity}\n\nMed vänliga hälsningar`);
-      
-      window.location.href = `mailto:sweprint3d@gmail.com?subject=${subject}&body=${body}`;
-    }
-
-    // Option button toggle
-    document.querySelectorAll('.option-btn').forEach(btn => {
-      btn.addEventListener('click', function() {
-        const group = this.closest('.option-group');
-        group.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-        this.classList.add('selected');
-      });
-    });
-
-    // Quantity controls
-    document.querySelectorAll('.quantity-btn').forEach((btn, index) => {
-      btn.addEventListener('click', function() {
-        const input = document.querySelector('.quantity-input');
-        let value = parseInt(input.value);
-        if (index === 0 && value > 1) input.value = value - 1;
-        if (index === 1) input.value = value + 1;
-      });
-    });
-  </script>
+    <footer>
+        <p>&copy; 2025 SwePrint3D. Alla rättigheter förbehållna.</p>
+    </footer>
 </body>
 </html>
