@@ -6,12 +6,11 @@
     <title>Darth Vader Hjälm – SwePrint3D</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* CSS-fix för att bilderna ska visas korrekt i Stormtrooper-layouten */
         .product-image img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
-            margin-bottom: 1rem; /* Ger mellanrum mellan bild 1, 2 och 3 */
+            margin-bottom: 1rem;
             display: block;
         }
         .product-container {
@@ -23,6 +22,20 @@
         .product-image, .product-details {
             flex: 1;
             min-width: 300px;
+        }
+        .option-group {
+            margin-bottom: 1.2rem;
+        }
+        .option-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: bold;
+        }
+        .option-group select, .option-group input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
@@ -50,14 +63,24 @@
 
             <div class="product-details">
                 <h1>Darth Vader Hjälm</h1>
-                <p class="product-description">Den ultimata sith-lord-hjälmen i 1:1 skala. Detaljerad replica som är ett måste för varje Star Wars-entusiast. Levereras redo för efterbehandling.</p>
+                <p class="product-description">Den ultimata sith-lord-hjälmen i 1:1 skala. Detaljerad replica som är ett måste för varje Star Wars-entusiast.</p>
 
                 <div class="option-group">
-                    <label for="color">Material/Färg:</label>
+                    <label for="material">Material:</label>
+                    <select id="material">
+                        <option value="pla">PLA (Standard - Bäst detaljer)</option>
+                        <option value="petg">PETG (Slagtåligt)</option>
+                        <option value="abs">ABS (Värmetåligt / Cosplay)</option>
+                    </select>
+                </div>
+
+                <div class="option-group">
+                    <label for="color">Färg:</label>
                     <select id="color">
-                        <option value="svart">Svart (Standard)</option>
-                        <option value="pla-plus">PLA+ Grå (Lättslipad)</option>
-                        <option value="anpassad">Anpassat material (kontakta oss)</option>
+                        <option value="svart">Svart (Klassisk)</option>
+                        <option value="gra">Grå (Bra för målning)</option>
+                        <option value="vit">Vit</option>
+                        <option value="anpassad">Annan färg (Kontakta oss)</option>
                     </select>
                 </div>
 
@@ -74,17 +97,16 @@
                     <input type="number" id="quantity" min="1" value="1">
                 </div>
 
-                <p class="pricing-note">Pris från 1 500 kr. Detaljerat prisförslag ges vid kontakt baserat på valda alternativ.</p>
+                <p class="pricing-note">Pris från 1 500 kr beroende på materialval.</p>
 
-                <button class="contact-button" onclick="location.href='mailto:sweprint3d@gmail.com?subject=Förfrågan: Darth Vader Hjälm'" style="padding: 10px 20px; background: #111827; color: white; border: none; border-radius: 5px; cursor: pointer;">Kontakta oss för beställning</button>
+                <button class="contact-button" onclick="location.href='mailto:sweprint3d@gmail.com?subject=Förfrågan: Darth Vader Hjälm'" style="padding: 10px 20px; background: #111827; color: white; border: none; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold;">Kontakta oss för beställning</button>
 
                 <div class="product-info" style="margin-top: 2rem;">
-                    <h3>Produktinformation</h3>
+                    <h3>Teknisk info</h3>
                     <ul>
-                        <li>Material: PLA+ / ABS / PETG</li>
+                        <li>Vikt: ca 800-1200g</li>
                         <li>Printtid: 45-60 timmar</li>
-                        <li>Typ: 1:1 Replica (Cosplay/Display)</li>
-                        <li>Leveranstid: ca 3-4 veckor</li>
+                        <li>Finish: Rå utskrift (behöver slipas/målas)</li>
                     </ul>
                 </div>
             </div>
