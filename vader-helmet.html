@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
+      /* Din originalstil */
       body {
         margin: 0;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -24,75 +25,19 @@
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #e5e7eb;
-        background: #ffffffcc;
-        backdrop-filter: blur(8px);
-        position: sticky;
-        top: 0;
-        z-index: 100;
       }
 
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
+      /* DENNA RAD FIXAR BILDERNA */
+      main img { 
+        max-width: 100%; 
+        height: auto; 
+        display: block; 
+        margin: 1rem 0; 
       }
 
-      header img {
-        height: 40px;
-        width: 40px;
-        border-radius: 0.5rem;
-        object-fit: cover;
-      }
-
-      .logo {
-        font-weight: 700;
-      }
-
-      nav a {
-        font-size: 0.9rem;
-        color: #4b5563;
-        text-decoration: none;
-        padding: 0.35rem 0.8rem;
-        border-radius: 999px;
-      }
-
-      nav a:hover {
-        background: #f3f4f6;
-      }
-
-      /* FIX FÖR STORA BILDER HÄR */
-      main img {
-        max-width: 100%; /* Hindrar bilden från att gå utanför skärmen */
-        height: auto;     /* Behåller proportionerna */
-        border-radius: 0.75rem;
-        display: block;
-        margin: 1.5rem 0; /* Ger lite luft mellan bilderna */
-        box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-      }
-
-      .price-tag {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #059669;
-        margin: 1rem 0;
-      }
-
-      .btn-buy {
-        background: #111827;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border-radius: 999px;
-        text-decoration: none;
-        display: inline-block;
-        font-weight: 600;
-      }
-
-      footer {
-        margin-top: 3rem;
-        border-top: 1px solid #e5e7eb;
-        color: #6b7280;
-        font-size: 0.85rem;
-      }
+      .brand { display: flex; align-items: center; gap: 0.5rem; }
+      header img { width: 40px; height: 40px; border-radius: 50%; }
+      nav a { margin-left: 1rem; text-decoration: none; color: #4b5563; }
     </style>
   </head>
 
@@ -100,7 +45,7 @@
     <header>
       <div class="brand">
         <img src="images/logo.jpg" alt="SwePrint3D logotyp">
-        <div class="logo">SwePrint3D</div>
+        <div class="logo" style="font-weight:bold;">SwePrint3D</div>
       </div>
       <nav>
         <a href="index.html">Start</a>
@@ -110,31 +55,15 @@
     </header>
 
     <main>
-      <a href="butik.html" style="text-decoration:none; color:#6b7280; font-size:0.9rem;">← Tillbaka till butiken</a>
-      
-      <h1>Darth Vader-hjälm (1:1 Replica)</h1>
-      <p>Detaljerad fullskalig hjälm för cosplay eller utställning.</p>
-      
-      <div class="price-tag">från 1 500 kr</div>
-      <a href="mailto:sweprint3d@gmail.com?subject=Beställning: Vader-hjälm" class="btn-buy">Beställ / Förfrågan</a>
+      <h1>Darth Vader-hjälm</h1>
+      <p>Fullskalig 1:1 replica för cosplay eller samling.</p>
 
-      <img src="images/vader-helmet-1.jpg" alt="Darth Vader hjälm front">
-      <img src="images/vader-helmet-2.jpg" alt="Darth Vader hjälm sida">
-      <img src="images/vader-helmet-3.jpg" alt="Darth Vader hjälm detalj">
+      <img src="images/vader-helmet-1.jpg" alt="Vader 1">
+      <img src="images/vader-helmet-2.jpg" alt="Vader 2">
+      <img src="images/vader-helmet-3.jpg" alt="Vader 3">
 
-      <section>
-        <h2>Om modellen</h2>
-        <p>Denna hjälm skrivs ut i flera delar för maximal detaljrikedom. Vi använder oftast PLA+ för stabilitet eller ABS om du vill ha extra värmetålighet.</p>
-        <ul>
-          <li>Skala: 1:1 (Fullstorlek)</li>
-          <li>Material: PLA+ / ABS</li>
-          <li>Finish: Levereras som rå utskrift (redo för slipning/målning)</li>
-        </ul>
-      </section>
+      <p>Pris: från 1 500 kr</p>
+      <p>Maila <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a> för beställning.</p>
     </main>
-
-    <footer>
-      <p>© 2025 SwePrint3D - 3D-print på beställning</p>
-    </footer>
   </body>
 </html>
