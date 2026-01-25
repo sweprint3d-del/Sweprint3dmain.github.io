@@ -132,6 +132,13 @@ nav a:hover {
     padding: 1rem;
     border-radius: 4px;
     margin: 1rem 0;
+
+    .product-price {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #059669;
+    margin: 1rem 0;
+}
 }
 
 .contact-button {
