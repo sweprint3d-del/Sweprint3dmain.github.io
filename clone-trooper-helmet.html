@@ -23,10 +23,14 @@
 
     <main class="product-page">
         <div class="product-container">
-            <div class="product-image">
-                <img src="images/clone-trooper-helmet1.jpg" alt="Clone Trooper Hjälm">
+            <div class="product-image">            <div class="product-image">
+                <img id="mainImage" src="images/clone-trooper-helmet1.jpg" alt="Clone Trooper Hjälm">
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="images/clone-trooper-helmet1.jpg" alt="Bild 1" onclick="changeImage('images/clone-trooper-helmet1.jpg', this)">
+                    <img class="thumbnail" src="images/clone-trooper-helmet2.jpg" alt="Bild 2" onclick="changeImage('images/clone-trooper-helmet2.jpg', this)">
+                    <img class="thumbnail" src="images/clone-trooper-helmet3.jpg" alt="Bild 3" onclick="changeImage('images/clone-trooper-helmet3.jpg', this)">
+                </div>
             </div>
-            
             <div class="product-details">
                 <h1>Clone Trooper Hjälm</h1>
                 <p class="product-description">
@@ -56,6 +60,8 @@
                         <label for="quantity">Antal:</label>
                         <input type="number" id="quantity" value="1" min="1">
                     </div>
+
+                                <p class="product-price">från 1 200 kr</p>
                 </div>
 
                 <div class="product-pricing">
@@ -69,8 +75,7 @@
                     <ul>
                         <li>Material: PLA/PETG/ABS</li>
                         <li>Printtid: 20-40 timmar (beroende på storlek)</li>
-                        <li>Efterbehandling: Slipning och målning tillgänglig</li>
-                        <li>Leveranstid: 2-4 veckor</li>
+                    <li>Efterbehandling: Support borttagning tillgänglig</li>                        <li>Leveranstid: 2-4 veckor</li>
                     </ul>
                 </div>
             </div>
@@ -80,5 +85,14 @@
     <footer>
         <p>&copy; 2025 SwePrint3D. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <script>
+        function changeImage(imageSrc, thumbnail) {
+            document.getElementById('mainImage').src = imageSrc;
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+    </script>
 </body>
 </html>
