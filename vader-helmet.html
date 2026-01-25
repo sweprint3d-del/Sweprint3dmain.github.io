@@ -2,11 +2,10 @@
 <html lang="sv">
   <head>
     <meta charset="utf-8">
-    <title>Darth Vader Hjälm – SwePrint3D</title>
+    <title>Darth Vader-hjälm – SwePrint3D</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
-      /* Din originalstil */
       body {
         margin: 0;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -20,24 +19,114 @@
         padding: 1.5rem;
       }
 
+      main {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+      }
+
       header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid #e5e7eb;
+        background: #ffffffcc;
+        backdrop-filter: blur(8px);
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
 
-      /* DENNA RAD FIXAR BILDERNA */
-      main img { 
-        max-width: 100%; 
-        height: auto; 
-        display: block; 
-        margin: 1rem 0; 
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
       }
 
-      .brand { display: flex; align-items: center; gap: 0.5rem; }
-      header img { width: 40px; height: 40px; border-radius: 50%; }
-      nav a { margin-left: 1rem; text-decoration: none; color: #4b5563; }
+      .brand .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #111827;
+      }
+
+      .brand img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      nav a {
+        margin-left: 1rem;
+        text-decoration: none;
+        color: #4b5563;
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        color: #111827;
+      }
+
+      .chip {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        background: #e0e7ff;
+        border-radius: 2rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #3730a3;
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: 2.25rem;
+        margin: 0.5rem 0;
+      }
+
+      .price {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #059669;
+        margin: 1rem 0;
+      }
+
+      /* Fix för att bilderna ska se bra ut och inte bli för stora */
+      .product-images img {
+        width: 100%;
+        max-width: 600px; /* Begränsar bredden så den inte tar över hela skärmen */
+        height: auto;
+        border-radius: 0.75rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        margin-bottom: 1.5rem;
+        display: block;
+      }
+
+      .description {
+        line-height: 1.6;
+        color: #4b5563;
+        max-width: 600px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background: #111827;
+        color: white;
+        text-decoration: none;
+        border-radius: 0.5rem;
+        font-weight: 600;
+        margin-top: 1rem;
+      }
+
+      .btn:hover {
+        background: #374151;
+      }
+
+      footer {
+        margin-top: 2.5rem;
+        border-top: 1px solid #e5e7eb;
+        font-size: 0.85rem;
+        color: #6b7280;
+      }
     </style>
   </head>
 
@@ -45,7 +134,7 @@
     <header>
       <div class="brand">
         <img src="images/logo.jpg" alt="SwePrint3D logotyp">
-        <div class="logo" style="font-weight:bold;">SwePrint3D</div>
+        <div class="logo">SwePrint3D</div>
       </div>
       <nav>
         <a href="index.html">Start</a>
@@ -55,15 +144,29 @@
     </header>
 
     <main>
+      <div class="chip">Helmets & Armor</div>
       <h1>Darth Vader-hjälm</h1>
-      <p>Fullskalig 1:1 replica för cosplay eller samling.</p>
+      <p class="price">från 1 500 kr</p>
 
-      <img src="images/vader-helmet-1.jpg" alt="Vader 1">
-      <img src="images/vader-helmet-2.jpg" alt="Vader 2">
-      <img src="images/vader-helmet-3.jpg" alt="Vader 3">
+      <div class="product-images">
+        <img src="images/vader-helmet-1.jpg" alt="Darth Vader-hjälm bild 1">
+        <img src="images/vader-helmet-2.jpg" alt="Darth Vader-hjälm bild 2">
+        <img src="images/vader-helmet-3.jpg" alt="Darth Vader-hjälm bild 3">
+      </div>
 
-      <p>Pris: från 1 500 kr</p>
-      <p>Maila <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a> för beställning.</p>
+      <div class="description">
+        <p>
+          En legendarisk 1:1 replica av Darth Vaders hjälm. 3D-printad med hög precision, perfekt för samlare eller cosplay.
+        </p>
+        <p>
+          Hjälmen levereras som ett kit eller sammansatt rå utskrift, redo för din egen finish i form av slipning och målning.
+        </p>
+        <a href="mailto:sweprint3d@gmail.com?subject=Förfrågan: Darth Vader-hjälm" class="btn">Kontakta för beställning</a>
+      </div>
     </main>
+
+    <footer>
+      <p>© 2025 SwePrint3D – 3D-printade modeller & kit</p>
+    </footer>
   </body>
 </html>
