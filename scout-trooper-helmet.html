@@ -24,10 +24,14 @@
     <main class="product-page">
         <div class="product-container">
             <div class="product-image">
-                <img src="images/scout-trooper-helmet1.webp" alt="Scout Trooper Hjälm">
+                <img src="images/scout-trooper-helmet1.webp" alt="Scout Trooper Hjälm">            <div class="product-image">
+                <img id="mainImage" src="images/scout-trooper-helmet1.webp" alt="Scout Trooper Hjälm">
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="images/scout-trooper-helmet1.webp" alt="Bild 1" onclick="changeImage('images/scout-trooper-helmet1.webp', this)">
+                    <img class="thumbnail" src="images/scout-trooper-helmet2.webp" alt="Bild 2" onclick="changeImage('images/scout-trooper-helmet2.webp', this)">
+                    <img class="thumbnail" src="images/scout-trooper-helmet3.webp" alt="Bild 3" onclick="changeImage('images/scout-trooper-helmet3.webp', this)">
+                </div>
             </div>
-
-            <div class="product-details">
                 <h1>Scout Trooper Hjälm</h1>
                 <p class="product-description">Scout Trooper från Return of the Jedi. Detaljerad 1:1 replica av den ikoniska speeder bike trooper-hjälmen. Perfekt för samlare och cosplay.</p>
 
@@ -45,6 +49,8 @@
                     <select id="size">
                         <option value="standard">Standard (vuxen)</option>
                         <option value="barn">Barn</option>
+
+                                    <p class="product-price">från 1 100 kr</p>
                         <option value="display">Display (50%)</option>
                     </select>
                 </div>
@@ -63,8 +69,7 @@
                     <ul>
                         <li>Material: PLA/PETG/ABS</li>
                         <li>Printtid: 30-45 timmar (beroende på storlek)</li>
-                        <li>Efterbehandling: Slipning och målning tillgänglig</li>
-                        <li>Leveranstid: 2-4 veckor</li>
+                    <li>Efterbehandling: Support borttagning tillgänglig</li>                        <li>Leveranstid: 2-4 veckor</li>
                     </ul>
                 </div>
             </div>
@@ -74,5 +79,14 @@
     <footer>
         <p>&copy; 2025 SwePrint3D. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <script>
+        function changeImage(imageSrc, thumbnail) {
+            document.getElementById('mainImage').src = imageSrc;
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+    </script>
 </body>
 </html>
