@@ -23,10 +23,15 @@
 
     <main class="product-page">
         <div class="product-container">
-            <div class="product-image">
-                <img src="images/vader-helmet-1.jpg" alt="Darth Vader Hjälm">
+                        <div class="product-image">
+                <img id="mainImage" src="images/vader-helmet-1.jpg" alt="Darth Vader Hjälm">
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="images/vader-helmet-1.jpg" alt="Bild 1" onclick="changeImage('images/vader-helmet-1.jpg', this)">
+                    <img class="thumbnail" src="images/vader-helmet-2.jpg" alt="Bild 2" onclick="changeImage('images/vader-helmet-2.jpg', this)">
+                    <img class="thumbnail" src="images/vader-helmet-3.jpg" alt="Bild 3" onclick="changeImage('images/vader-helmet-3.jpg', this)">
+                    <img class="thumbnail" src="images/vader-helmet-4.jpg" alt="Bild 4" onclick="changeImage('images/vader-helmet-4.jpg', this)">
+                </div>
             </div>
-
             <div class="product-details">
                 <h1>Darth Vader Hjälm</h1>
                 <p class="product-description">Den legendariska Darth Vader-hjälmen. En av de mest ikoniska hjälmarna i Star Wars-universumet. Fullskalig 1:1 replica perfekt för samlare och cosplay.</p>
@@ -76,4 +81,17 @@
         <p>&copy; 2025 SwePrint3D. Alla rättigheter förbehållna.</p>
     </footer>
 </body>
+
+        <script>
+        function changeImage(imageSrc, thumbnail) {
+            document.getElementById('mainImage').src = imageSrc;
+            
+            // Ta bort active class från alla miniatyrbilder
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            
+            // Lägg till active class på den klickade miniatyrbilden
+            thumbnail.classList.add('active');
+        }
+    </script>
 </html>
