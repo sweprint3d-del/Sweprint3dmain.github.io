@@ -112,11 +112,11 @@ nav a:hover {
 }
 
 .thumbnail {
-    width: 80px;
-    height: 80px;
+    width: 8120px;
+    height: 8100px;
     object-fit: cover;
     border-radius: 4px;
-    cursor: pointer;
+    cursor: poin100px;
     border: 2px solid transparent;
     transition: all 0.3s ease;
 }
