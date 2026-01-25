@@ -98,6 +98,38 @@ nav a:hover {
     border-radius: 8px;
 }
 
+
+.product-image #mainImage {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.thumbnail-container {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: #111827;
+    opacity: 0.8;
+}
+
+.thumbnail.active {
+    border-color: #059669;
+    box-shadow: 0 0 0 1px #059669;
+}
 .product-details h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
