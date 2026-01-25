@@ -24,10 +24,14 @@
     <main class="product-page">
         <div class="product-container">
             <div class="product-image">
-                <img src="images/boba-fett-helmet1.webp" alt="Boba Fett Hjälm">
-            </div>
-            
-            <div class="product-details">
+                <img src="images/boba-f            <div class="product-image">
+                <img id="mainImage" src="images/boba-fett-helmet1.webp" alt="Boba Fett Hjälm">
+                <div class="thumbnail-container">
+                    <img class="thumbnail active" src="images/boba-fett-helmet1.webp" alt="Bild 1" onclick="changeImage('images/boba-fett-helmet1.webp', this)">
+                    <img class="thumbnail" src="images/boba-fett-helmet2.webp" alt="Bild 2" onclick="changeImage('images/boba-fett-helmet2.webp', this)">
+                    <img class="thumbnail" src="images/boba-fett-helmet3.webp" alt="Bild 3" onclick="changeImage('images/boba-fett-helmet3.webp', this)">
+                </div>
+            </div>">
                 <h1>Boba Fett Hjälm</h1>
                 <p class="product-description">
                     Den legendariska Boba Fett-hjälmen. En av de mest iköniska hjälmarna i Star Wars-universumet, känd för sina battle-worn detaljer och distinktiva design. 3D-printad med exakt precision.
@@ -56,6 +60,8 @@
                         <label for="quantity">Antal:</label>
                         <input type="number" id="quantity" value="1" min="1">
                     </div>
+
+                                <p class="product-price">från 1 400 kr</p>
                 </div>
 
                 <div class="product-pricing">
@@ -73,12 +79,20 @@
                         <li>Leveranstid: 2-4 veckor</li>
                     </ul>
                 </div>
-            </div>
-        </div>
+                    <li>Efterbehandling: Support borttagning tillgänglig</li>        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 SwePrint3D. Alla rättigheter förbehållna.</p>
     </footer>
+
+    <script>
+        function changeImage(imageSrc, thumbnail) {
+            document.getElementById('mainImage').src = imageSrc;
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            thumbnail.classList.add('active');
+        }
+    </script>
 </body>
 </html>
