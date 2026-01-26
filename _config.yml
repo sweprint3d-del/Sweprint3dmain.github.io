@@ -1,8 +1,6 @@
 url: "https://sweprint3d.se"
 baseurl: ""
 
-include: [produkter]  # Lägg till denna rad
-
 collections:
   produkter:
     output: true
