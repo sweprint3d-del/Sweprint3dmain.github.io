@@ -1,136 +1,36 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stormtrooper Hjälm – SwePrint3D</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .product-image img { 
-            max-width: 100%; 
-            height: auto; 
-            border-radius: 8px; 
-            margin-bottom: 1rem; 
-            display: block; 
-        }
-        .product-container { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 2rem; 
-            margin-top: 2rem; 
-        }
-        .product-image, .product-details { 
-            flex: 1; 
-            min-width: 300px; 
-        }
-        .option-group { 
-            margin-bottom: 1.2rem; 
-        }
-        .option-group label { 
-            display: block; 
-            margin-bottom: 0.4rem; 
-            font-weight: bold; 
-        }
-        .option-group select, .option-group input { 
-            width: 100%; 
-            padding: 8px; 
-            border-radius: 4px; 
-            border: 1px solid #ccc; 
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.jpg" alt="SwePrint3D Logo" style="width:50px; height:50px; border-radius:50%;">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Hem</a></li>
-                <li><a href="butik.html">Butik</a></li>
-                <li><a href="priser-och-faq.html">Priser & FAQ</a></li>
-            </ul>
-        </nav>
-    </header>
+<div class="product-details">
+    <h1>Stormtrooper Hjälm</h1>
+    <p><strong>Raw 3D Printed Parts – Rogue One Style</strong></p>
+    
+    <p class="product-description">
+        Denna replica är baserad på den moderniserade Rogue One-designen av den klassiska Stormtrooper-hjälmen. 
+        Den erbjuder en mer symmetrisk och stilren look än de ursprungliga hjälmarna från 70-talet, 
+        vilket gör den till en favorit för både display och seriös cosplay.
+    </p>
 
-    <main class="product-page">
-        <div class="product-container">
-            <div class="product-image">
-            <img src="images/storm-trooper-helmet1.webp" alt="Stormtrooper 1">
-            <img src="images/storm-trooper-helmet2.webp" alt="Stormtrooper 2">
-            <img src="images/storm-trooper-helmet3.webp" alt="Stormtrooper 3">
-            <img src="images/storm-trooper-helmet4.webp" alt="Stormtrooper 4">
-            </div>
+    <div class="parts-list">
+        <h4>Kitet innehåller 6 delar:</h4>
+        <ul>
+            <li>Face (Ansiktsdel)</li>
+            <li>Dome (Kupol)</li>
+            <li>Back (Bakstycke)</li>
+            <li>Aerators x2 (Luftrenare)</li>
+            <li>Visir-mall (För enkel tillskärning av lins)</li>
+        </ul>
+    </div>
 
-            <div class="product-details">
-                <h1>Stormtrooper Hjälm</h1>
-                <p class="product-description">Raw 3D Printed Parts – Rogue One Stormtrooper Helmet
+    <div class="option-group">
+        <label for="material">Material:</label>
+        <select id="material">
+            <option value="pla">PLA (Standard)</option>
+            <option value="petg">PETG (Slagtåligt)</option>
+            <option value="abs">ABS (Värmetåligt)</option>
+        </select>
+    </div>
 
-Detta kit är baserat på den moderniserade Rogue One-designen och levereras som en rå utskrift för dig som vill bygga din egen hjälm från grunden.
-
-Utskriften levereras i 6 separata delar:
-
-Face (Ansiktsdel)
-
-Dome (Kupol)
-
-Back (Bakstycke)
-
-Aerators x2 (Luftrenare)
-
-Visir-mall (För enkel tillskärning av lins)
-
-Observera: Detta är en "Raw Print", vilket innebär att supportmaterial är borttaget men slipning, spackling och målning krävs för en färdig finish.</p>
-
-                <div class="option-group">
-                    <label for="material">Material:</label>
-                    <select id="material">
-                        <option value="pla">PLA (Standard - Hög detaljrikedom)</option>
-                        <option value="petg">PETG (Slagtåligt)</option>
-                        <option value="abs">ABS (Värmetåligt - bäst för bilar/varma mässor)</option>
-                    </select>
-                </div>
-
-                <div class="option-group">
-                    <label for="color">Färg:</label>
-                    <select id="color">
-                        <option value="vit">Vit (Klassisk)</option>
-                        <option value="gra">Grå (Bra bas för målning)</option>
-                        <option value="svart">Svart (Shadow Trooper)</option>
-                    </select>
-                </div>
-
-                <div class="option-group">
-                    <label for="size">Storlek:</label>
-                    <select id="size">
-                        <option value="standard">Standard (vuxen 1:1)</option>
-                        <option value="barn">Barn / Display</option>
-                    </select>
-                </div>
-
-                <div class="option-group">
-                    <label for="quantity">Antal:</label>
-                    <input type="number" id="quantity" min="1" value="1">
-                </div>
-
-                <p class="pricing-note">Pris från 1 400 kr. Kontakta oss för en exakt offert baserat på dina val.</p>
-
-                <button class="contact-button" onclick="location.href='mailto:sweprint3d@gmail.com?subject=Förfrågan: Stormtrooper Hjälm'" style="padding: 10px 20px; background: #111827; color: white; border: none; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold;">Kontakta för beställning</button>
-
-                <div class="product-info" style="margin-top: 2rem;">
-                    <h3>Produktfakta</h3>
-                    <ul>
-                        <li>Material: PLA/PETG/ABS</li>
-                        <li>Printtid: ca 40 timmar</li>
-                        <li>Skala: 1:1 Fullstorlek</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer style="margin-top: 3rem; border-top: 1px solid #eee; padding-top: 1rem; text-align: center;">
-        <p>&copy; 2025 SwePrint3D. Alla rättigheter förbehållna.</p>
-    </footer>
-</body>
-</html>
+    <p class="pricing-note">Pris från 1 400 kr.</p>
+    
+    <button class="contact-button" onclick="location.href='mailto:sweprint3d@gmail.com?subject=Förfrågan: Stormtrooper Rogue One'">
+        Kontakta för beställning
+    </button>
+</div>
