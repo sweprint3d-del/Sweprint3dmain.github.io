@@ -1,7 +1,7 @@
 ---
 layout: product
 title: Stormtrooper Hjälm
-product_name: Stormtrooper Hjälm
+product_name: Rogue one Stormtrooper Hjälm
 subtitle: Raw 3D Printed Parts – Rogue One Style
 description: Stormtrooper-hjälm i Rogue One-stil – rå 3D-printad kit i 6 delar. Perfekt för cosplay eller display.
 description_long: Denna replica är baserad på den moderniserade Rogue One-designen. Den är mer symmetrisk och stilren än de ursprungliga hjälmarna från 70-talet, vilket gör den perfekt för display.
