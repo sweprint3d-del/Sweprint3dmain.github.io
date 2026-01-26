@@ -1,1 +1,100 @@
 
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} – SwePrint3D</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+    <header style="padding: 1rem 2rem; background: white; border-bottom: 1px solid #e0e0e0; position: sticky; top: 0; z-index: 100;">
+        <nav style="display: flex; align-items: center; justify-content: space-between; max-width: 1400px; margin: 0 auto;">
+            <a href="/index.html" style="text-decoration: none;">
+                <img src="/images/sweprint3d-logo.png" alt="SwePrint3D Logo" style="height: 50px;">
+            </a>
+            <div style="display: flex; gap: 2rem;">
+                <a href="/index.html" style="text-decoration: none; color: #333; font-weight: 500;">Hem</a>
+                <a href="/butik.html" style="text-decoration: none; color: #333; font-weight: 500;">Butik</a>
+                <a href="/priser-och-faq.html" style="text-decoration: none; color: #333; font-weight: 500;">Priser & FAQ</a>
+            </div>
+        </nav>
+    </header>
+
+    <section style="max-width: 1200px; margin: 3rem auto; padding: 2rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: start;">
+            
+            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
+                {% for image in page.images %}
+                <img src="{{ image.src }}" alt="{{ image.alt }}" style="width: 100%; border-radius: 8px; border: 2px solid #e0e0e0;">
+                {% endfor %}
+            </div>
+
+            <div>
+                <h1 style="margin-bottom: 0.5rem; font-size: 2.5rem;">{{ page.product_name }}</h1>
+                <p style="color: #666; font-weight: 600; font-size: 1rem; text-transform: uppercase; margin-bottom: 1.5rem;">
+                    {{ page.subtitle }}
+                </p>
+                
+                <p style="line-height: 1.6; margin-bottom: 2rem;">
+                    {{ page.description_long }}
+                </p>
+
+                {% if page.kit_contents %}
+                <div style="background: #f9f9f9; padding: 1.5rem; border-left: 4px solid #333; margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">{{ page.kit_title | default: "Kitet innehåller:" }}</h4>
+                    <ul style="list-style: none; padding: 0; margin: 0;">
+                        {% for item in page.kit_contents %}
+                        <li style="margin-bottom: 0.5rem;">• {{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">MATERIAL</label>
+                <select id="material" style="width: 100%; padding: 0.75rem; margin-bottom: 1.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                    {% for material in page.materials %}
+                    <option value="{{ material.value }}">{{ material.name }}</option>
+                    {% endfor %}
+                </select>
+
+                {% if page.sizes %}
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">STORLEK</label>
+                <select id="size" style="width: 100%; padding: 0.75rem; margin-bottom: 1.5rem; border: 1px solid #ccc; border-radius: 4px;">
+                    {% for size in page.sizes %}
+                    <option value="{{ size.value }}">{{ size.name }}</option>
+                    {% endfor %}
+                </select>
+                {% endif %}
+
+                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">ANTAL</label>
+                <input type="number" id="quantity" min="1" value="1" style="width: 100%; padding: 0.75rem; margin-bottom: 2rem; border: 1px solid #ccc; border-radius: 4px;">
+
+                <p class="pricing-note" style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">
+                    Pris från {{ page.price_from }} kr.
+                </p>
+
+                <button class="contact-button" 
+                        style="width: 100%; padding: 1rem; background: #1a1a1a; color: white; border: none; border-radius: 4px; font-size: 1rem; font-weight: 600; cursor: pointer;"
+                        onclick="location.href='mailto:sweprint3d@gmail.com?subject=Förfrågan: {{ page.product_name }}'">
+                    Kontakta för beställning
+                </button>
+
+                {% if page.tech_info %}
+                <p style="margin-top: 1.5rem; font-size: 0.9rem; color: #666;">
+                    <strong>Teknisk info:</strong> {{ page.tech_info }}
+                </p>
+                {% endif %}
+
+                {{ content }}
+            </div>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 2rem; background: #f5f5f5; color: #666; font-size: 0.9rem;">
+        <p>© {{ "now" | date: "%Y" }} SwePrint3D. Alla rättigheter förbehållna.</p>
+    </footer>
+</body>
+</html>
