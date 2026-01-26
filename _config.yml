@@ -1,6 +1,7 @@
+url: "https://sweprint3d.se"
 baseurl: ""
-url: "https://sweprint3d-del.github.io"
+
 collections:
   produkter:
     output: true
-    permalink: /produkter/:path
+    permalink: /produkter/:path/
