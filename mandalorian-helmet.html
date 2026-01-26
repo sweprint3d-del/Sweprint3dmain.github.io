@@ -6,44 +6,50 @@
     <title>The Mandalorian Hjälm – SwePrint3D</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        .product-image img { max-width: 100%; height: auto; border-radius: 8px; margin-bottom: 1rem; display: block; }
-        .product-container { display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem; }
-        .product-image, .product-details { flex: 1; min-width: 300px; }
-        .option-group { margin-bottom: 1.2rem; }
-        .option-group label { display: block; margin-bottom: 0.4rem; font-weight: bold; }
-        .option-group select, .option-group input { width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc; }
+        body { background-color: #f4f4f9; margin: 0; font-family: sans-serif; color: #333; }
+        .product-page { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .product-container { display: flex; flex-wrap: wrap; gap: 3rem; align-items: flex-start; }
+        .product-image { flex: 1.2; min-width: 320px; }
+        .product-image img { width: 100%; height: auto; border-radius: 15px; margin-bottom: 1.5rem; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .product-details { flex: 1; min-width: 320px; background: #fff; padding: 2.5rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+        .parts-list { background: #f8f9fa; padding: 1.2rem; border-radius: 10px; border-left: 5px solid #111827; margin: 1.5rem 0; }
+        .option-group { margin-bottom: 1.5rem; }
+        .option-group label { display: block; margin-bottom: 0.5rem; font-weight: bold; font-size: 0.9rem; color: #666; }
+        .option-group select, .option-group input { width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd; }
+        .pricing-note { font-size: 1.4rem; color: #059669; font-weight: 800; margin: 2rem 0 1rem 0; }
+        .contact-button { width: 100%; padding: 1.2rem; background: #111827; color: white; border: none; border-radius: 10px; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
-    <header>
-        <div class="logo"><img src="images/logo.jpg" alt="SwePrint3D Logo" style="width:50px; height:50px; border-radius:50%;"></div>
-        <nav><ul><li><a href="index.html">Hem</a></li><li><a href="butik.html">Butik</a></li><li><a href="priser-och-faq.html">Priser & FAQ</a></li></ul></nav>
-    </header>
     <main class="product-page">
         <div class="product-container">
             <div class="product-image">
-                <img src="images/the-mandalorian-helmet1.webp" alt="Mando front">
+                <img src="images/the-mandalorian-helmet1.webp" alt="Mandalorian 1">
+                <img src="images/the-mandalorian-helmet2.webp" alt="Mandalorian 2">
+                <img src="images/the-mandalorian-helmet3.webp" alt="Mandalorian 3">
             </div>
             <div class="product-details">
                 <h1>The Mandalorian Hjälm</h1>
-                <p class="product-description">Din Djarins Beskar-hjälm. Ren design med skarpa linjer.</p>
-                <div class="option-group">
-                    <label for="material">Material:</label>
-                    <select id="material">
-                        <option value="pla">PLA (Bäst finish)</option>
-                        <option value="petg">PETG</option>
-                        <option value="abs">ABS</option>
-                    </select>
+                <p><strong>Raw 3D Printed Parts – Beskar Style</strong></p>
+                <p>This is the way. Äg din egen del av prisjägar-historien med den legendariska Mandalorian-hjälmen. Vi återskapar Din Djarins eleganta design med fokus på de mjuka kurvorna och den ikoniska T-visiren.</p>
+                <div class="parts-list">
+                    <h4>Kitet innehåller:</h4>
+                    <ul>
+                        <li>Huvudskal (Main Bucket)</li>
+                        <li>Öronstycken x2</li>
+                        <li>Visir-mall (För enkel tillskärning)</li>
+                    </ul>
                 </div>
                 <div class="option-group">
-                    <label for="color">Färg:</label>
-                    <select id="color">
-                        <option value="silver">Silver/Grå (Beskar-look)</option>
-                        <option value="svart">Svart</option>
-                    </select>
+                    <label>Material</label>
+                    <select><option>PLA</option><option>PETG</option><option>ABS</option></select>
+                </div>
+                <div class="option-group">
+                    <label>Antal</label>
+                    <input type="number" value="1" min="1">
                 </div>
                 <p class="pricing-note">Pris från 1 500 kr.</p>
-                <button class="contact-button" onclick="location.href='mailto:sweprint3d@gmail.com?subject=Förfrågan: Mando'" style="padding: 10px 20px; background: #111827; color: white; border: none; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold;">Kontakta för beställning</button>
+                <button class="contact-button" onclick="location.href='mailto:sweprint3d@gmail.com?subject=Förfrågan: Mandalorian'">Kontakta för beställning</button>
             </div>
         </div>
     </main>
