@@ -108,6 +108,20 @@ layout: null
     Färdiga 3D-printade modeller och kit. Klicka på en produkt för detaljer och beställning.
   </p>
 
+<p style="color:red;font-weight:bold;">
+  DEBUG produkter: {{ site.produkter | size }}
+</p>
+
+<ul>
+{% for p in site.produkter %}
+  <li>
+    {{ p.product_name }} |
+    category = "{{ p.category }}"
+  </li>
+{% endfor %}
+</ul>
+
+  
   <!-- HELMETS -->
   <h2>Helmets & Armor</h2>
   <div class="grid">
