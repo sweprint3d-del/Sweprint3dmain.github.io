@@ -25,7 +25,9 @@ kit_contents:
   - "Huvuddel (dome & face)"
   - "Bakstycke"
   - "Ventiler (vänster & höger)"
-  - "Rangefinder (tillval)"
+  - "Nack-/krageparti"
+  - "Commander-tillägg: rangefinder"
+  - "Varianttillägg: Heavy med visir, Officer med antenn"
 
 materials:
   - name: "PLA (Standard - Bäst detaljer)"
