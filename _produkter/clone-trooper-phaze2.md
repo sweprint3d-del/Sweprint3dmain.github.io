@@ -18,6 +18,11 @@ images:
     alt: "Clone Trooper-hjälm från sidan"
   - src: "/images/clone-trooper-helmet3.jpg"
     alt: "Clone Trooper-hjälm snett framifrån"
+  - src: "/images/clone-trooper-helmet4.jpg"
+    alt: "Clone Trooper-hjälm Heavy-variant med visir"
+  - src: "/images/clone-trooper-helmet5.jpg"
+    alt: "Clone Trooper-hjälm Officer-variant med antenn"
+
 
 
 
