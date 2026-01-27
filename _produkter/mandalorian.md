@@ -32,6 +32,16 @@ kit_contents:
   - "Detaljdelar runt öron och bakstycke"
 
 materials:
-  - name: "PLA+ (Standard - Bäst detaljer)"
-    value: "pla-plus"
+  - name: "PLA (Standard - Bäst detaljer)"
+    value: "pla"
+  - name: "PETG (Slagtåligt)"
+    value: "petg"
+  - name: "ABS (Värmetåligt)"
+    value: "abs"
+
+sizes:
+  - name: "Standard (Vuxen 1:1)"
+    value: "adult"
+  - name: "Display / Barn"
+    value: "display"
 ---
