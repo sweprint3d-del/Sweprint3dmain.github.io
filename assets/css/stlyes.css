@@ -1,4 +1,6 @@
 /* Dark Tech Theme - SwePrint3D */
+
+/* 1. GRUNDINSTÄLLNINGAR */
 body { 
     margin: 0; 
     font-family: 'Inter', system-ui, -apple-system, sans-serif; 
@@ -7,9 +9,13 @@ body {
     line-height: 1.6;
 }
 
-header, main, footer { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+header, main, footer { 
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 1.5rem; 
+}
 
-/* Header - Glas-look */
+/* 2. HEADER - Glas-look */
 header { 
     display: flex; 
     justify-content: space-between; 
@@ -22,19 +28,50 @@ header {
     z-index: 100; 
 }
 
-.brand { display: flex; align-items: center; gap: 0.8rem; text-decoration: none; color: #fff; font-weight: 700; }
-.brand img { height: 35px; width: 35px; border-radius: 4px; border: 1px solid #30363d; }
+.brand { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.8rem; 
+    text-decoration: none; 
+    color: #fff; 
+    font-weight: 700; 
+}
 
-nav a { font-size: 0.85rem; color: #8b949e; text-decoration: none; padding: 0.5rem 0.8rem; transition: 0.2s; }
-nav a:hover { color: #58a6ff; background: #161b22; border-radius: 6px; }
+.brand img { 
+    height: 35px; 
+    width: 35px; 
+    border-radius: 4px; 
+    border: 1px solid #30363d; 
+    object-fit: cover;
+}
 
-/* Grid & Kort */
-.grid, .cards, .gallery { display: grid; gap: 2rem; margin-top: 2rem; }
+nav a { 
+    font-size: 0.85rem; 
+    color: #8b949e; 
+    text-decoration: none; 
+    padding: 0.5rem 0.8rem; 
+    transition: 0.2s; 
+}
+
+nav a:hover { 
+    color: #58a6ff; 
+    background: #161b22; 
+    border-radius: 6px; 
+}
+
+/* 3. GRID & LAYOUT */
+.grid, .cards, .gallery { 
+    display: grid; 
+    gap: 2rem; 
+    margin-top: 2rem; 
+}
+
 @media (min-width: 768px) {
     .grid, .cards, .gallery { grid-template-columns: repeat(3, 1fr); }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 
+/* 4. PRODUKTER & KORT */
 .card { 
     background: #161b22; 
     border-radius: 12px; 
@@ -43,6 +80,8 @@ nav a:hover { color: #58a6ff; background: #161b22; border-radius: 6px; }
     text-decoration: none; 
     color: inherit; 
     transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover { 
@@ -51,15 +90,27 @@ nav a:hover { color: #58a6ff; background: #161b22; border-radius: 6px; }
     box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
 }
 
-.card img { width: 100%; height: 230px; object-fit: cover; border-bottom: 1px solid #30363d; }
-.card-body { padding: 1.25rem; }
-.card h3 { margin: 0; color: #fff; }
-.price { color: #3fb950; font-weight: 800; font-size: 1.1rem; }
+.card img { 
+    width: 100%; 
+    height: 230px; 
+    object-fit: cover; 
+    border-bottom: 1px solid #30363d; 
+}
 
-/* Knappar & Chips */
-.btn { padding: 0.7rem 1.4rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block; transition: 0.2s; }
-.btn-primary { background: #238636; color: white; }
-.btn-outline { border: 1px solid #30363d; color: #58a6ff; }
-.chip { background: #21262d; color: #58a6ff; padding: 0.3rem 0.7rem; border-radius: 20px; font-size: 0.75rem; border: 1px solid #30363d; }
+.card-body { 
+    padding: 1.25rem; 
+}
 
-footer { margin-top: 6rem; border-top: 1px solid #30363d; padding: 3rem 1.5rem; color: #8b949e; text-align: center; }
+.card h3 { 
+    margin: 0; 
+    color: #fff; 
+    font-size: 1.1rem;
+}
+
+.card p {
+    color: #8b949e;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.price {
