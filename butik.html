@@ -3,49 +3,73 @@ layout: default
 title: Butik
 ---
 
-<h1>Butik</h1>
-<p class="lead">
-  Färdiga 3D-printade modeller och kit. Klicka på en produkt för detaljer.
-</p>
+<div class="page-wrapper">
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-kicker">Butik</p>
+      <h1>Färdiga 3D‑printade modeller och kit</h1>
+      <p class="lead">
+        Färdiga 3D‑printade modeller och kit. Klicka på en produkt för detaljer.
+      </p>
+    </div>
+  </section>
 
-<section class="shop-section">
-  <h2>Helmets & Armor</h2>
+  <section class="shop-section">
+    <h2>Helmets &amp; Armor</h2>
 
-  <div class="cards">
-    {% assign helmets = site.produkter | where: "category", "helmets" %}
-    {% for produkt in helmets %}
+    <div class="cards">
+      {% assign helmets = site.produkter | where: "category", "helmets" %}
+      {% for produkt in helmets %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
+          {% if produkt.tag %}
+          <span class="card-tag">{{ produkt.tag }}</span>
+          {% endif %}
           <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
         </div>
 
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
-          <span class="price">Från {{ produkt.price_from }} kr</span>
+          <div class="price-row">
+            <span class="price">Från {{ produkt.price_from }} kr</span>
+            {% if produkt.material %}
+            <span class="price-note">{{ produkt.material }}</span>
+            {% endif %}
+          </div>
         </div>
       </a>
-    {% endfor %}
-  </div>
-</section>
+      {% endfor %}
+    </div>
+  </section>
 
-<section class="shop-section">
-  <h2>Props & Stands</h2>
+  <section class="shop-section">
+    <h2>Props &amp; Stands</h2>
 
-  <div class="cards">
-    {% assign props = site.produkter | where: "category", "props" %}
-    {% for produkt in props %}
+    <div class="cards">
+      {% assign props = site.produkter | where: "category", "props" %}
+      {% for produkt in props %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
+          {% if produkt.tag %}
+          <span class="card-tag">{{ produkt.tag }}</span>
+          {% endif %}
           <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
         </div>
 
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
-          <span class="price">Från {{ produkt.price_from }} kr</span>
+          <div class="price-row">
+            <span class="price">Från {{ produkt.price_from }} kr</span>
+            {% if produkt.material %}
+            <span class="price-note">{{ produkt.material }}</span>
+            {% endif %}
+          </div>
         </div>
       </a>
-    {% endfor %}
-  </div>
-</section>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
