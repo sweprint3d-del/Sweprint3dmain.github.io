@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page.title }} – SwePrint3D</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <a href="/" class="brand">
+            <img src="/images/logo.jpg" alt="SwePrint3D">
+            <div class="logo">SwePrint3D</div>
+        </a>
+        <nav>
+            <a href="/">Start</a>
+            <a href="/butik.html">Butik</a>
+            <a href="/priser-och-faq.html">Priser & FAQ</a>
+        </nav>
+    </header>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer>
+        <div>© {{ "now" | date: "%Y" }} SwePrint3D</div>
+    </footer>
+</body>
+</html>
