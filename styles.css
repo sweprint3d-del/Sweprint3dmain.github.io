@@ -465,6 +465,50 @@ footer {
 }
 
 /* =====================
+   Startsida - Grid 4 kolumner
+===================== */
+
+.grid-4col {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-4col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-4col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Call-to-action sektion */
+.cta-section {
+  margin-top: 3rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  text-align: center;
+}
+
+.cta-section h2 {
+  margin-top: 0;
+  color: #f9fafb;
+}
+
+.cta-section p {
+  max-width: 600px;
+  margin: 0.75rem auto 1.5rem;
+  color: var(--text-muted);
+}
+
+
+/* =====================
    Produktsidor
 ===================== */
 
