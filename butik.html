@@ -4,15 +4,21 @@ title: Butik
 ---
 
 <h1>Butik</h1>
-<p class="lead">Färdiga 3D-printade modeller och kit. Klicka på en produkt för detaljer.</p>
+<p class="lead">
+  Färdiga 3D-printade modeller och kit. Klicka på en produkt för detaljer.
+</p>
 
-<section>
+<section class="shop-section">
   <h2>Helmets & Armor</h2>
-  <div class="grid">
+
+  <div class="cards">
     {% assign helmets = site.produkter | where: "category", "helmets" %}
     {% for produkt in helmets %}
       <a href="{{ produkt.url }}" class="card">
-        <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+        <div class="card-image">
+          <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+        </div>
+
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
@@ -23,13 +29,17 @@ title: Butik
   </div>
 </section>
 
-<section>
+<section class="shop-section">
   <h2>Props & Stands</h2>
-  <div class="grid">
+
+  <div class="cards">
     {% assign props = site.produkter | where: "category", "props" %}
     {% for produkt in props %}
       <a href="{{ produkt.url }}" class="card">
-        <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+        <div class="card-image">
+          <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+        </div>
+
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
