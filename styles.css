@@ -9,7 +9,7 @@
 }
 
 :root {
-  /* Färger från SwePrint3D logotyp */
+  /* Färger från SwePrint3D logotyp - LJUST TEMA */
   --color-primary: #0f1f2e;
   --color-primary-dark: #0a131f;
   --color-accent: #db2732;
@@ -18,7 +18,7 @@
   --color-text: #0f1f2e;
   --color-text-light: #555;
   
-  /* Gamla variabler för kompatibilitet */
+  /* Gamla variabler för kompatibilitet - UPPDATERADE */
   --bg-main: #f5f1e6;
   --bg-section: #f5f1e6;
   --bg-card: #ffffff;
@@ -26,8 +26,8 @@
   --accent-soft: rgba(219, 39, 50, 0.1);
   --text-main: #0f1f2e;
   --text-muted: #555;
-  --border-subtle: #0f1f2e;
-  --shadow-card: 0 16px 40px rgba(0, 0, 0, 0.1);
+  --border-subtle: #ddd;
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
   --radius-md: 10px;
   --radius-lg: 16px;
   --transition-fast: 0.18s ease-out;
@@ -37,17 +37,6 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-/* Rest av CSS-koden förblir samma som tidigare... */
-
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
-  color: var(--text-main);
   line-height: 1.6;
   font-size: 16px;
 }
@@ -74,8 +63,8 @@ header {
   top: 0;
   z-index: 50;
   backdrop-filter: blur(16px);
-  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75));
-  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid #ddd;
 }
 
 .header-content {
@@ -106,7 +95,7 @@ header {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.9rem;
-  color: #f9fafb;
+  color: #0f1f2e;
 }
 
 .logo-subtitle {
@@ -137,7 +126,7 @@ nav a::after {
 }
 
 nav a:hover {
-  color: #f9fafb;
+  color: #0f1f2e;
 }
 
 nav a:hover::after {
@@ -170,7 +159,7 @@ h1 {
   margin-bottom: 0.75rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: #f9fafb;
+  color: #0f1f2e;
 }
 
 .lead {
@@ -208,24 +197,24 @@ h1 {
 
 .btn-primary {
   background: var(--accent);
-  color: #022c22;
-  box-shadow: 0 14px 35px rgba(34, 197, 94, 0.4);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(219, 39, 50, 0.3);
 }
 
 .btn-primary:hover {
-  background: #16a34a;
+  background: #c71e28;
   transform: translateY(-1px);
 }
 
 .btn-secondary {
-  background: rgba(15, 23, 42, 0.95);
+  background: #ffffff;
   color: var(--text-main);
-  border-color: var(--border-subtle);
+  border-color: #ddd;
 }
 
 .btn-secondary:hover {
   border-color: var(--accent);
-  color: #bbf7d0;
+  color: var(--accent);
 }
 
 .hero-grid {
@@ -237,15 +226,15 @@ h1 {
 
 .hero-panel {
   border-radius: var(--radius-lg);
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  border: 1px solid #ddd;
   padding: 1.3rem 1.5rem;
 }
 
 .hero-panel h3 {
   font-size: 1rem;
   font-weight: 600;
-  color: #e5e7eb;
+  color: #0f1f2e;
   margin-bottom: 0.4rem;
 }
 
@@ -261,7 +250,7 @@ h2 {
   font-size: 1.4rem;
   margin: 2.5rem 0 0.75rem;
   font-weight: 700;
-  color: #f3f4f6;
+  color: #0f1f2e;
 }
 
 .section-intro {
@@ -280,15 +269,15 @@ h2 {
 
 .panel {
   border-radius: var(--radius-lg);
-  background: rgba(15, 23, 42, 0.9);
-  border: 1px solid var(--border-subtle);
+  background: #ffffff;
+  border: 1px solid #ddd;
   padding: 1.1rem 1.3rem;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: var(--shadow-card);
 }
 
 .panel h3 {
   font-size: 1.02rem;
-  color: #e5e7eb;
+  color: #0f1f2e;
   margin-bottom: 0.4rem;
 }
 
@@ -307,9 +296,9 @@ h2 {
 }
 
 .card {
-  background: radial-gradient(circle at top left, #1f2937 0, #020617 55%);
+  background: #ffffff;
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(31, 41, 55, 0.9);
+  border: 1px solid #ddd;
   overflow: hidden;
   text-decoration: none;
   color: inherit;
@@ -326,15 +315,15 @@ h2 {
 
 .card:hover {
   transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85);
-  border-color: rgba(34, 197, 94, 0.7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  border-color: var(--accent);
 }
 
 .card-image {
   position: relative;
   width: 100%;
   padding-top: 70%;
-  background: radial-gradient(circle at top, #1f2937 0, #020617 70%);
+  background: #f0f0f0;
 }
 
 .card-image img {
@@ -349,12 +338,12 @@ h2 {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
-  background: var(--accent-soft);
-  color: #bbf7d0;
+  background: var(--color-accent-soft);
+  color: #c71e28;
   border-radius: 999px;
   font-size: 0.75rem;
   padding: 0.2rem 0.7rem;
-  border: 1px solid rgba(34, 197, 94, 0.8);
+  border: 1px solid var(--accent);
 }
 
 .card-body {
@@ -368,7 +357,7 @@ h2 {
 .card-body h3 {
   font-size: 1.02rem;
   font-weight: 600;
-  color: #f9fafb;
+  color: #0f1f2e;
 }
 
 .card-body p {
@@ -401,20 +390,20 @@ h2 {
 .faq-section {
   margin-top: 2rem;
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
-  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid #ddd;
+  background: #ffffff;
   padding: 1.5rem 1.75rem;
 }
 
 .faq-item + .faq-item {
-  border-top: 1px solid #1f2937;
+  border-top: 1px solid #ddd;
   padding-top: 1.1rem;
   margin-top: 1.1rem;
 }
 
 .faq-question {
   font-weight: 600;
-  color: #e5e7eb;
+  color: #0f1f2e;
   margin-bottom: 0.3rem;
 }
 
@@ -438,12 +427,12 @@ li + li {
 ===================== */
 
 footer {
-  background: #020617;
+  background: #f9f9f9;
   color: var(--text-muted);
   text-align: center;
   padding: 2rem 1.5rem 2.5rem;
   margin-top: 3rem;
-  border-top: 1px solid #111827;
+  border-top: 1px solid #ddd;
   font-size: 0.85rem;
 }
 
@@ -511,14 +500,14 @@ footer {
   margin-top: 3rem;
   padding: 2.5rem 1.5rem;
   border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: linear-gradient(135deg, rgba(219, 39, 50, 0.1), rgba(219, 39, 50, 0.05));
+  border: 1px solid rgba(219, 39, 50, 0.3);
   text-align: center;
 }
 
 .cta-section h2 {
   margin-top: 0;
-  color: #f9fafb;
+  color: #0f1f2e;
 }
 
 .cta-section p {
@@ -526,7 +515,6 @@ footer {
   margin: 0.75rem auto 1.5rem;
   color: var(--text-muted);
 }
-
 
 /* =====================
    Produktsidor
@@ -540,12 +528,11 @@ footer {
 
 .product-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); /* bilder + text */
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 2.5rem;
   align-items: flex-start;
 }
 
-/* Bilder vänster, text höger */
 .product-gallery {
   order: 1;
 }
@@ -564,7 +551,7 @@ footer {
   height: auto;
   display: block;
   border-radius: 8px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .product-thumbs {
@@ -579,7 +566,6 @@ footer {
   border-radius: 4px;
 }
 
-/* Textdelen */
 .product-main h1 {
   margin: 0 0 0.4rem;
 }
@@ -623,7 +609,7 @@ footer {
   border-radius: 999px;
   border: 1px solid transparent;
   background: var(--accent);
-  color: #022c22;
+  color: #ffffff;
   font-weight: 600;
   cursor: pointer;
 }
