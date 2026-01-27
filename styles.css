@@ -1,5 +1,5 @@
 /* =====================
-   Reset & base
+   Reset & Base
 ===================== */
 * {
   margin: 0;
@@ -8,48 +8,93 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+  font-size: 16px; /* Grundläggande kroppstext */
+}
+
+/* Hela sidan får normal textstorlek. */
+p, span, li {
+  font-size: 1rem;
+  color: #374151;
+}
+
+/* =====================
+   Header
+===================== */
+header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header .header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #374151;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+nav a:hover {
   color: #111827;
 }
 
 /* =====================
-   Typography
+   Titles & Text
 ===================== */
 h1 {
-  font-size: 2.25rem;
+  font-size: 1.875rem; /* ca 30px */
   margin-bottom: 0.5rem;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+  font-size: 1.375rem; /* ca 22px */
+  margin: 1.5rem 0 0.75rem;
+  font-weight: 600;
 }
 
 .lead {
+  font-size: 1rem;
   color: #4b5563;
-  margin-bottom: 2.5rem;
-  max-width: 700px;
+  margin-bottom: 1.5rem;
 }
 
 /* =====================
-   Shop layout
+   Grid & Shop Layout
 ===================== */
 .shop-section {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
+  padding: 0 1.5rem;
 }
 
+/* Vi använder en rimlig grid med min/max */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1.5rem;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  margin-top: 1rem;
 }
 
 /* =====================
-   Product cards
+   Product Cards
 ===================== */
 .card {
-  background: white;
+  background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   overflow: hidden;
@@ -57,19 +102,20 @@ h2 {
   color: inherit;
   display: flex;
   flex-direction: column;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+/* Hover-effekt */
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Image */
+/* Bildbehållare */
 .card-image {
   position: relative;
   width: 100%;
-  padding-top: 70%;
+  padding-top: 70%; /* proportionell bildyta */
 }
 
 .card-image img {
@@ -80,38 +126,46 @@ h2 {
   object-fit: cover;
 }
 
-/* Body */
+/* Textdelen */
 .card-body {
-  padding: 1rem 1.1rem 1.25rem;
+  padding: 0.75rem 1rem;
 }
 
 .card-body h3 {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 600;
+  margin-bottom: 0.35rem;
 }
 
 .card-body p {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color: #6b7280;
-  margin: 0.4rem 0 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .price {
-  font-weight: 700;
+  font-size: 0.95rem;
+  font-weight: bold;
   color: #059669;
-  font-size: 1rem;
 }
 
 /* =====================
-   Mobile
+   Media Queries – mobilen först
 ===================== */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   h1 {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.25rem;
+  }
+  .cards {
+    gap: 1rem;
+    grid-template-columns: 1fr;
   }
 
-  .cards {
-    gap: 1.25rem;
+  .card-body {
+    padding: 0.75rem;
   }
 
   .card-body h3 {
@@ -119,6 +173,18 @@ h2 {
   }
 
   .price {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
+}
+
+/* =====================
+   Footer
+===================== */
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  font-size: 0.875rem;
 }
