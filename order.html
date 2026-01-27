@@ -1,0 +1,110 @@
+---
+layout: default
+title: Beställning
+---
+
+<div class="page-wrapper">
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Beställ din 3D-printade hjälm</h1>
+      <p class="lead">Fyll i formuläret nedan för att beställa. Vi kontaktar dig inom 24 timmar för bekräftelse och betalning.</p>
+    </div>
+  </section>
+
+  <section style="max-width: 600px; margin: 2rem auto;">
+    <form id="orderForm" method="POST" action="https://formspree.io/f/YOUR_FORM_ID">
+      
+      <div class="form-group">
+        <label for="product">Produkt</label>
+        <select id="product" name="product" required>
+          <option value="">Välj produkt...</option>
+          <option value="Boba Fett Hjälm - 1600 kr">Boba Fett Hjälm - 1600 kr</option>
+          <option value="Darth Vader Hjälm - 1500 kr">Darth Vader Hjälm - 1500 kr</option>
+          <option value="Clone Trooper Phase 1 - 1500 kr">Clone Trooper Phase 1 - 1500 kr</option>
+          <option value="The Mandalorian - 1500 kr">The Mandalorian - 1500 kr</option>
+          <option value="Captain Rex - 1800 kr">Captain Rex - 1800 kr</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="material">Material</label>
+        <select id="material" name="material" required>
+          <option value="">Välj material...</option>
+          <option value="PLA (Standard)">PLA (Standard)</option>
+          <option value="PETG (Slagtåligt)">PETG (Slagtåligt)</option>
+          <option value="ABS (Värmetåligt)">ABS (Värmetåligt)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="size">Storlek</label>
+        <select id="size" name="size" required>
+          <option value="">Välj storlek...</option>
+          <option value="Standard (Vuxen 1:1)">Standard (Vuxen 1:1)</option>
+          <option value="Display / Barn">Display / Barn</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Antal</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Ditt namn</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-post</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefon</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Särskilda önskemål / Noteringar</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary" style="width: 100%; padding: 0.7rem;">Skicka beställning</button>
+    </form>
+  </section>
+</div>
+
+<style>
+  .form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #e5e7eb;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.6rem;
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid #1f2937;
+    border-radius: 6px;
+    color: #e5e7eb;
+    font-family: inherit;
+    font-size: 1rem;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.1);
+  }
+</style>
