@@ -1,274 +1,66 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="utf-8">
-    <title>Priser & vanliga frågor – SwePrint3D</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }} – SwePrint3D</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* BAS-STIL */
+    body { margin: 0; font-family: system-ui, sans-serif; background: linear-gradient(to bottom, #ffffff, #f3f4f6); color: #111827; line-height: 1.5; }
+    header, main, footer { max-width: 1100px; margin: 0 auto; padding: 1.5rem; }
+    
+    /* HEADER */
+    header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e5e7eb; background: #ffffffcc; backdrop-filter: blur(8px); position: sticky; top: 0; z-index: 100; }
+    .brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: inherit; font-weight: 700; }
+    .brand img { height: 40px; width: 40px; border-radius: 0.5rem; object-fit: cover; }
+    nav a { font-size: 0.9rem; color: #4b5563; text-decoration: none; padding: 0.35rem 0.8rem; border-radius: 999px; }
+    nav a:hover { background: #f3f4f6; color: #111827; }
 
-    <style>
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        background: linear-gradient(to bottom, #ffffff, #f3f4f6);
-        color: #111827;
-      }
+    /* KOMPONENTER */
+    .chip { display: inline-block; padding: 0.35rem 0.75rem; border-radius: 999px; border: 1px solid #e5e7eb; background: #fff; font-size: 0.8rem; color: #4b5563; margin-top: 1rem; }
+    .btn-row { margin-top: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .btn { padding: 0.6rem 1.3rem; border-radius: 999px; font-size: 0.9rem; text-decoration: none; display: inline-block; }
+    .btn-primary { background: #111827; color: #fff; }
+    .btn-outline { border: 1px solid #d1d5db; color: #111827; background: #ffffffaa; }
 
-      header, main, footer {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 1.5rem;
-      }
+    /* GRIDS & CARDS */
+    .cards, .grid, .gallery { display: grid; gap: 1.5rem; margin-top: 2rem; }
+    @media (min-width: 768px) {
+      .cards, .grid, .gallery { grid-template-columns: repeat(3, 1fr); }
+      .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    }
+    .card { background: #fff; border-radius: 1rem; border: 1px solid #e5e7eb; padding: 1.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-decoration: none; color: inherit; transition: 0.2s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    .card img { width: 100%; border-radius: 0.75rem; margin-bottom: 1rem; height: 200px; object-fit: cover; }
+    .price { font-weight: 700; color: #059669; }
 
-      main {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
-      }
+    /* FOOTER */
+    footer { margin-top: 4rem; border-top: 1px solid #e5e7eb; font-size: 0.85rem; color: #6b7280; display: grid; gap: 1.5rem; }
+    @media (min-width: 640px) { footer { grid-template-columns: 1.5fr 1.5fr 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/" class="brand">
+      <img src="/images/logo.jpg" alt="SwePrint3D">
+      <div class="logo">SwePrint3D</div>
+    </a>
+    <nav>
+      <a href="/">Start</a>
+      <a href="/butik.html">Butik</a>
+      <a href="/priser-och-faq.html">Priser & FAQ</a>
+      <a href="https://www.tradera.com/profile/items/1577517/sweprint3d">Tradera</a>
+    </nav>
+  </header>
 
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #e5e7eb;
-        background: #ffffffcc;
-        backdrop-filter: blur(8px);
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
+  <main>
+    {{ content }}
+  </main>
 
-      header img {
-        height: 40px;
-        width: 40px;
-        border-radius: 0.5rem;
-        object-fit: cover;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-      }
-
-      header nav a {
-        font-size: 0.9rem;
-        color: #4b5563;
-        text-decoration: none;
-        padding: 0.35rem 0.8rem;
-        border-radius: 999px;
-      }
-
-      header nav a:hover {
-        background: #f3f4f6;
-      }
-
-      .logo {
-        font-weight: 700;
-        letter-spacing: 0.03em;
-      }
-
-      h1 {
-        margin-top: 1.25rem;
-        font-size: 2rem;
-      }
-
-      h2 {
-        margin-top: 2rem;
-        font-size: 1.3rem;
-      }
-
-      h3 {
-        margin-top: 0.75rem;
-        font-size: 1rem;
-      }
-
-      .lead {
-        margin-top: 0.75rem;
-        max-width: 40rem;
-        color: #4b5563;
-      }
-
-      ul {
-        margin-top: 0.5rem;
-        padding-left: 1.1rem;
-        font-size: 0.9rem;
-        color: #4b5563;
-      }
-
-      .grid-2 {
-        margin-top: 1rem;
-        display: grid;
-        gap: 1rem;
-      }
-
-      @media (min-width: 768px) {
-        .grid-2 {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-      }
-
-      .faq-item {
-        margin-top: 1rem;
-        padding: 0.75rem 1rem;
-        background: #fff;
-        border-radius: 0.75rem;
-        border: 1px solid #e5e7eb;
-        font-size: 0.9rem;
-      }
-
-      figure {
-        margin: 1.5rem 0;
-        background: #fff;
-        border-radius: 1rem;
-        border: 1px solid #e5e7eb;
-        padding: 0.75rem;
-        box-shadow: 0 1px 2px rgb(0 0 0 / 0.04);
-        font-size: 0.85rem;
-        color: #4b5563;
-      }
-
-      figure img {
-        width: 100%;
-        border-radius: 0.75rem;
-        display: block;
-        margin-bottom: 0.5rem;
-      }
-
-      footer {
-        margin-top: 2.5rem;
-        border-top: 1px solid #e5e7eb;
-        font-size: 0.85rem;
-        color: #6b7280;
-        display: grid;
-        gap: 0.75rem;
-      }
-
-      @media (min-width: 640px) {
-        footer {
-          grid-template-columns: 1.5fr 1.5fr 1fr;
-          align-items: flex-start;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <header>
-      <div class="brand">
-        <img src="images/logo.jpg" alt="SwePrint3D logotyp">
-        <div class="logo">SwePrint3D</div>
-      </div>
-      <nav>
-        <a href="index.html">Start</a>
-        <a href="butik.html">Butik</a>
-        <a href="priser-och-faq.html">Priser & FAQ</a>
-        <a href="https://www.tradera.com/profile/items/1577517/sweprint3d">Tradera</a>
-      </nav>
-    </header>
-
-    <main>
-      <h1>Priser & vanliga frågor</h1>
-      <p class="lead">
-        Här hittar du ungefärliga prisnivåer och svar på vanliga frågor om beställning, material och leverans.
-      </p>
-
-      <section>
-        <h2>Hur priset räknas ut</h2>
-        <p>
-          Priset på en 3D‑print beror på materialåtgång, printtid och efterarbete. 
-          Skicka alltid en länk eller fil för ett exakt prisförslag.
-        </p>
-        <ul>
-          <li><strong>Material:</strong> Vikt (gram) och plasttyp (PLA, PETG, ABS/ASA, TPU).</li>
-          <li><strong>Printtid:</strong> Hur länge maskinen arbetar med din modell.</li>
-          <li><strong>Efterarbete:</strong> Support-borttagning och enklare slipning.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2>Prisexempel (ca-nivåer)</h2>
-        <div class="grid-2">
-          <div>
-            <h3>Mindre delar & hållare</h3>
-            <ul>
-              <li>Fästen, batterihållare eller små reservdelar.</li>
-              <li>Ofta från ca 100–300 kr beroende på antal och storlek.</li>
-            </ul>
-
-            <h3>Figurer & display</h3>
-            <ul>
-              <li>Detaljerade samlarfigurer eller statyer.</li>
-              <li>Spann från ca 300 kr upp till 1 000 kr för stora modeller.</li>
-            </ul>
-          </div>
-
-          <div>
-            <h3>Hjälmar (1:1)</h3>
-            <ul>
-              <li>Hjälmar för cosplay redo för efterbehandling.</li>
-              <li>Vanligtvis mellan 1 200 kr och 2 000 kr.</li>
-            </ul>
-
-            <h3>Småserier</h3>
-            <ul>
-              <li>Behöver du 10-20 st av samma del? Kontakta för mängdrabatt.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h2>Cosplay & större projekt</h2>
-        <p>
-          SwePrint3D levererar ofta råa utskrifter som kunden själv slipar och målar. 
-          Det är ett kostnadseffektivt sätt att få en proffsig rustning eller hjälm.
-        </p>
-        <figure>
-          <img src="images/halo_rustning_massa.jpg" alt="Cosplaygrupp med Halo-rustning">
-          <figcaption>
-            Den blå rustningen i mitten är ett Halo‑bygge där SwePrint3D levererat 3D‑utskrifterna.
-          </figcaption>
-        </figure>
-      </section>
-
-      <section>
-        <h2>Vanliga frågor (FAQ)</h2>
-
-        <div class="faq-item">
-          <h3>Hur får jag ett exakt pris?</h3>
-          <p>Maila en länk (t.ex. Thingiverse/Printables) eller bifoga en STL-fil till oss.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Gör du målning?</h3>
-          <p>Fokus ligger på utskrift och grundarbete. Målning och finspackling görs oftast av kunden.</p>
-        </div>
-
-        <div class="faq-item">
-          <h3>Hur lång är leveranstiden?</h3>
-          <p>Normalt 1–2 veckor beroende på projektets storlek och nuvarande kö.</p>
-        </div>
-      </section>
-
-      <section>
-        <h2>Kontakta för offert</h2>
-        <p>
-          Maila: <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a>
-        </p>
-      </section>
-    </main>
-
-    <footer>
-      <div>
-        <strong>SwePrint3D</strong><br>
-        3D‑printade modeller & kit.
-      </div>
-      <div>
-        <strong>Kontakt</strong><br>
-        E‑post: <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a>
-      </div>
-      <div>
-        © 2025 SwePrint3D
-      </div>
-    </footer>
-  </body>
+  <footer>
+    <div><strong>SwePrint3D</strong><br>3D‑printade modeller & kit på beställning.</div>
+    <div><strong>Kontakt</strong><br>E‑post: <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a></div>
+    <div>© {{ "now" | date: "%Y" }} SwePrint3D</div>
+  </footer>
+</body>
 </html>
