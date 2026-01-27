@@ -12,14 +12,13 @@ price_from: 1500
 tech_info: "ca 45h printtid | Skala 1:1 | Material: PLA+"
 
 images:
-  - src: "/images/clone-trooper-1.webp"
+  - src: "/images/clone-trooper-helmet1.jpg"
     alt: "Clone Trooper-hjälm framifrån"
-  - src: "/images/clone-trooper-2.webp"
+  - src: "/images/clone-trooper-helmet2.jpg"
     alt: "Clone Trooper-hjälm från sidan"
-  - src: "/images/clone-trooper-3.webp"
-    alt: "Clone Trooper-hjälm bakifrån"
-  - src: "/images/clone-trooper-4.webp"
-    alt: "Clone Trooper-hjälm på display"
+  - src: "/images/clone-trooper-helmet3.jpg"
+    alt: "Clone Trooper-hjälm snett framifrån"
+
 
 
 kit_contents:
