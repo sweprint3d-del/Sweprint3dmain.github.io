@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="sv">
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }} – SwePrint3D</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <a href="/" class="brand">
-      <img src="/images/logo.jpg" alt="SwePrint3D">
-      <div class="logo">SwePrint3D</div>
-    </a>
-    <nav>
-      <a href="/">Start</a>
-      <a href="/butik.html">Butik</a>
-      <a href="/priser-och-faq.html">Priser & FAQ</a>
-      <a href="https://www.tradera.com/profile/items/1577517/sweprint3d" target="_blank">Tradera</a>
-    </nav>
-  </header>
-
-  <main>
-    {{ content }}
-  </main>
-
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <strong>SwePrint3D</strong><br>
-        3D‑printade modeller & kit på beställning.
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }} – SwePrint3D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <a href="/" class="logo">
+          <span class="logo-title">SwePrint3D</span>
+          <span class="logo-subtitle">3D‑printade modeller &amp; kit</span>
+        </a>
+        <nav>
+          <a href="/">Start</a>
+          <a href="/butik.html">Butik</a>
+          <a href="/priser-och-faq.html">Priser &amp; FAQ</a>
+          <a href="https://www.tradera.com/profile/items/1577517/sweprint3d">Tradera</a>
+        </nav>
       </div>
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+
+    <footer>
+      <div><strong>SwePrint3D</strong><br />3D‑printade modeller &amp; kit på beställning.</div>
       <div>
-        <strong>Kontakt</strong><br>
-        E‑post: <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a>
+        <strong>Kontakt</strong><br />E‑post:
+        <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a>
       </div>
-      <div>
-        © {{ "now" | date: "%Y" }} SwePrint3D
-      </div>
-    </div>
-  </footer>
-</body>
+      <div>© {{ "now" | date: "%Y" }} SwePrint3D</div>
+    </footer>
+  </body>
 </html>
+
