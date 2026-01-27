@@ -93,8 +93,33 @@ layout: default
         </button>
       </div>
 
-      {{ content }}
-    </div>
-  </section>
+     {{ content }}
 </div>
+</section>
+</div>
+
+<script>
+  document.querySelectorAll('.product-thumb').forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const newImg = this.querySelector('img');
+      const newSrc = newImg.src;
+      const newAlt = newImg.alt;
+      
+      const mainImg = document.querySelector('.product-image-main img');
+      mainImg.src = newSrc;
+      mainImg.alt = newAlt;
+      
+      document.querySelectorAll('.product-thumb').forEach(btn => {
+        btn.style.opacity = '0.6';
+      });
+      this.style.opacity = '1';
+    });
+  });
+  
+  const firstThumb = document.querySelector('.product-thumb');
+  if (firstThumb) firstThumb.style.opacity = '1';
+</script>
+
 
