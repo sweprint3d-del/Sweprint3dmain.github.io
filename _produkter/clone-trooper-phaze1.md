@@ -23,11 +23,11 @@ images:
 
 
 kit_contents:
-  - "Huvuddel (dome & face, Phase 1-design)"
+  - "Huvuddel (dome & face)"
   - "Bakstycke"
   - "Ventiler och kinddetaljer"
   - "Nack-/krageparti"
-  - "Linsöppning anpassad för separat visir"
+  - "Commander-tillägg: visir, 2 antenndelar och optiskt sikte"
 
 materials:
   - name: "PLA (Standard - Bäst detaljer)"
