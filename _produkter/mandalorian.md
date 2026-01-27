@@ -1,20 +1,37 @@
 ---
 layout: product
-title: "The Mandalorian Hjälm"
 category: helmets
+
 product_name: "The Mandalorian Hjälm"
 subtitle: "Din Djarin – Beskar Style"
+
 description: "This is the way. En stilren och blank Mandalorian-hjälm."
 description_long: "Mando-hjälmen är känd för sina rena linjer. Den printas med extra hög upplösning för att underlätta slipningen mot den kromade finishen."
+
 price_from: 1500
 tech_info: "ca 40h printtid | Skala 1:1 | Mycket detaljerad"
 
 images:
   - src: "/images/the-mandalorian-helmet1.webp"
-    alt: "The Mandalorian Hjälm"
+    alt: "The Mandalorian-hjälm framifrån"
+  - src: "/images/the-mandalorian-helmet2.webp"
+    alt: "The Mandalorian-hjälm från sidan"
+  - src: "/images/the-mandalorian-helmet3.webp"
+    alt: "The Mandalorian-hjälm snett framifrån"
+  - src: "/images/the-mandalorian-helmet4.webp"
+    alt: "The Mandalorian-hjälm bakifrån"
+  - src: "/images/the-mandalorian-helmet5.webp"
+    alt: "Närbild på detaljer på The Mandalorian-hjälmen"
+  - src: "/images/the-mandalorian-helmet6.webp"
+    alt: "The Mandalorian-hjälm på display"
+
+
+kit_contents:
+  - "Hjälmskal i flera delar"
+  - "T-visor-öppning för separat lins"
+  - "Detaljdelar runt öron och bakstycke"
 
 materials:
-  - name: "PLA+"
-    value: plaplus
+  - name: "PLA+ (Standard - Bäst detaljer)"
+    value: "pla-plus"
 ---
- 
