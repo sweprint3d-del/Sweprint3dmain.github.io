@@ -2,7 +2,7 @@
 layout: product
 category: helmets
 
-product_name: "Clone Trooper Hjälm"
+product_name: "Clone Trooper Hjälm – Phase 2"
 subtitle: "Phase 2 – Raw 3D Printed Kit"
 
 description: "Klassisk Clone Trooper-hjälm (Phase 2) – rå 3D-printad i högkvalitativ plast. Perfekt för cosplay."
