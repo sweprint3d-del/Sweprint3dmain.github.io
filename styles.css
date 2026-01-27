@@ -463,3 +463,110 @@ footer {
     padding: 1.25rem 1.1rem;
   }
 }
+
+/* =====================
+   Produktsidor
+===================== */
+
+.product-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3rem;
+}
+
+.product-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); /* bilder + text */
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+/* Bilder vänster, text höger */
+.product-gallery {
+  order: 1;
+}
+.product-main {
+  order: 2;
+}
+
+.product-images {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+.product-thumbs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.product-thumb img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Textdelen */
+.product-main h1 {
+  margin: 0 0 0.4rem;
+}
+
+.product-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.8rem;
+}
+
+.product-description {
+  margin-bottom: 1rem;
+}
+
+.product-kit {
+  margin: 1.2rem 0 1.5rem;
+}
+
+.product-purchase {
+  margin-top: 1rem;
+}
+
+.product-price {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.product-tech {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.6rem;
+}
+
+.product-field {
+  margin-bottom: 0.5rem;
+}
+
+.primary-button {
+  margin-top: 0.75rem;
+  padding: 0.55rem 1.3rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  background: var(--accent);
+  color: #022c22;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Stacka på mobil */
+@media (max-width: 800px) {
+  .product-hero {
+    grid-template-columns: 1fr;
+  }
+}
