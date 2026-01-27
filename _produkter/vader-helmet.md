@@ -15,9 +15,9 @@ images:
   - src: "/images/vader-helmet-1.jpg"
     alt: "Darth Vader-hjälm framifrån"
   - src: "/images/vader-helmet-2.jpg"
-     alt: "Darth Vader-hjälm från sidan"
-   - src: "/images/vader-helmet-3.jpg"
-     alt: "Närbild på detaljer"
+    alt: "Darth Vader-hjälm från sidan"
+  - src: "/images/vader-helmet-3.jpg"
+    alt: "Närbild på detaljer"
 
 kit_contents:
   - "Ansiktsdel"
