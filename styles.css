@@ -423,18 +423,128 @@ li + li {
 }
 
 /* =====================
-   Footer
+   Footer - Uppdaterad layout
 ===================== */
 
 footer {
   background: #f9f9f9;
   color: var(--text-muted);
-  text-align: center;
-  padding: 2rem 1.5rem 2.5rem;
+  padding: 2.5rem 1.5rem;
   margin-top: 3rem;
   border-top: 1px solid #ddd;
   font-size: 0.85rem;
 }
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--accent);
+}
+
+.footer-social {
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.footer-social a:hover {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-right p {
+  margin: 0.2rem 0;
+  color: var(--text-muted);
+}
+
+.footer-right a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-col {
+    width: 100%;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .footer-links li {
+    margin-bottom: 0;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-right {
+    text-align: center;
+  }
+}
+
 
 /* =====================
    Responsivitet
