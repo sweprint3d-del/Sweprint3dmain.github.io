@@ -20,6 +20,8 @@ images:
     alt: "Phase 1 Clone Trooper-hjälm snett framifrån"
   - src: "/images/Phaze-1Clone-trooper4.webp"
     alt: "Phase 1 Clone Trooper-hjälm på display"
+    - src: "/images/Phaze-1Clone-trooper5.webp"
+    alt: "Phase 1 Clone Trooper-hjälm Commander"
 
 
 kit_contents:
