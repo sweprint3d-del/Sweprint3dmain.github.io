@@ -4,6 +4,27 @@ layout: default
 
 <div class="page-wrapper product-page">
   <section class="product-hero">
+    <aside class="product-gallery">
+      {% if page.images %}
+      <div class="product-images">
+        {% assign main_image = page.images | first %}
+        <figure class="product-image product-image-main">
+          <img src="{{ main_image.src }}" alt="{{ main_image.alt }}">
+        </figure>
+
+        {% if page.images.size > 1 %}
+        <div class="product-thumbs">
+          {% for image in page.images %}
+          <button class="product-thumb">
+            <img src="{{ image.src }}" alt="{{ image.alt }}">
+          </button>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+    </aside>
+
     <div class="product-main">
       {% if page.category %}
       <p class="hero-kicker">{{ page.category | upcase }}</p>
@@ -12,19 +33,13 @@ layout: default
       <h1>{{ page.product_name }}</h1>
 
       {% if page.subtitle %}
-      <p class="product-subtitle">
-        {{ page.subtitle }}
-      </p>
+      <p class="product-subtitle">{{ page.subtitle }}</p>
       {% endif %}
 
       {% if page.description_long %}
-      <p class="product-description">
-        {{ page.description_long }}
-      </p>
+      <p class="product-description">{{ page.description_long }}</p>
       {% elsif page.description %}
-      <p class="product-description">
-        {{ page.description }}
-      </p>
+      <p class="product-description">{{ page.description }}</p>
       {% endif %}
 
       {% if page.kit_contents %}
@@ -69,7 +84,7 @@ layout: default
 
         <div class="product-field">
           <label for="quantity">Antal</label>
-          <input type="number" id="quantity" min="1" value="1" />
+          <input type="number" id="quantity" min="1" value="1">
         </div>
 
         <button class="primary-button"
@@ -80,18 +95,6 @@ layout: default
 
       {{ content }}
     </div>
-
-    <aside class="product-gallery">
-      {% if page.images %}
-      <div class="product-images">
-        {% for image in page.images %}
-        <figure class="product-image">
-          <img src="{{ image.src }}" alt="{{ image.alt }}">
-        </figure>
-        {% endfor %}
-      </div>
-      {% endif %}
-    </aside>
   </section>
 </div>
 
