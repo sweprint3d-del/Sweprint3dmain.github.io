@@ -12,13 +12,13 @@ price_from: 1800
 tech_info: "ca 52h printtid | Skala 1:1 | Material: PLA | Passar 22-24 tum omkrets"
 
 images:
-  - src: "/images/captain-rex-helmet1.webp"
+  - src: "images/realistic-captain-rex1.webp"
     alt: "Captain Rex Hjälm framifrån"
-  - src: "/images/captain-rex-helmet2.webp"
+  - src: "images/realistic-captain-rex2.webp"
     alt: "Captain Rex Hjälm med antenn"
-  - src: "/images/captain-rex-helmet3.webp"
+  - src: "images/realistic-captain-rex3.webp"
     alt: "Captain Rex Hjälm från sidan"
-  - src: "/images/captain-rex-helmet4.webp"
+  - src: "images/realistic-captain-rex4.webp"
     alt: "Närbild på detaljer"
 
 kit_contents:
