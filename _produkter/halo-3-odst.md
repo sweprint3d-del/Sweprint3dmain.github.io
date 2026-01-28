@@ -1,92 +1,46 @@
 ---
-layout: default
-title: Halo 3 ODST Hjälm
+layout: product
+category: helmets
+
+product_name: "Halo 3 ODST Hjälm"
+subtitle: "Fullskalig rå 3D-print – cosplaykit"
+
+description: "ODST-inspirerad hjälm från Halo 3/Halo 3: ODST – rå 3D-printad i flera delar, perfekt för egen målning och weathering."
+description_long: "Den här ODST-hjälmen är inspirerad av designen från Halo 3 och Halo 3: ODST. Hjälmen printas i flera större sektioner för bästa passform och stabilitet, samt mindre detaljdelar. Du får ett rått 3D-printat kit som du själv slipar, spacklar och målar för att få exakt den look du vill ha."
+
+price_from: 1600
+tech_info: "ca 50–60h printtid | Skala 1:1 | Material: PLA+ / PETG"
+
+images:
+  - src: "/images/halo-odst/DSC00949_1024x1024.jpg"
+    alt: "Halo 3 ODST-hjälm från sidan"
+  - src: "/images/halo-odst/DSC00948_1024x1024.jpg"
+    alt: "Halo 3 ODST-hjälm – alla delar i kitet"
+  - src: "/images/halo-odst/DSC00957_1024x1024.jpg"
+    alt: "Halo 3 ODST-hjälm – höger sida"
+  - src: "/images/halo-odst/DSC00945_1024x1024.jpg"
+    alt: "Halo 3 ODST-hjälm framifrån"
+  - src: "/images/halo-odst/DSC00952_1024x1024.jpg"
+    alt: "Halo 3 ODST-hjälm uppifrån"
+
+kit_contents:
+  - "Nedre hjälmsektion"
+  - "Övre hjälmskal"
+  - "Frontlist / kantdetalj"
+  - "Små intaks-/ventdetaljer"
+  - "Råprints utan målning – redo för slipning och filler"
+
+materials:
+  - name: "PLA (Standard – bra detalj och styvhet)"
+    value: "pla"
+  - name: "PETG (Mer slagtåligt)"
+    value: "petg"
+  - name: "ABS (För dig som vill ha extra värmetålighet)"
+    value: "abs"
+
+sizes:
+  - name: "Standard (Vuxen 1:1)"
+    value: "adult"
+  - name: "Display / Mindre huvud"
+    value: "display"
 ---
-
-<div class="product-page">
-  <div class="product-hero">
-    
-    <!-- Bilder vänster -->
-    <div class="product-gallery">
-      <div class="product-images">
-        <div class="product-image">
-          <img src="/images/halo3-odst1.wepb" alt="Halo 3 ODST Hjälm – sida">
-        </div>
-        <div class="product-image">
-          <img src="/images/halo-odst/halo3-odst2.wepb" alt="Halo 3 ODST Hjälm – delar">
-        </div>
-        <div class="product-image">
-          <img src="/images/halo-odst/halo3-odst3.wepb" alt="Halo 3 ODST Hjälm – höger sida">
-        </div>
-        <div class="product-image">
-          <img src="/halo-odst/halo3-odst1.wepb4" alt="Halo 3 ODST Hjälm – framifrån">
-        </div>
-        <div class="product-image">
-          <img src="/halo-odst/halo3-odst1.wepb5" alt="Halo 3 ODST Hjälm – topp">
-        </div>
-      </div>
-    </div>
-
-    <!-- Text höger -->
-    <div class="product-main">
-      <h1>Halo 3 ODST Hjälm – 1:1 cosplaykit</h1>
-      <p class="product-subtitle">
-        Rå 3D-printad hjälm inspirerad av ODST från Halo 3 / Halo 3: ODST. Perfekt som grund för din egen målning och weathering.
-      </p>
-
-      <div class="product-description">
-        <p>
-          Hjälmen levereras som ett omonterat, rå-3D-printat kit – exakt som på bilderna. 
-          Delarna är uppdelade för att vara enkla att efterbearbeta, limma ihop och slipa inför målning.
-        </p>
-      </div>
-
-      <div class="product-kit">
-        <h2>Detta ingår</h2>
-        <ul>
-          <li>Övre hjälmskal</li>
-          <li>Nedre hjälmsektion</li>
-          <li>Detaljdelar (frontlist och små intaksdetaljer)</li>
-          <li>Råprints utan målning – redo för slipning, filler och färg</li>
-        </ul>
-      </div>
-
-      <div class="product-purchase">
-        <p class="product-price">Pris: från 1 600 kr</p>
-        <p class="product-tech">
-          Levereras som rå-3D-print i valfritt material (PLA / PETG / ABS) beroende på dina önskemål.
-        </p>
-
-        <div class="product-field">
-          <strong>Skala:</strong> Fullskalig 1:1 för vuxen huvudstorlek (kan skalas efter önskemål).
-        </div>
-        <div class="product-field">
-          <strong>Produktionstid:</strong> ca 1–3 veckor beroende på kö och materialval.
-        </div>
-
-        <a class="primary-button" href="/bestallning.html?product=Halo%203%20ODST%20Hj%C3%A4lm">
-          Beställ ODST-hjälm
-        </a>
-      </div>
-
-      <div class="product-kit">
-        <h2>För dig som bygger själv</h2>
-        <p>
-          Hjälmen är avsedd för dig som vill göra slipning, filler, målning och visir själv. 
-          Rekommenderas till dig som redan har lite erfarenhet av 3D-printade props eller vill ge dig på ett mer avancerat projekt.
-        </p>
-      </div>
-
-      <div class="product-kit">
-        <h2>Rekommenderade steg efter leverans</h2>
-        <ul>
-          <li>Provmontera alla delar och planera limning</li>
-          <li>Limma med epoxy eller stark CA-lim</li>
-          <li>Slipa, spackla och filler-prima ytan</li>
-          <li>Måla med grundfärg, basfärg och weathering</li>
-          <li>Montera visir (vacuumformad plast, face shield eller liknande)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
