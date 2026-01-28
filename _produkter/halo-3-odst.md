@@ -12,15 +12,15 @@ price_from: 1600
 tech_info: "ca 50–60h printtid | Skala 1:1 | Material: PLA+ / PETG"
 
 images:
-  - src: "/images/images/halo3-odst1.webp"
+  - src: "/images/halo3-odst1.webp"
     alt: "Halo 3 ODST-hjälm från sidan"
-  - src: "/images/images/halo3-odst2.webp"
+  - src: "/images/halo3-odst2.webp"
     alt: "Halo 3 ODST-hjälm – alla delar i kitet"
-  - src: "/images/images/halo3-odst3.webp"
+  - src: "/images/halo3-odst3.webp"
     alt: "Halo 3 ODST-hjälm – höger sida"
-  - src: "/images/images/halo3-odst4.webp"
+  - src: "/images/halo3-odst4.webp"
     alt: "Halo 3 ODST-hjälm framifrån"
-  - src: "/images/images/halo3-odst5.webp"
+  - src: "/images/halo3-odst5.webp"
     alt: "Halo 3 ODST-hjälm uppifrån"
 
 kit_contents:
