@@ -10,19 +10,19 @@ title: Halo 3 ODST Hjälm
     <div class="product-gallery">
       <div class="product-images">
         <div class="product-image">
-          <img src="/images/halo-odst/DSC00949_1024x1024.jpg" alt="Halo 3 ODST Hjälm – sida">
+          <img src="/images/halo3-odst1.wepb" alt="Halo 3 ODST Hjälm – sida">
         </div>
         <div class="product-image">
-          <img src="/images/halo-odst/DSC00948_1024x1024.jpg" alt="Halo 3 ODST Hjälm – delar">
+          <img src="/images/halo-odst/halo3-odst2.wepb" alt="Halo 3 ODST Hjälm – delar">
         </div>
         <div class="product-image">
-          <img src="/images/halo-odst/DSC00957_1024x1024.jpg" alt="Halo 3 ODST Hjälm – höger sida">
+          <img src="/images/halo-odst/halo3-odst3.wepb" alt="Halo 3 ODST Hjälm – höger sida">
         </div>
         <div class="product-image">
-          <img src="/images/halo-odst/DSC00945_1024x1024.jpg" alt="Halo 3 ODST Hjälm – framifrån">
+          <img src="/halo-odst/halo3-odst1.wepb4" alt="Halo 3 ODST Hjälm – framifrån">
         </div>
         <div class="product-image">
-          <img src="/images/halo-odst/DSC00952_1024x1024.jpg" alt="Halo 3 ODST Hjälm – topp">
+          <img src="/halo-odst/halo3-odst1.wepb5" alt="Halo 3 ODST Hjälm – topp">
         </div>
       </div>
     </div>
