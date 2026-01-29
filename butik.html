@@ -75,3 +75,33 @@ title: Butik
   </section>
 </div>
 
+  <!-- ORGANIZERS -->
+  <section class="shop-section">
+    <h2>Organizers</h2>
+
+    <div class="cards">
+      {% assign organizers = site.produkter | where: "category", "organizers" %}
+      {% for produkt in organizers %}
+      <a href="{{ produkt.url }}" class="card">
+        <div class="card-image">
+          {% if produkt.tag %}
+          <span class="card-tag">{{ produkt.tag }}</span>
+          {% endif %}
+          <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+        </div>
+
+        <div class="card-body">
+          <h3>{{ produkt.product_name }}</h3>
+          <p>{{ produkt.subtitle }}</p>
+          <div class="price-row">
+            <span class="price">Från {{ produkt.price_from }} kr</span>
+            {% if produkt.material %}
+            <span class="price-note">{{ produkt.material }}</span>
+            {% endif %}
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
