@@ -14,8 +14,21 @@ title: Butik
     </div>
   </section>
 
+  <!-- FILTERKNAPPAR -->
+  <section class="shop-filters">
+    <button class="filter-button is-active" data-target="helmets">
+      Helmets &amp; Armor
+    </button>
+    <button class="filter-button" data-target="kit-cards">
+      Kit &amp; Cards
+    </button>
+    <button class="filter-button" data-target="organizers">
+      Organizers
+    </button>
+  </section>
+
   <!-- HELMETS -->
-  <section class="shop-section">
+  <section class="shop-section" data-section="helmets">
     <h2>Helmets &amp; Armor</h2>
 
     <div class="cards">
@@ -45,7 +58,7 @@ title: Butik
   </section>
 
   <!-- KIT CARDS -->
-  <section class="shop-section">
+  <section class="shop-section" data-section="kit-cards">
     <h2>Kit &amp; Cards</h2>
 
     <div class="cards">
@@ -73,10 +86,9 @@ title: Butik
       {% endfor %}
     </div>
   </section>
-</div>
 
   <!-- ORGANIZERS -->
-  <section class="shop-section">
+  <section class="shop-section" data-section="organizers">
     <h2>Organizers</h2>
 
     <div class="cards">
@@ -104,4 +116,36 @@ title: Butik
       {% endfor %}
     </div>
   </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const buttons = document.querySelectorAll('.filter-button');
+      const sections = document.querySelectorAll('.shop-section');
+
+      function showSection(target) {
+        sections.forEach(section => {
+          const key = section.getAttribute('data-section');
+          if (key === target) {
+            section.style.display = '';
+          } else {
+            section.style.display = 'none';
+          }
+        });
+      }
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const target = btn.getAttribute('data-target');
+
+          buttons.forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+
+          showSection(target);
+        });
+      });
+
+      showSection('helmets');
+    });
+  </script>
+</div>
 
