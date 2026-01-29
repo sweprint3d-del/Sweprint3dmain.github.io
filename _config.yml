@@ -5,3 +5,11 @@ collections:
   produkter:
     output: true
     permalink: /produkter/:path/
+
+title: SwePrint3D
+url: "https://sweprint3d.se"
+# ev. baseurl: ""  om du inte har någon subkatalog
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
