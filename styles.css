@@ -720,6 +720,57 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* ===== select & inputs för material, storlek, antal ===== */
+
+.product-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.product-field select,
+.product-field input[type="number"] {
+  width: 100%;
+  max-width: 260px;
+  padding: 0.55rem 0.75rem;
+  border-radius: 999px;
+  border: 1px solid #ccc;
+  background: #ffffff;
+  font-size: 0.95rem;
+  color: #0f1f2e;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.product-field select:focus,
+.product-field input[type="number"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(219,39,50,0.18);
+  transform: translateY(-1px);
+}
+
+.product-field-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.product-field-row .product-field {
+  min-width: 160px;
+}
+
 .primary-button {
   margin-top: 0.75rem;
   padding: 0.55rem 1.3rem;
