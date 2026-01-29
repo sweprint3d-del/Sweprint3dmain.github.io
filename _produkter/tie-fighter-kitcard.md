@@ -12,22 +12,15 @@ price_from: 249
 tech_info: "Printas på beställning. Rek. skala: 100 %. Multicolor‑alternativ kräver AMS (+30 kr)."
 
 images:
-  - src: "/images/tie-fighter-front.webp"
-    alt: "TIE Fighter‑modell framifrån på vit bakgrund."
-  - src: "/images/tie-fighter-sprue.webp"
-    alt: "TIE Fighter‑delar på sprueplatta bredvid monterad modell."
-  - src: "/images/tie-fighter-wing-detail.webp"
-    alt: "Närbild på TIE Fighter‑vinge från framsidan."
-  - src: "/images/tie-fighter-side-view.webp"
-    alt: "TIE Fighter från sidan med vingarna delvis nedfällda."
-  - src: "/images/tie-interceptor-side.webp"
-    alt: "TIE Interceptor från sidan med förlängda vingar på displayställ."
-  - src: "/images/tie-interceptor-back.webp"
-    alt: "TIE Interceptor bakifrån på displayställ, visar vingdetaljer."
-  - src: "/images/tie-sprue-compare.webp"
-    alt: "Sprueplatta med flera TIE‑delar före montering."
-  - src: "/images/tie-interceptor-front.webp"
-    alt: "TIE Interceptor framifrån mot vit bakgrund."
+  - src: "/images/il_1140xN.7376484392_4eey.jpg"
+    alt: "TIE Fighter framifrån på vit bakgrund."
+  - src: "/images/il_1140xN.7376484460_39uj.jpg"
+    alt: "TIE Fighter‑delar på sprueplattor."
+  - src: "/images/il_1140xN.7424407369_pbx4.jpg"
+    alt: "Närbild på TIE Fighter‑vinge framifrån."
+  - src: "/images/il_1140xN.7424407407_1ly3.jpg"
+    alt: "TIE Fighter från sidan med synliga vingdetaljer."
+
 
 kit_contents:
   - "Kropp‑ och vingdelar på sprue"
