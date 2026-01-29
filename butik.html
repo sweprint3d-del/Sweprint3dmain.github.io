@@ -14,47 +14,18 @@ title: Butik
     </div>
   </section>
 
- /* =====================
-   Butik – filterknappar
-===================== */
-
-.shop-filters {
-  display: flex;
-  gap: 1rem;
-  margin: 2rem 0 2.5rem;
-  flex-wrap: wrap;
-}
-
-.filter-button {
-  border: 1px solid #bbb;
-  background: #ffffff;
-  color: #0f1f2e;
-  padding: 0.7rem 1.6rem;
-  border-radius: 999px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
-  transition:
-    background-color var(--transition-fast),
-    color var(--transition-fast),
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.filter-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
-}
-
-.filter-button.is-active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #ffffff;
-}
+ <!-- FILTERKNAPPAR -->
+  <section class="shop-filters">
+    <button class="filter-button is-active" data-target="helmets">
+      Helmets &amp; Armor
+    </button>
+    <button class="filter-button" data-target="kit-cards">
+      Kit &amp; Cards
+    </button>
+    <button class="filter-button" data-target="organizers">
+      Organizers
+    </button>
+  </section>
 
   <!-- HELMETS -->
   <section class="shop-section" data-section="helmets">
