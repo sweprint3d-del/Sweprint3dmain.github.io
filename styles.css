@@ -744,35 +744,38 @@ footer {
 
 .shop-filters {
   display: flex;
-  gap: 0.75rem;
-  margin: 1.5rem 0 2rem;
+  gap: 1rem;
+  margin: 2rem 0 2.5rem;
   flex-wrap: wrap;
 }
 
 .filter-button {
-  border: 1px solid #444;
-  background: #111;
-  color: #eee;
-  padding: 0.5rem 1rem;
+  border: 1px solid #bbb;
+  background: #ffffff;
+  color: #0f1f2e;
+  padding: 0.7rem 1.6rem;
   border-radius: 999px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
   transition:
     background-color var(--transition-fast),
     color var(--transition-fast),
     border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
     transform var(--transition-fast);
 }
 
 .filter-button:hover {
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
 }
 
 .filter-button.is-active {
-  background: #2563eb;
-  border-color: #2563eb;
-  color: #fff;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
 }
