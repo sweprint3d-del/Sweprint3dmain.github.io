@@ -14,6 +14,7 @@ title: Butik
     </div>
   </section>
 
+  <!-- HELMETS -->
   <section class="shop-section">
     <h2>Helmets &amp; Armor</h2>
 
@@ -43,12 +44,13 @@ title: Butik
     </div>
   </section>
 
+  <!-- KIT CARDS -->
   <section class="shop-section">
-    <h2>Props &amp; Stands</h2>
+    <h2>Kit &amp; Cards</h2>
 
     <div class="cards">
-      {% assign props = site.produkter | where: "category", "props" %}
-      {% for produkt in props %}
+      {% assign kitcards = site.produkter | where: "category", "kit-cards" %}
+      {% for produkt in kitcards %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
           {% if produkt.tag %}
