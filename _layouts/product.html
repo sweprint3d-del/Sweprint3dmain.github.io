@@ -4,6 +4,7 @@ layout: default
 
 <div class="page-wrapper product-page">
   <section class="product-hero">
+    <!-- ========== BILDGALLERI ========== -->
     <aside class="product-gallery">
       {% if page.images %}
       <div class="product-images">
@@ -25,6 +26,7 @@ layout: default
       {% endif %}
     </aside>
 
+    <!-- ========== PRODUKTINFORMATION ========== -->
     <div class="product-main">
       {% if page.category %}
       <p class="hero-kicker">{{ page.category | upcase }}</p>
@@ -53,6 +55,7 @@ layout: default
       </div>
       {% endif %}
 
+      <!-- ========== PRIS & VAL (material / storlek / antal) ========== -->
       <div class="product-purchase">
         <p class="product-price">Pris från {{ page.price_from }} kr</p>
 
@@ -60,64 +63,70 @@ layout: default
         <p class="product-tech">{{ page.tech_info }}</p>
         {% endif %}
 
-        {% if page.materials %}
-        <div class="product-field">
-          <label for="material">Material</label>
-          <select id="material">
-            {% for material in page.materials %}
-            <option value="{{ material.value }}">{{ material.name }}</option>
-            {% endfor %}
-          </select>
-        </div>
-        {% endif %}
+        <!-- Rad med alla valbara fält -->
+        <div class="product-field-row">
+          {% if page.materials %}
+          <div class="product-field">
+            <label for="material">Material</label>
+            <select id="material">
+              {% for material in page.materials %}
+              <option value="{{ material.value }}">{{ material.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          {% endif %}
 
-        {% if page.sizes %}
-        <div class="product-field">
-          <label for="size">Storlek</label>
-          <select id="size">
-            {% for size in page.sizes %}
-            <option value="{{ size.value }}">{{ size.name }}</option>
-            {% endfor %}
-          </select>
-        </div>
-        {% endif %}
+          {% if page.sizes %}
+          <div class="product-field">
+            <label for="size">Storlek</label>
+            <select id="size">
+              {% for size in page.sizes %}
+              <option value="{{ size.value }}">{{ size.name }}</option>
+              {% endfor %}
+            </select>
+          </div>
+          {% endif %}
 
-        <div class="product-field">
-          <label for="quantity">Antal</label>
-          <input type="number" id="quantity" min="1" value="1">
+          <div class="product-field">
+            <label for="quantity">Antal</label>
+            <input type="number" id="quantity" min="1" value="1">
+          </div>
         </div>
 
+        <!-- Kontaktknapp -->
         <button class="primary-button"
           onclick="location.href='mailto:sweprint3d@gmail.com?subject=Förfrågan: {{ page.product_name }}'">
           Kontakta för beställning
         </button>
       </div>
 
-     {{ content }}
-</div>
-</section>
+      <!-- Extra innehåll från markdown-filen -->
+      {{ content }}
+    </div>
+  </section>
 </div>
 
+<!-- ========== GALLERI-JS – byt huvudbild när man klickar thumbnail ========== -->
 <script>
   document.querySelectorAll('.product-thumb').forEach(button => {
-    button.addEventListener('click', function(e) {
+    button.addEventListener('click', function (e) {
       e.preventDefault();
-      
+
       const newImg = this.querySelector('img');
       const newSrc = newImg.src;
       const newAlt = newImg.alt;
-      
+
       const mainImg = document.querySelector('.product-image-main img');
       mainImg.src = newSrc;
       mainImg.alt = newAlt;
-      
+
       document.querySelectorAll('.product-thumb').forEach(btn => {
         btn.style.opacity = '0.6';
       });
       this.style.opacity = '1';
     });
   });
-  
+
   const firstThumb = document.querySelector('.product-thumb');
   if (firstThumb) firstThumb.style.opacity = '1';
 </script>
