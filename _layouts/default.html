@@ -26,41 +26,50 @@
       </div>
     </header>
 
-     <footer>
-  <div class="footer-container">
-    <!-- Vänster: info + kontakt -->
-    <div class="footer-col">
-      <strong>SwePrint3D</strong><br />
-      3D‑printade modeller &amp; kit på beställning.<br /><br />
-      <strong>Kontakt</strong><br />
-      E‑post:
-      <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a>
-    </div>
+    <!-- HÄR RENDERAS SIDANS INNEHÅLL -->
+    <main>
+      {{ content }}
+    </main>
 
-    <!-- Mitten: länkar + socialikoner -->
-    <div class="footer-col">
-      <ul class="footer-links">
-        <li><a href="/villkor.html">Villkor</a></li>
-        <li><a href="/returpolicy.html">Returpolicy</a></li>
-      </ul>
+    <!-- GEMENSAM FOOTER -->
+    <footer>
+      <div class="footer-container">
+        <!-- Vänster: info + kontakt -->
+        <div class="footer-col">
+          <strong>SwePrint3D</strong><br />
+          3D‑printade modeller &amp; kit på beställning.<br /><br />
+          <strong>Kontakt</strong><br />
+          E‑post:
+          <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a>
+        </div>
 
-      <div class="footer-social">
-        <a href="https://facebook.com/DITT_KONTO" aria-label="Facebook">
-          <img src="/images/facebook.svg" alt="" class="footer-icon">
-        </a>
-        <a href="https://instagram.com/DITT_KONTO" aria-label="Instagram">
-          <img src="/images/instagram.svg" alt="" class="footer-icon">
-        </a>
-        <a href="https://youtube.com/@DITT_KONTO" aria-label="YouTube">
-          <img src="/images/youtube.svg" alt="" class="footer-icon">
-        </a>
+        <!-- Mitten: länkar + socialikoner -->
+        <div class="footer-col">
+          <ul class="footer-links">
+            <li><a href="/villkor.html">Villkor</a></li>
+            <li><a href="/returpolicy.html">Returpolicy</a></li>
+          </ul>
+
+          <div class="footer-social">
+            <a href="https://facebook.com/DITT_KONTO" aria-label="Facebook">
+              <img src="/images/facebook.svg" alt="" class="footer-icon">
+            </a>
+            <a href="https://instagram.com/DITT_KONTO" aria-label="Instagram">
+              <img src="/images/instagram.svg" alt="" class="footer-icon">
+            </a>
+            <a href="https://youtube.com/@DITT_KONTO" aria-label="YouTube">
+              <img src="/images/youtube.svg" alt="" class="footer-icon">
+            </a>
+          </div>
+        </div>
+
+        <!-- Höger: copyright -->
+        <div class="footer-col footer-right">
+          <p>© {{ "now" | date: "%Y" }} SwePrint3D</p>
+          <p>Powered by GitHub Pages</p>
+        </div>
       </div>
-    </div>
+    </footer>
+  </body>
+</html>
 
-    <!-- Höger: copyright -->
-    <div class="footer-col footer-right">
-      <p>© {{ "now" | date: "%Y" }} SwePrint3D</p>
-      <p>Powered by GitHub Pages</p>
-    </div>
-  </div>
-</footer>
