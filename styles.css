@@ -643,6 +643,12 @@ footer {
   align-items: flex-start;
 }
 
+/* Viktigt: hindra kolumnerna från att spränga varandra */
+.product-gallery,
+.product-main {
+  min-width: 0;
+}
+
 .product-gallery {
   order: 1;
 }
@@ -724,14 +730,6 @@ footer {
   font-weight: 600;
   cursor: pointer;
 }
-
-/* Stacka på mobil */
-@media (max-width: 800px) {
-  .product-hero {
-    grid-template-columns: 1fr;
-  }
-}
-
 
 /* Stacka på mobil */
 @media (max-width: 800px) {
