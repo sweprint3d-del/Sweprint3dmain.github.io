@@ -646,6 +646,7 @@ footer {
 .product-gallery {
   order: 1;
 }
+
 .product-main {
   order: 2;
 }
@@ -723,23 +724,14 @@ footer {
   font-weight: 600;
   cursor: pointer;
 }
-<div class="product-page">
-  <div class="product-hero">
-    <div class="product-gallery">
-      <div class="product-images">
-        {% for image in page.images %}
-        <div class="product-image">
-          <img src="{{ image.src }}" alt="{{ image.alt }}">
-        </div>
-        {% endfor %}
-      </div>
-    </div>
 
-    <div class="product-main">
-      <!-- rubriker, beskrivning, kitlista, pris osv. -->
-    </div>
-  </div>
-</div>
+/* Stacka på mobil */
+@media (max-width: 800px) {
+  .product-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Stacka på mobil */
 @media (max-width: 800px) {
