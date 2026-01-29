@@ -26,17 +26,37 @@
       </div>
     </header>
 
-    <main>
+      <main>
       {{ content }}
     </main>
 
     <footer>
-      <div><strong>SwePrint3D</strong><br />3D‑printade modeller &amp; kit på beställning.</div>
-      <div>
-        <strong>Kontakt</strong><br />E‑post:
-        <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a>
+      <div class="footer-container">
+        <div class="footer-col">
+          <strong>SwePrint3D</strong><br />
+          3D‑printade modeller &amp; kit på beställning.<br /><br />
+          <strong>Kontakt</strong><br />
+          E‑post:
+          <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a>
+        </div>
+
+        <div class="footer-col footer-social">
+          <a href="https://facebook.com/DITT_KONTO" aria-label="Facebook">
+            <img src="/images/facebook.jpg" alt="" class="footer-icon">
+          </a>
+          <a href="https://instagram.com/DITT_KONTO" aria-label="Instagram">
+            <img src="/images/instagram.jpg" alt="" class="footer-icon">
+          </a>
+          <a href="https://youtube.com/@DITT_KONTO" aria-label="YouTube">
+            <img src="/images/youtube.jpg" alt="" class="footer-icon">
+          </a>
+        </div>
+
+        <div class="footer-col footer-right">
+          <p>© {{ "now" | date: "%Y" }} SwePrint3D</p>
+          <p>Powered by GitHub Pages</p>
+        </div>
       </div>
-      <div>© {{ "now" | date: "%Y" }} SwePrint3D</div>
     </footer>
   </body>
 </html>
