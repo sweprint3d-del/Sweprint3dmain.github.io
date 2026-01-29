@@ -20,17 +20,12 @@ images:
     alt: "Röd Dummy 13 i låg action‑pose nära marken."
   - src: "/images/rainbow-text.webp"
     alt: "Flera Dummy 13‑figurer i olika färger i dynamiska poser med texten Dummy 13 Version 1.0."
-  - src: "/images/orange-back.webp"
-    alt: "Orange Dummy 13 på svart stand fotograferad bakifrån i hopp‑pose."
   - src: "/images/grab.webp"
     alt: "Blå och röd Dummy 13 där den blå figuren lyfts upp av den röda."
   - src: "/images/big-little-text.webp"
     alt: "Stor och liten orange Dummy 13 bredvid varandra med text om 250 % och 75 % skala."
   - src: "/images/green.webp"
     alt: "Grön Dummy 13 på svart stand i uppsträckt pose."
-  - src: "/images/frame.webp"
-    alt: "Röd och grå Dummy 13 sida vid sida, en mer pansrad och en mer avskalad."
-
 
 kit_contents:
   - "Figurdelar på sprues (kropp, armar, ben, händer, fötter)"
