@@ -12,13 +12,13 @@ price_from: 249
 tech_info: "Printas på beställning. Rek. skala: 100 %. Multicolor‑alternativ kräver AMS (+30 kr)."
 
 images:
-  - src: "/images/il_1140xN.7376484392_4eey.jpg"
+  - src: "/images/tie-fighter1.jpg"
     alt: "TIE Fighter framifrån på vit bakgrund."
-  - src: "/images/il_1140xN.7376484460_39uj.jpg"
+  - src: "/images/tie-fighter2.jpg"
     alt: "TIE Fighter‑delar på sprueplattor."
-  - src: "/images/il_1140xN.7424407369_pbx4.jpg"
+  - src: "/images/tie-fighter3.jpg"
     alt: "Närbild på TIE Fighter‑vinge framifrån."
-  - src: "/images/il_1140xN.7424407407_1ly3.jpg"
+  - src: "/images/tie-fighter4.jpg"
     alt: "TIE Fighter från sidan med synliga vingdetaljer."
 
 
