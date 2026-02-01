@@ -1,20 +1,22 @@
 ---
 layout: default
-title: Butik
+title: Butik – 3D‑printade hjälmar & kit
 ---
 
 <div class="page-wrapper">
   <section class="hero">
     <div class="hero-inner">
       <p class="hero-kicker">Butik</p>
-      <h1>Färdiga 3D‑printade modeller och kit</h1>
+      <h1>3D‑printade hjälmar, kit & tillbehör</h1>
       <p class="lead">
-        Färdiga 3D‑printade modeller och kit. Klicka på en produkt för detaljer.
+        Här hittar du färdiga 3D‑printade cosplay‑hjälmar, kit och tillbehör. 
+        Alla hjälmar i kategorin <strong>Helmets &amp; Armor</strong> är 3D‑printade under kommersiell licens från Galactic Armory – 
+        du köper en fysisk produkt, inte STL‑filer.
       </p>
     </div>
   </section>
 
- <!-- FILTERKNAPPAR -->
+  <!-- FILTERKNAPPAR -->
   <section class="shop-filters">
     <button class="filter-button is-active" data-target="helmets">
       Helmets &amp; Armor
@@ -30,6 +32,10 @@ title: Butik
   <!-- HELMETS -->
   <section class="shop-section" data-section="helmets">
     <h2>Helmets &amp; Armor</h2>
+    <p class="section-intro">
+      Cosplay‑hjälmar och armor‑delar printade i sektioner för enkel montering och målning. 
+      Modeller av Galactic Armory, 3D‑printade här i Sverige under kommersiell licens – endast fysiska produkter.
+    </p>
 
     <div class="cards">
       {% assign helmets = site.produkter | where: "category", "helmets" %}
@@ -60,6 +66,9 @@ title: Butik
   <!-- KIT CARDS -->
   <section class="shop-section" data-section="kit-cards">
     <h2>Kit &amp; Cards</h2>
+    <p class="section-intro">
+      Mindre props, kit och samlarkort‑inspirerade prints – perfekta som insteg eller present.
+    </p>
 
     <div class="cards">
       {% assign kitcards = site.produkter | where: "category", "kit-cards" %}
@@ -90,6 +99,9 @@ title: Butik
   <!-- ORGANIZERS -->
   <section class="shop-section" data-section="organizers">
     <h2>Organizers</h2>
+    <p class="section-intro">
+      Praktiska organizers och hållare för gaming, hobby och vardag – designade och 3D‑printade av SwePrint3D.
+    </p>
 
     <div class="cards">
       {% assign organizers = site.produkter | where: "category", "organizers" %}
@@ -148,5 +160,4 @@ title: Butik
     });
   </script>
 </div>
-
 
