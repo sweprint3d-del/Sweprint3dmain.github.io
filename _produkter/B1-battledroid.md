@@ -12,12 +12,12 @@ price_from: 850
 tech_info: "ca 25–30h printtid | Skala 1:1 huvud | Material: PLA+"
 
 images:
+  - src: "/images/il_1140xN.6756726162_5x2b.jpg"
+    alt: "B1 Battle Droid-huvud snett framifrån"
   - src: "/images/il_1140xN.6804736307_rjx6.jpg"
     alt: "B1 Battle Droid-huvud framifrån"
   - src: "/images/il_1140xN.6756759096_eafk.jpg"
     alt: "B1 Battle Droid-huvud från sidan"
-  - src: "/images/il_1140xN.6756726162_5x2b.jpg"
-    alt: "B1 Battle Droid-huvud snett framifrån"
   - src: "/images/il_1140xN.6756726476_9ia5.jpg"
     alt: "B1 Battle Droid-huvud bakifrån"
 
