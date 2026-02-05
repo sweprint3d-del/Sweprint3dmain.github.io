@@ -2,14 +2,14 @@
 layout: product
 category: helmets
 
-product_name: "Clone Trooper Hjälm – Phase 2"
-subtitle: "Phase 2 – Raw 3D Printed Kit"
+product_name: "Clone Trooper hjälm – Phase 2 (1:1 cosplay-kit)"
+subtitle: "Rå 3D‑printad Clone Trooper-hjälm – redo för slipning och målning"
 
-description: "Klassisk Clone Trooper-hjälm (Phase 2) – rå 3D-printad i högkvalitativ plast. Perfekt för cosplay."
-description_long: "Detta är en Phase 2 Clone Trooper-hjälm, känd från The Clone Wars och Revenge of the Sith. Hjälmen printas i flera delar för att garantera bästa möjliga yta och passform. Den levereras som ett rått kit, vilket betyder att du själv slipar och målar den för att få den perfekta finishen."
+description: "Clone Trooper hjälm Phase 2 – rå 3D‑printad i högkvalitativ plast i skala 1:1. Perfekt som bas för cosplay eller displayhjälm."
+description_long: "Detaljerad Clone Trooper hjälm (Phase 2) känd från The Clone Wars och Revenge of the Sith. Hjälmen 3D‑printas i flera delar för bästa passform och så lite synliga layer lines som möjligt. Du får ett rått 3D‑printat kit som du själv slipar, spacklar och målar för att skapa din egen unika Clone Trooper cosplayhjälm eller displayhjälm."
 
 price_from: 1500
-tech_info: "ca 45h printtid | Skala 1:1 | Material: PLA+"
+tech_info: "ca 45h printtid | Skala 1:1 | Material: PLA+ | För cosplay eller display"
 
 images:
   - src: "/images/clone-trooper-helmet1.jpg"
