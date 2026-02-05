@@ -1,0 +1,46 @@
+---
+layout: default
+title: "Rå 3D‑printad hjälm (raw kit)"
+permalink: /ra-3d-printad-hjalm/
+---
+
+<div class="page-wrapper">
+  <section class="hero">
+    <div class="hero-inner">
+      <p class="hero-kicker">Guide</p>
+      <h1>Vad är ett rått 3D‑printat hjälm‑kit?</h1>
+      <p class="lead">
+        Här förklarar jag vad som ingår i ett rått 3D‑printat hjälm‑kit från SwePrint3D, och vad du själv behöver göra
+        när du får hem modellen.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Vad innebär “rå 3D‑printad”?</h2>
+    <p>
+      Ett rått kit betyder att hjälmen är 3D‑printad i sektioner men inte färdigbearbetad. Delarna är rensade från stöd
+      och redo för slipning, spackling, limning och målning av dig.
+    </p>
+
+    <h2>Detta ingår typiskt i ett rått kit</h2>
+    <ul>
+      <li>Alla 3D‑printade delar som behövs för hjälmen eller busten.</li>
+      <li>Delar separerade för enklare målning och montering.</li>
+      <li>Material enligt produktens specifikation (t.ex. PLA).</li>
+    </ul>
+
+    <h2>Detta ingår normalt inte</h2>
+    <ul>
+      <li>Ingen slipning, spackling eller grundmålning.</li>
+      <li>Ingen slutfinish, topplack eller vädring.</li>
+      <li>Ingen elektronik, belysning eller padding om inte annat anges i produkten.</li>
+    </ul>
+
+    <h2>För dig som vill bygga själv</h2>
+    <p>
+      Råa kit är perfekta om du vill göra din egen finish, vädring och detaljnivå men slippa hela utskriftsdelen.
+      Du får ett stabilt grundarbete från skrivaren och kan lägga tiden på det kreativa.
+    </p>
+  </section>
+</div>
