@@ -2,24 +2,25 @@
 layout: product
 category: helmets
 
+title: "B1 Battle Droid huvud med ställning – 3D‑printad displaybust"
 product_name: "B1 Battle Droid – Huvud med ställning"
-subtitle: "Trade Federation Battle Droid – Display Bust"
+subtitle: "Trade Federation Battle Droid – rå 3D‑printad displaybust"
 
-description: "Ikoniskt B1 Battle Droid-huvud på display-ställning – rå 3D-printad bust. Perfekt för skrivbord eller samling."
-description_long: "Livsstort B1 Battle Droid-huvud monterat på fristående display-ställning. Känt från The Phantom Menace och The Clone Wars. Levereras som rått kit – slipa, montera och måla själv."
+description: "Ikoniskt B1 Battle Droid-huvud på display-ställning – rå 3D-printad bust i skala 1:1. Perfekt som displaybust på skrivbord eller i samling."
+description_long: "Livsstort B1 Battle Droid-huvud monterat på fristående display-ställning, känt från The Phantom Menace och The Clone Wars. Hjälmen 3D‑printas i flera delar för bästa passform och detaljrikedom. Du får ett rått 3D‑printat kit som du själv slipar, monterar och målar för att skapa din egen unika Star Wars displaybust. Perfekt för fans av Battle Droids, Trade Federation eller som displayartikel i spelrum och samlarrummet. Levereras från Sverige med spårbar frakt."
 
 price_from: 850
-tech_info: "ca 25–30h printtid | Skala 1:1 huvud | Material: PLA+"
+tech_info: "ca 25–30h printtid | Skala 1:1 huvud | Material: PLA+ | För display"
 
 images:
   - src: "/images/il_1140xN.6756726162_5x2b.jpg"
-    alt: "B1 Battle Droid-huvud snett framifrån"
+    alt: "3D‑printad B1 Battle Droid huvud displaybust snett framifrån – rått kit i vitt PLA"
   - src: "/images/il_1140xN.6804736307_rjx6.jpg"
-    alt: "B1 Battle Droid-huvud framifrån"
+    alt: "3D‑printad B1 Battle Droid huvud med ställning framifrån – Star Wars displaybust"
   - src: "/images/il_1140xN.6756759096_eafk.jpg"
-    alt: "B1 Battle Droid-huvud från sidan"
+    alt: "B1 Battle Droid huvud 3D‑printad från sidan – Trade Federation droid"
   - src: "/images/il_1140xN.6756726476_9ia5.jpg"
-    alt: "B1 Battle Droid-huvud bakifrån"
+    alt: "B1 Battle Droid huvud displaybust bakifrån – 3D‑printat kit för montering"
 
 kit_contents:
   - "Huvudskal i två delar"
@@ -41,7 +42,6 @@ sizes:
     value: "adult"
   - name: "Display / Barn"
     value: "display"
-
 ---
 
 ## Leverans & Montering
