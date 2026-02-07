@@ -17,7 +17,7 @@
   --color-bg: #f5f1e6;
   --color-text: #0f1f2e;
   --color-text-light: #555;
-  
+
   /* Gamla variabler för kompatibilitet - UPPDATERADE */
   --bg-main: #f5f1e6;
   --bg-section: #f5f1e6;
@@ -74,6 +74,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 
 .logo {
@@ -103,7 +104,14 @@ header {
   color: var(--text-muted);
 }
 
-nav a {
+/* huvudnav i headern */
+header nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header nav a {
   color: var(--text-muted);
   text-decoration: none;
   font-weight: 500;
@@ -114,7 +122,7 @@ nav a {
   transition: color var(--transition-fast);
 }
 
-nav a::after {
+header nav a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -125,11 +133,11 @@ nav a::after {
   transition: width var(--transition-fast);
 }
 
-nav a:hover {
+header nav a:hover {
   color: #0f1f2e;
 }
 
-nav a:hover::after {
+header nav a:hover::after {
   width: 100%;
 }
 
@@ -423,7 +431,7 @@ li + li {
 }
 
 /* =====================
-   Footer - Uppdaterad layout
+   Footer - ljus layout
 ===================== */
 
 footer {
@@ -470,9 +478,10 @@ footer {
 }
 
 .footer-social {
+  display: flex;
   flex-direction: row;
   gap: 1rem;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .footer-social a {
@@ -497,6 +506,11 @@ footer {
   border-color: var(--accent);
 }
 
+.footer-icon {
+  width: 24px;
+  height: 24px;
+}
+
 .footer-right {
   text-align: right;
 }
@@ -506,16 +520,58 @@ footer {
   color: var(--text-muted);
 }
 
-.footer-right a {
-  color: var(--text-muted);
-  text-decoration: none;
-}
+/* =====================
+   Responsivitet – ljusa temat
+===================== */
 
-.footer-right a:hover {
-  color: var(--accent);
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
+  .page-wrapper {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+
+  .header-content {
+    padding-inline: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    flex: 1 1 100%;
+  }
+
+  header nav {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  header nav a {
+    margin-left: 0;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .hero {
+    padding-top: 2.2rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-section {
+    padding: 1.25rem 1.1rem;
+  }
+
   .footer-container {
     flex-direction: column;
     text-align: center;
@@ -545,41 +601,14 @@ footer {
   }
 }
 
-
-/* =====================
-   Responsivitet
-===================== */
-
-@media (max-width: 900px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-content {
-    padding-inline: 1rem;
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 1.8rem;
   }
 
-  nav a {
-    margin-left: 0.9rem;
-    font-size: 0.9rem;
-  }
-
-  .hero {
-    padding-top: 2.2rem;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .cards {
-    grid-template-columns: 1fr;
-  }
-
-  .faq-section {
-    padding: 1.25rem 1.1rem;
+  .hero .lead,
+  .section-intro {
+    font-size: 0.95rem;
   }
 }
 
@@ -643,7 +672,7 @@ footer {
   align-items: flex-start;
 }
 
-/* Viktigt: hindra kolumnerna från att spränga varandra */
+/* hindra kolumner från att spränga varandra */
 .product-gallery,
 .product-main {
   min-width: 0;
@@ -720,7 +749,7 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-/* ===== select & inputs för material, storlek, antal ===== */
+/* select & inputs för material, storlek, antal */
 
 .product-field label {
   display: block;
@@ -743,10 +772,8 @@ footer {
   font-size: 0.95rem;
   color: #0f1f2e;
   appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
   outline: none;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   transition:
     border-color var(--transition-fast),
     box-shadow var(--transition-fast),
@@ -756,7 +783,7 @@ footer {
 .product-field select:focus,
 .product-field input[type="number"]:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 2px rgba(219,39,50,0.18);
+  box-shadow: 0 0 0 2px rgba(219, 39, 50, 0.18);
   transform: translateY(-1px);
 }
 
@@ -781,215 +808,6 @@ footer {
   font-weight: 600;
   cursor: pointer;
 }
-
-/* BASLAYOUT */
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #05070b;
-  color: #f5f5f5;
-}
-
-.page-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-/* HEADER */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: rgba(5, 7, 11, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.header-content {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-/* LOGO */
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  text-decoration: none;
-  color: inherit;
-}
-
-.logo-image {
-  width: 40px;
-  height: 40px;
-  border-radius: 999px;
-  object-fit: cover;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-title {
-  font-weight: 600;
-  font-size: 1rem;
-}
-
-.logo-subtitle {
-  font-size: 0.8rem;
-  opacity: 0.8;
-}
-
-/* NAVIGATION */
-header nav {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-size: 0.9rem;
-}
-
-header nav a {
-  color: #e0e0e0;
-  text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  border-radius: 999px;
-  transition: background 0.2s, color 0.2s;
-}
-
-header nav a:hover {
-  background: rgba(255, 255, 255, 0.08);
-  color: #ffffff;
-}
-
-/* FOOTER */
-footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
-  margin-top: 3rem;
-}
-
-.footer-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-  font-size: 0.9rem;
-}
-
-.footer-links {
-  list-style: none;
-  margin: 0 0 1rem;
-  padding: 0;
-}
-
-.footer-links li {
-  margin-bottom: 0.25rem;
-}
-
-.footer-links a {
-  color: #e0e0e0;
-  text-decoration: none;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-social {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.footer-icon {
-  width: 24px;
-  height: 24px;
-}
-
-.footer-right {
-  text-align: right;
-  opacity: 0.8;
-}
-
-/* MOBILANPASSNING */
-@media (max-width: 768px) {
-  .page-wrapper {
-    padding: 1.5rem 1rem;
-  }
-
-  .header-content {
-    padding: 0.75rem 1rem;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    flex: 1 1 100%;
-  }
-
-  header nav {
-    flex: 1 1 100%;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 0.5rem;
-  }
-
-  header nav a {
-    font-size: 0.85rem;
-    padding: 0.35rem 0.75rem;
-    background: rgba(255, 255, 255, 0.04);
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-    line-height: 1.2;
-  }
-
-  .hero .lead {
-    font-size: 1rem;
-  }
-
-  .cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-
-  .grid-4col,
-  .grid-simple {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: left;
-  }
-
-  .footer-right {
-    text-align: left;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 1.6rem;
-  }
-
-  .hero .lead,
-  .section-intro {
-    font-size: 0.95rem;
-  }
-}
-
 
 /* =====================
    Butik – filterknappar
