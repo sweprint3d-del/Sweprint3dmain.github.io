@@ -32,45 +32,55 @@
       </div>
     </header>
 
-    <main>
-      {{ content }}
-    </main>
+    <!-- GEMENSAM FOOTER -->
+<footer>
+  <div class="footer-container">
+    <!-- Vänster: info + kontakt -->
+    <div class="footer-col">
+      <h3 class="footer-heading">SwePrint3D</h3>
+      <p>
+        3D‑printade modeller &amp; kit på beställning – med fokus på cosplayhjälmar, kit och organizers.
+      </p>
 
-    <footer>
-      <div class="footer-container">
-        <div class="footer-col">
-          <strong>SwePrint3D</strong><br />
-          3D‑printade modeller &amp; kit på beställning.<br /><br />
-          <strong>Kontakt</strong><br />
-          E‑post:
-          <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a>
-        </div>
+      <p class="footer-contact">
+        <strong>Kontakt</strong><br />
+        E‑post:
+        <a href="mailto:sweprint3d@gmail.com">sweprint3d@gmail.com</a><br />
+        Ort: Vänersborg, Sverige
+      </p>
+    </div>
 
-        <div class="footer-col">
-          <ul class="footer-links">
-            <li><a href="/villkor.html">Villkor</a></li>
-            <li><a href="/returpolicy.html">Returpolicy</a></li>
-          </ul>
+    <!-- Mitten: länkar + socialikoner -->
+    <div class="footer-col">
+      <h3 class="footer-heading">Köpinformation</h3>
+      <ul class="footer-links">
+        <li><a href="/villkor.html">Villkor</a></li>
+        <li><a href="/returpolicy.html">Returpolicy</a></li>
+        <li><a href="/priser-och-faq.html">Priser &amp; FAQ</a></li>
+      </ul>
 
-          <div class="footer-social">
-            <a href="https://www.facebook.com/profile.php?id=61568846190966" aria-label="Facebook">
-              <img src="/images/facebook.svg" alt="" class="footer-icon">
-            </a>
-            <a href="https://www.instagram.com/sweprint3d/" aria-label="Instagram">
-              <img src="/images/instagram.svg" alt="" class="footer-icon">
-            </a>
-            <a href="https://www.youtube.com/@Swe-Print3D-v2e" aria-label="YouTube">
-              <img src="/images/youtube.svg" alt="" class="footer-icon">
-            </a>
-          </div>
-        </div>
-
-        <div class="footer-col footer-right">
-          <p>© {{ "now" | date: "%Y" }} SwePrint3D</p>
-          <p>Powered by GitHub Pages</p>
-        </div>
+      <h3 class="footer-heading" style="margin-top:1rem;">Följ SwePrint3D</h3>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61568846190966" aria-label="Facebook">
+          <img src="/images/facebook.svg" alt="Facebook" class="footer-icon">
+        </a>
+        <a href="https://www.instagram.com/sweprint3d/" aria-label="Instagram">
+          <img src="/images/instagram.svg" alt="Instagram" class="footer-icon">
+        </a>
+        <a href="https://www.youtube.com/@Swe-Print3D-v2e" aria-label="YouTube">
+          <img src="/images/youtube.svg" alt="YouTube" class="footer-icon">
+        </a>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <!-- Höger: copyright -->
+    <div class="footer-col footer-right">
+      <p>© {{ "now" | date: "%Y" }} SwePrint3D</p>
+      <p>3D‑printade hjälmar, kit &amp; modeller på beställning.</p>
+      <p class="footer-powered">Powered by GitHub Pages</p>
+    </div>
+  </div>
+</footer>
+</body>
 </html>
 
