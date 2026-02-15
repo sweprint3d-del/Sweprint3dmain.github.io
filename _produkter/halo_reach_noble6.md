@@ -12,14 +12,14 @@ price_from: 1700
 tech_info: "ca 55–65h printtid | Skala 1:1 | Material: PLA+ / PETG"
 
 images:
+  - src: "/images/DSC01866_1024x1024.webp"
+    alt: "Halo Reach Noble 6-hjälm snett framifrån – rå 3D-print"
   - src: "/images/DSC01860_1024x1024.webp"
     alt: "Halo Reach Noble 6-hjälm framifrån – rå 3D-print"
   - src: "/images/DSC01861_1024x1024.webp"
     alt: "Halo Reach Noble 6-hjälm från sidan – rå 3D-print"
   - src: "/images/DSC01873_1024x1024.webp"
     alt: "Halo Reach Noble 6-hjälm bakifrån – rå 3D-print"
-  - src: "/images/DSC01866_1024x1024.webp"
-    alt: "Halo Reach Noble 6-hjälm snett framifrån – rå 3D-print"
   - src: "/images/DSC01864_1024x1024.webp"
     alt: "Halo Reach Noble 6-hjälm – topplate och detaljdelar"
   - src: "/images/DSC01868_1024x1024.webp"
