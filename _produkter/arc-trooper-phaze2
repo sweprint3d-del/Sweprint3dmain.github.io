@@ -1,0 +1,39 @@
+---
+layout: product
+category: helmets
+
+product_name: "ARC Trooper Hjälm"
+subtitle: "Elite Clone Trooper Helmet"
+
+description: "Fullskalig ARC Trooper-hjälm inspirerad av Star Wars, levereras som rått 3D-printat kit redo för slipning, montering och målning."
+description_long: "ARC Trooper-hjälmen printas i flera delar för enkel efterbehandling och är perfekt för både cosplay och display."
+
+price_from: 1500
+tech_info: "ca 50–70h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
+
+images:
+  - src: "/images/arc-trooper-helmet1.webp"
+    alt: "ARC Trooper-hjälm framifrån"
+  - src: "/images/arc-trooper-helmet2.webp"
+    alt: "ARC Trooper-hjälm bakifrån"
+  - src: "/images/arc-trooper-helmet3.webp"
+    alt: "ARC Trooper-hjälm alla delar"
+  - src: "/images/arc-trooper-helmet4.webp"
+    alt: "ARC Trooper-kammen från sidan"
+
+kit_contents:
+  - "Hjälmskal i flera delar (front, bakstycke, kupol, kam)"
+  - "Smådetaljer runt ventiler och paneler"
+
+materials:
+  - name: "PLA (Standard - Bäst detaljer)"
+    value: "pla"
+  - name: "PETG (Slagtåligt)"
+    value: "petg"
+
+sizes:
+  - name: "Standard (Vuxen 1:1)"
+    value: "adult"
+  - name: "Display / Barn"
+    value: "display"
+---
