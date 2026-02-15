@@ -12,10 +12,14 @@ price_from: 1500
 tech_info: "ca 50–70h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
 
 images:
-  - /images/20200420_191626_1024x1024.webp
-  - /inages/20200420_191537_1024x1024.webp
-  - /images/20200420_191650_1024x1024.webp
-  - /images/20200420_191611_1024x1024.webp
+  - src: "/images/20200420_191626_1024x1024.webp"
+    alt: "ARC Trooper-hjälm framifrån, monterad utan visir"
+  - src: "/images/20200420_191537_1024x1024.webp"
+    alt: "ARC Trooper-hjälm bakifrån med alla paneler"
+  - src: "/images/20200420_191650_1024x1024.webp"
+    alt: "ARC Trooper-hjälm kit med alla delar uppställda"
+  - src: "/images/20200420_191611_1024x1024.webp"
+    alt: "ARC Trooper-hjälm kupol med kam sedd från sidan"
 
 kit_contents:
   - "Hjälmskal i flera delar (front, bakstycke, kupol, kam)"
