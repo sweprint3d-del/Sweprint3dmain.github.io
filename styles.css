@@ -850,3 +850,37 @@ footer {
   border-color: var(--accent);
   color: #ffffff;
 }
+
+/* =====================
+   Product Page Mobile Fix
+===================== */
+
+@media (max-width: 768px) {
+  .product-hero {
+    /* This forces the image and text to stack vertically */
+    grid-template-columns: 1fr; 
+    gap: 1.5rem;
+  }
+
+  .product-main {
+    /* This ensures the Title and Price stay at the TOP on mobile */
+    order: 1; 
+  }
+
+  .product-gallery {
+    /* This puts the Image Gallery second */
+    order: 2; 
+  }
+
+  .product-main h1 {
+    font-size: 1.8rem;      /* Slightly smaller for mobile screens */
+    line-height: 1.2;
+    overflow-wrap: break-word; /* This is the "Ställning" fix! */
+    hyphens: auto;
+  }
+
+  .product-image img {
+    max-height: 400px;      /* Keeps the droid head from taking up the whole screen */
+    object-fit: contain;    /* Ensures the image doesn't get cropped weirdly */
+  }
+}
