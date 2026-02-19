@@ -4,8 +4,6 @@ title: "Butik – 3D‑printade cosplayhjälmar, kit & organizers"
 description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från SwePrint3D i Sverige. Fysiska produkter printade på beställning – perfekta för cosplay och display."
 ---
 
-
-
 <div class="page-wrapper">
   <section class="hero">
     <div class="hero-inner">
@@ -41,7 +39,7 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
     </p>
 
     <div class="cards">
-      {% assign helmets = site.produkter | where: "category", "helmets" %}
+      {% assign helmets = site.produkter | where: "category", "helmets" | sort: "product_name" %}
       {% for produkt in helmets %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
@@ -74,7 +72,7 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
     </p>
 
     <div class="cards">
-      {% assign kitcards = site.produkter | where: "category", "kit-cards" %}
+      {% assign kitcards = site.produkter | where: "category", "kit-cards" | sort: "product_name" %}
       {% for produkt in kitcards %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
@@ -107,7 +105,7 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
     </p>
 
     <div class="cards">
-      {% assign organizers = site.produkter | where: "category", "organizers" %}
+      {% assign organizers = site.produkter | where: "category", "organizers" | sort: "product_name" %}
       {% for produkt in organizers %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
@@ -163,4 +161,3 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
     });
   </script>
 </div>
-
