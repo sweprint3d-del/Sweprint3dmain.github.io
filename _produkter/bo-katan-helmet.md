@@ -1,0 +1,42 @@
+---
+layout: product
+category: helmets
+
+product_name: "Bo-Katan Kryze Hjälm"
+subtitle: "Night Owls – Mandalorian Warrior"
+
+description: "Fullskalig Bo-Katan Kryze-hjälm från The Mandalorian, levereras som rått 3D‑printat kit redo för slipning, montering och målning."
+description_long: "Bo-Katan-hjälmen printas med högsta möjliga accuracy baserat på The Mandalorian-serien. Antenn kan roteras 90 grader och fällas ner – precis som i filmen. Perfekt för cosplay eller display."
+
+price_from: 1600
+tech_info: "ca 50–70h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
+
+images:
+  - src: "/images/bo-katan-helmet1.webp"
+    alt: "Bo-Katan-hjälm framifrån med antennen uppfälld"
+  - src: "/images/bo-katan-helmet2.webp"
+    alt: "Bo-Katan-hjälm sidovy med visirdetaljer"
+  - src: "/images/bo-katan-helmet3.webp"
+    alt: "Bo-Katan-hjälm alla delar uppställda"
+  - src: "/images/bo-katan-helmet4.webp"
+    alt: "Bo-Katan-hjälm bakifrån"
+
+kit_contents:
+  - "Hjälmskal med pre-separerade delar för enklare montering"
+  - "Rörlig antenn som kan fällas ner 90 grader och låsas upp"
+  - "Visirram med mall för att klippa ut eget visir"
+  - "Pre-cut delar för mindre printvolymer"
+  - "Storleksbit för provtryckning innan fullskalig print"
+
+materials:
+  - name: "PLA (Standard - Bäst detaljer)"
+    value: "pla"
+  - name: "PETG (Slagtåligt)"
+    value: "petg"
+
+sizes:
+  - name: "Standard (Vuxen 1:1)"
+    value: "adult"
+  - name: "Display / Barn"
+    value: "display"
+---
