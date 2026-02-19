@@ -12,13 +12,13 @@ price_from: 1600
 tech_info: "ca 55–75h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
 
 images:
-  - src: "/images/bacara-helmet1.webp"
+  - src: "/images/DSC00762_1024x1024.webp"
     alt: "Commander Bacara-hjälm framifrån med horndetaljer"
-  - src: "/images/bacara-helmet2.webp"
+  - src: "/images/DSC00764_1024x1024.webp"
     alt: "Commander Bacara-hjälm sidovy"
-  - src: "/images/bacara-helmet3.webp"
+  - src: "/images/DSC00760_1024x1024.webp"
     alt: "Commander Bacara-hjälm alla delar uppställda"
-  - src: "/images/bacara-helmet4.webp"
+  - src: "/images/DSC00765_1024x1024.webp"
     alt: "Commander Bacara-hjälm bakifrån"
 
 kit_contents:
