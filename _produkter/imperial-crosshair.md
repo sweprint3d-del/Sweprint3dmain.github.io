@@ -9,16 +9,18 @@ description: "Fullskalig Crosshair-hjälm i Imperial-version från Star Wars: Th
 description_long: "Crosshair Imperial-hjälmen printas i flera delar för enkel efterbehandling – perfekt för att återskapa den mörka Imperial-looken med det karakteristiska svart/vita schemat från säsong 2–3."
 
 price_from: 1600
-tech_info: "ca 55–75h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
+tech_info: "ca 55-75h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
 
 images:
-  - src: "/images/crosshair-imperial-helmet1.webp"
+  - src: "/images/IMG_3134_1024x1024.webp"
     alt: "Crosshair Imperial-hjälm framifrån"
-  - src: "/images/crosshair-imperial-helmet2.webp"
+  - src: "/images/IMG_3135_1024x1024.webp"
     alt: "Crosshair Imperial-hjälm sidovy"
-  - src: "/images/crosshair-imperial-helmet3.webp"
+  - src: "/images/IMG_3137_1024x1024.webp"
     alt: "Crosshair Imperial-hjälm alla delar uppställda"
-  - src: "/images/crosshair-imperial-helmet4.webp"
+  - src: "/images/IMG_3138_1024x1024.webp"
+    alt: "Crosshair Imperial-hjälm närbild detaljer"
+  - src: "/images/IMG_3141_1024x1024.webp"
     alt: "Crosshair Imperial-hjälm bakifrån"
 
 kit_contents:
