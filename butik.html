@@ -5,37 +5,13 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
 ---
 
 <div class="page-wrapper">
-  <section class="hero">
-    <div class="hero-inner">
-      <p class="hero-kicker">Butik</p>
-      <h1>3D‑printade hjälmar, kit & tillbehör</h1>
-      <p class="lead">
-        Här hittar du färdiga 3D‑printade cosplay‑hjälmar, kit och tillbehör. 
-        Alla hjälmar i kategorin <strong>Helmets &amp; Armor</strong> är 3D‑printade under kommersiell licens från Galactic Armory – 
-        du köper en fysisk produkt, inte STL‑filer.
-      </p>
-    </div>
-  </section>
-
-  <!-- FILTERKNAPPAR -->
-  <section class="shop-filters">
-    <button class="filter-button is-active" data-target="helmets">
-      Helmets &amp; Armor
-    </button>
-    <button class="filter-button" data-target="kit-cards">
-      Kit &amp; Cards
-    </button>
-    <button class="filter-button" data-target="organizers">
-      Organizers
-    </button>
-  </section>
 
   <!-- HELMETS -->
   <section class="shop-section" data-section="helmets">
     <h2>Helmets &amp; Armor</h2>
     <p class="section-intro">
-      Cosplay‑hjälmar och armor‑delar printade i sektioner för enkel montering och målning. 
-      Modeller av Galactic Armory, 3D‑printade här i Sverige under kommersiell licens – endast fysiska produkter.
+      3D‑printade cosplay‑hjälmar i skala 1:1, levererade som råa kit redo för slipning, montering och målning.
+      Modeller från tredjepartsdesigners (t.ex. Galactic Armory), 3D‑printade under kommersiell licens.
     </p>
 
     <div class="cards">
@@ -48,7 +24,6 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
           {% endif %}
           <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
         </div>
-
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
@@ -64,7 +39,7 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
     </div>
   </section>
 
-  <!-- KIT CARDS -->
+  <!-- KIT & CARDS -->
   <section class="shop-section" data-section="kit-cards">
     <h2>Kit &amp; Cards</h2>
     <p class="section-intro">
@@ -81,7 +56,6 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
           {% endif %}
           <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
         </div>
-
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
@@ -114,7 +88,6 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
           {% endif %}
           <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
         </div>
-
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
@@ -130,34 +103,4 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
     </div>
   </section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const buttons = document.querySelectorAll('.filter-button');
-      const sections = document.querySelectorAll('.shop-section');
-
-      function showSection(target) {
-        sections.forEach(section => {
-          const key = section.getAttribute('data-section');
-          if (key === target) {
-            section.style.display = '';
-          } else {
-            section.style.display = 'none';
-          }
-        });
-      }
-
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const target = btn.getAttribute('data-target');
-
-          buttons.forEach(b => b.classList.remove('is-active'));
-          btn.classList.add('is-active');
-
-          showSection(target);
-        });
-      });
-
-      showSection('helmets');
-    });
-  </script>
 </div>
