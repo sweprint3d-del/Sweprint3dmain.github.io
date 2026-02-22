@@ -7,7 +7,6 @@ description: "Köp fullskalig Commander Cody-hjälm i Phase 2-design 3D-printad 
 product_name: "Commander Cody Hjälm – Phase 2"
 subtitle: "212th Attack Battalion"
 
-description: "Fullskalig Commander Cody-hjälm i Phase 2‑design, levereras som rått 3D‑printat kit redo för slipning, montering och målning."
 description_long: "Commander Cody-hjälmen printas i flera delar för enkel efterbehandling – perfekt bas för att skapa din egen 212th Attack Battalion‑look."
 
 price_from: 1600
