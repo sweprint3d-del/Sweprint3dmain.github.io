@@ -1,6 +1,7 @@
 ---
 layout: product
 category: kit-cards
+title: "TIE Interceptor Modellkit – 3D-printad Imperial Star Wars modell på sprue"
 
 product_name: "TIE Interceptor – Modellkit"
 subtitle: "Imperial snabbare interceptor från Star Wars på sprue"
