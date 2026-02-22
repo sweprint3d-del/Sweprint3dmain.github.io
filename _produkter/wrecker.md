@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Wrecker Hjälm The Bad Batch – 3D-printad Clone Force 99 cosplayhjälm | SwePrint3D"
+title: "Wrecker Hjälm The Bad Batch – 3D-printad Clone Force 99 cosplayhjälm"
 description: "Köp fullskalig Wrecker-hjälm från Star Wars: The Bad Batch 3D-printad i Sverige. Rått kit med gul/svart demoleringslook. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Wrecker Hjälm – The Bad Batch"
