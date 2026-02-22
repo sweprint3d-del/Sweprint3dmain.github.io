@@ -1,6 +1,8 @@
 ---
 layout: product
 category: helmets
+title: "Scout Trooper Hjälm – 3D-printad Biker Scout ROTJ cosplayhjälm | SwePrint3D"
+description: "Köp fullskalig Scout Trooper-hjälm från Return of the Jedi 3D-printad i Sverige. Lätt och smidig med unik visor-design. Från 1300 kr. Beställ på SwePrint3D."
 
 product_name: "Scout Trooper Hjälm"
 subtitle: "Biker Scout – ROTJ Edition"
