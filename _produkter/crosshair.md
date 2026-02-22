@@ -12,13 +12,15 @@ price_from: 1600
 tech_info: "ca 55–75h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
 
 images:
-  - src: "/images/crosshair-helmet1.webp"
+  - src: "/images/PXL_20210125_134315942_1024x1024.webp"
     alt: "Crosshair-hjälm framifrån"
-  - src: "/images/crosshair-helmet2.webp"
+  - src: "/images/PXL_20210125_134646268_1024x1024.webp"
     alt: "Crosshair-hjälm sidovy"
-  - src: "/images/crosshair-helmet3.webp"
+  - src: "/images/PXL_20210125_134655950_1024x1024.webp"
     alt: "Crosshair-hjälm alla delar uppställda"
-  - src: "/images/crosshair-helmet4.webp"
+  - src: "/images/PXL_20210125_134708996_1024x1024.webp"
+    alt: "Crosshair-hjälm närbild detaljer"
+  - src: "/images/PXL_20210125_134716997_1024x1024.webp"
     alt: "Crosshair-hjälm bakifrån"
 
 kit_contents:
