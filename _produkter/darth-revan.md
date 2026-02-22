@@ -12,14 +12,10 @@ price_from: 1600
 tech_info: "ca 50–70h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
 
 images:
-  - src: "/images/darth-revan-helmet1.webp"
-    alt: "Darth Revan-hjälm framifrån med maskdetaljer"
-  - src: "/images/darth-revan-helmet2.webp"
+  - src: "/images/DSC00515_1024x1024.webp"
+    alt: "Darth Revan-hjälm framifrån"
+  - src: "/images/DSC00518_1024x1024.webp"
     alt: "Darth Revan-hjälm sidovy"
-  - src: "/images/darth-revan-helmet3.webp"
-    alt: "Darth Revan-hjälm alla delar uppställda"
-  - src: "/images/darth-revan-helmet4.webp"
-    alt: "Darth Revan-hjälm bakifrån"
 
 kit_contents:
   - "Hjälmdel (kupol, bakstycke och sidopaneler)"
