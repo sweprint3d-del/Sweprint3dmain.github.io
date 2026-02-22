@@ -1,6 +1,8 @@
 ---
 layout: product
 category: helmets
+title: "Boba Fett Hjälm – 3D-printad Bounty Hunter Mandalorian Cosplay | SwePrint3D"
+description: "Köp fullskalig Boba Fett-hjälm 3D-printad i Sverige. Rörlig rangefinder, ratt kit redo för målning. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Boba Fett Hjälm"
 subtitle: "The Bounty Hunter Classic"
