@@ -1,13 +1,39 @@
 url: "https://sweprint3d.se"
 baseurl: ""
 
+lang: sv
+locale: sv_SE
+
 collections:
   produkter:
     output: true
     permalink: /produkter/:path/
 
 title: SwePrint3D
-url: "https://sweprint3d.se"
+description: "3D-printade cosplayhjälmar, kit och tillbehör från Sverige. Hjälmar från Star Wars, Halo med mera – levereras som råa kit redo för slipning och målning."
+author:
+  name: SwePrint3D
+  email: sweprint3d@gmail.com
+
+logo: "/images/logo.jpg"
+
+twitter:
+  username: sweprint3d
+
+social:
+  name: SwePrint3D
+  links:
+    - https://www.facebook.com/profile.php?id=61568846190966
+    - https://www.instagram.com/sweprint3d/
+    - https://www.youtube.com/@Swe-Print3D-v2e
+
+defaults:
+  - scope:
+      path: ""
+      type: "produkter"
+    values:
+      image: "/images/logo.jpg"
+
 # ev. baseurl: ""  om du inte har någon subkatalog
 
 plugins:
