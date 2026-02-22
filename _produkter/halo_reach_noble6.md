@@ -1,6 +1,8 @@
 ---
 layout: product
 category: helmets
+title: "Halo Reach Noble 6 Hjälm – 3D-printad Spartan cosplayhjälm | SwePrint3D"
+description: "Köp Halo Reach Noble 6-hjälm 3D-printad i Sverige. Rått kit i Mark V[B]-design, perfekt för cosplay och weathering. Från 1700 kr. Beställ på SwePrint3D."
 
 product_name: "Halo Reach Noble 6 Hjälm"
 subtitle: "Fullskalig rå 3D-print – cosplaykit"
