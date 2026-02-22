@@ -1,6 +1,8 @@
 ---
 layout: product
 category: helmets
+title: "Halo 3 ODST Hjälm – 3D-printad cosplayhjälm | SwePrint3D"
+description: "Köp Halo 3 ODST-hjälm 3D-printad i Sverige. Rått kit i flera delar, perfekt för cosplay och weathering. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Halo 3 ODST Hjälm"
 subtitle: "Fullskalig rå 3D-print – cosplaykit"
