@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Commander Bacara Hjälm – 3D-printad 21st Nova Corps Clone Trooper | SwePrint3D"
+title: "Commander Bacara Hjälm – 3D-printad 21st Nova Corps Clone Trooper"
 description: "Köp fullskalig Commander Bacara-hjälm 3D-printad i Sverige. Rått kit med ikoniska horndetaljer. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Commander Bacara Hjälm"
