@@ -3,7 +3,7 @@ layout: product
 category: helmets
 
 product_name: "Darth Vader Hjälm"
-subtitle: "Fullskalig 1:1 Replica"
+subtitle: "A New Hope"
 
 description: "Den ikoniska Darth Vader-hjälmen – en massiv och detaljerad utskrift för den ultimata samlaren."
 description_long: "Darth Vader-hjälmen är ett av de mest komplexa projekten vi erbjuder. Den printas i högkvalitativ PLA+ eller ABS för maximal hållbarhet och finish. Detta är en 1:1-replica som garanterat blir rummets mittpunkt."
