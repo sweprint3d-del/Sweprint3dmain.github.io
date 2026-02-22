@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Death Trooper Hjälm – 3D-printad Rogue One Elite cosplayhjälm | SwePrint3D"
+title: "Death Trooper Hjälm – 3D-printad Rogue One Elite cosplayhjälm"
 description: "Köp fullskalig Death Trooper-hjälm från Rogue One 3D-printad i Sverige. Rått kit med mörk elit-trooper-look. Från 1500 kr. Beställ på SwePrint3D."
 
 product_name: "Death Trooper Hjälm"
