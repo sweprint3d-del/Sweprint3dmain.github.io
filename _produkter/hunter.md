@@ -12,14 +12,18 @@ price_from: 1600
 tech_info: "ca 55–75h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
 
 images:
-  - src: "/images/hunter-helmet1.webp"
+  - src: "/images/PXL_20201106_174533539_1024x1024.webp"
     alt: "Hunter-hjälm framifrån"
-  - src: "/images/hunter-helmet2.webp"
-    alt: "Hunter-hjälm sidovy"
-  - src: "/images/hunter-helmet3.webp"
+  - src: "/images/PXL_20201106_174554959_1024x1024.webp"
     alt: "Hunter-hjälm alla delar uppställda"
-  - src: "/images/hunter-helmet4.webp"
+  - src: "/images/PXL_20201106_175406443_1024x1024.webp"
+    alt: "Hunter-hjälm sidovy"
+  - src: "/images/PXL_20201106_175431871_1024x1024.webp"
+    alt: "Hunter-hjälm närbild detaljer"
+  - src: "/images/PXL_20201106_175546004_1024x1024.webp"
     alt: "Hunter-hjälm bakifrån"
+  - src: "/images/PXL_20201106_175605047_1024x1024.webp"
+    alt: "Hunter-hjälm uppifrån"
 
 kit_contents:
   - "Hjälmskal i flera delar (front, bakstycke, kupol)"
