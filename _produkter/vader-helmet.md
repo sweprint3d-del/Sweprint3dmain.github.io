@@ -1,6 +1,8 @@
 ---
 layout: product
 category: helmets
+title: "Darth Vader Hjälm – 3D-printad Star Wars samlarhjälm | SwePrint3D"
+description: "Köp ikonisk Darth Vader-hjälm 3D-printad i Sverige. Högkvalitativ 1:1-replica i PLA+ eller ABS. Perfekt samlarhjälm. Från 1500 kr. Beställ på SwePrint3D."
 
 product_name: "Darth Vader Hjälm"
 subtitle: "A New Hope"
