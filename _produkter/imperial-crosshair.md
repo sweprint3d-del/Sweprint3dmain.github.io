@@ -1,6 +1,8 @@
 ---
 layout: product
 category: helmets
+title: "Crosshair Hjälm Imperial – 3D-printad Imperial Defector cosplayhjälm | SwePrint3D"
+description: "Köp fullskalig Crosshair Imperial-hjälm från The Bad Batch säsong 2-3 3D-printad i Sverige. Rått kit med mörk Imperial-look. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Crosshair Hjälm – Imperial"
 subtitle: "Clone Force 99 – Imperial Defector"
