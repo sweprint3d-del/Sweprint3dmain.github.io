@@ -12,14 +12,14 @@ price_from: 1600
 tech_info: "ca 50–70h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
 
 images:
-  - src: "/images/bo-katan-helmet1.webp"
-    alt: "Bo-Katan-hjälm framifrån med antennen uppfälld"
-  - src: "/images/bo-katan-helmet2.webp"
-    alt: "Bo-Katan-hjälm sidovy med visirdetaljer"
-  - src: "/images/bo-katan-helmet3.webp"
-    alt: "Bo-Katan-hjälm alla delar uppställda"
-  - src: "/images/bo-katan-helmet4.webp"
-    alt: "Bo-Katan-hjälm bakifrån"
+  - src: "/images/IMG_4172_1024x1024.webp"
+    alt: "Bo-Katan Kryze-hjälm framifrån med antennen uppfälld"
+  - src: "/images/IMG_4174_1024x1024.webp"
+    alt: "Bo-Katan Kryze-hjälm sidovy med visirdetaljer"
+  - src: "/images/IMG_4175_1024x1024.webp"
+    alt: "Bo-Katan Kryze-hjälm alla delar uppställda"
+  - src: "/images/DSC01233_1024x1024.webp"
+    alt: "Bo-Katan Kryze-hjälm bakifrån"
 
 kit_contents:
   - "Hjälmskal med pre-separerade delar för enklare montering"
