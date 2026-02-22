@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "The Mandalorian Hjälm – 3D-printad Din Djarin Beskar cosplayhjälm | SwePrint3D"
+title: "The Mandalorian Hjälm – 3D-printad Din Djarin Beskar cosplayhjälm"
 description: "Köp fullskalig Mandalorian-hjälm i Beskar-stil 3D-printad i Sverige. Rått kit med ren linjedesign. Från 1500 kr. Beställ på SwePrint3D."
 
 product_name: "The Mandalorian Hjälm"
