@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /google390185167b60b5d5.html
-Disallow: /produkter/dummy13/
 
 Sitemap: https://sweprint3d.se/sitemap.xml
