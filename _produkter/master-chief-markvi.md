@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Halo Master Chief Hjälm Mark VI – 3D-printad Mjolnir cosplayhjälm | SwePrint3D"
+title: "Halo Master Chief Hjälm Mark VI – 3D-printad Mjolnir cosplayhjälm"
 description: "Köp fullskalig Master Chief Mjolnir Mark VI-hjälm 3D-printad i Sverige. Rått kit i flera sektioner för Halo-cosplay. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Halo Master Chief Hjälm – Mark VI"
