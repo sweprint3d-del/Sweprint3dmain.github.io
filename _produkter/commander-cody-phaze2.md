@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Commander Cody Hjälm Phase 2 – 3D-printad cosplayhjälm | SwePrint3D"
+title: "Commander Cody Hjälm Phase 2 – 3D-printad cosplayhjälm"
 description: "Köp fullskalig Commander Cody-hjälm i Phase 2-design 3D-printad i Sverige. Rått kit med ikonisk gul/orange dekor. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Commander Cody Hjälm – Phase 2"
