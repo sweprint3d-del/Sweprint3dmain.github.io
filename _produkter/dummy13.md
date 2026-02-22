@@ -1,6 +1,8 @@
 ---
 layout: product
 category: kit-cards
+title: "Dummy 13 – Poserbar 3D-printad figur för teckning och display | SwePrint3D"
+description: "Köp Dummy 13 - fullt rörlig 3D-printad poserbar figur i Sverige. Perfekt för teckning, foto och animation. Från 249 kr. Beställ på SwePrint3D."
 
 product_name: "Dummy 13 – Poserbar figur"
 subtitle: "Articulated figure kit för teckning, display och lek"
