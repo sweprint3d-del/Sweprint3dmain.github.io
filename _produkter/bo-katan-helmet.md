@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Bo-Katan Kryze Hjälm – 3D-printad Mandalorian Night Owls | SwePrint3D"
+title: "Bo-Katan Kryze Hjälm – 3D-printad Mandalorian Night Owls"
 description: "Köp fullskalig Bo-Katan Kryze-hjälm från The Mandalorian, 3D-printad i Sverige. Rått kit med rörlig antenn. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Bo-Katan Kryze Hjälm"
