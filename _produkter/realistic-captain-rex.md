@@ -1,6 +1,8 @@
 ---
 layout: product
 category: helmets
+title: "Captain Rex Hjälm Realistic – 3D-printad 501st Clone Trooper cosplayhjälm | SwePrint3D"
+description: "Köp realistisk Captain Rex-hjälm 3D-printad i Sverige. Finns i Regular och Binocular-variant. 501st Clone Trooper Commander. Från 1800 kr. Beställ på SwePrint3D."
 
 product_name: "Captain Rex Hjälm – Realistic"
 subtitle: "The 501st Clone Trooper Commander"
