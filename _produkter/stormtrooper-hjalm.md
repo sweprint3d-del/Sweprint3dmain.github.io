@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets                # ändras per produkt (helmets, figures, props, accessories …)
-title: "Stormtrooper Hjälm Rogue One – 3D-printad cosplayhjälm | SwePrint3D"
+title: "Stormtrooper Hjälm Rogue One – 3D-printad cosplayhjälm"
 description: "Köp fullskalig Stormtrooper-hjälm i Rogue One-stil 3D-printad i Sverige. Rått kit med symmetrisk Rogue One-design. Från 1400 kr. Beställ på SwePrint3D."
 
 product_name: "Rogue One Stormtrooper Hjälm"
