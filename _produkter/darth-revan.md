@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Darth Revan Hjälm – 3D-printad KOTOR cosplayhjälm | SwePrint3D"
+title: "Darth Revan Hjälm – 3D-printad KOTOR cosplayhjälm"
 description: "Köp fullskalig Darth Revan-hjälm inspirerad av KOTOR 3D-printad i Sverige. Rått kit i två sektioner – hjälm och mask. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Darth Revan Hjälm"
