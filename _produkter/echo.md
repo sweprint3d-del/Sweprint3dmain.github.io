@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Echo Hjälm The Bad Batch – 3D-printad ARC Trooper cosplayhjälm | SwePrint3D"
+title: "Echo Hjälm The Bad Batch – 3D-printad ARC Trooper cosplayhjälm"
 description: "Köp fullskalig Echo-hjälm från Star Wars: The Bad Batch 3D-printad i Sverige. Rått kit med blå/vit ARC Trooper-look. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Echo Hjälm – The Bad Batch"
