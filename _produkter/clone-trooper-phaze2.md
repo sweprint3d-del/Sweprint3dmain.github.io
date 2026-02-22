@@ -3,6 +3,7 @@ layout: product
 category: helmets
 
 title: "Clone Trooper hjälm Phase 2 – 3D‑printad cosplayhjälm"
+description: "Köp fullskalig Clone Trooper Phase 2-hjälm 3D-printad i Sverige. Rått kit känt från Revenge of the Sith. Från 1500 kr. Beställ på SwePrint3D."
 product_name: "Clone Trooper hjälm – Phase 2 (1:1 cosplay‑kit)"
 subtitle: "Rå 3D‑printad Clone Trooper-hjälm – redo för slipning och målning"
 
