@@ -884,3 +884,42 @@ footer {
     object-fit: contain;    /* Ensures the image doesn't get cropped weirdly */
   }
 }
+
+/* =====================
+   Kommande modeller
+===================== */
+
+.product-card.is-coming-soon {
+  border: 1px dashed rgba(148, 163, 184, 0.6);
+  background: #ffffff;
+}
+
+.badge.badge-soon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  background: #f59e0b;
+  color: #111827;
+  font-size: 0.7rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-kicker {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.product-meta-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+#coming-soon .cards {
+  margin-top: 0.5rem;
+  max-width: 700px; /* håller listan tajt under Organizers */
+}
