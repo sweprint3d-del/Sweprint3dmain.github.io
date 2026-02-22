@@ -1,6 +1,8 @@
 ---
 layout: product
 category: helmets
+title: "ARC Trooper Hjälm – 3D-printad Phase 2 Elite Clone Trooper | SwePrint3D"
+description: "Köp fullskalig ARC Trooper Phase 2-hjälm 3D-printad i Sverige. Rått kit redo för slipning och målning. Från 1500 kr. Beställ på SwePrint3D."
 
 product_name: "ARC Trooper Hjälm"
 subtitle: "Elite Clone Trooper Helmet"
