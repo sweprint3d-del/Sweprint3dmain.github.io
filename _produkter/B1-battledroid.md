@@ -13,13 +13,13 @@ price_from: 850
 tech_info: "ca 25–30h printtid | Skala 1:1 huvud | Material: PLA+ | För display"
 
 images:
-  - src: "/images/il_1140xN.6756726162_5x2b.jpg"
+  - src: "/images/B1-1.jpg"
     alt: "3D‑printad B1 Battle Droid huvud displaybust snett framifrån – rått kit i vitt PLA"
-  - src: "/images/il_1140xN.6804736307_rjx6.jpg"
+  - src: "/images/B1-2.jpg"
     alt: "3D‑printad B1 Battle Droid huvud med ställning framifrån – Star Wars displaybust"
-  - src: "/images/il_1140xN.6756759096_eafk.jpg"
+  - src: "/images/B1-3.jpg"
     alt: "B1 Battle Droid huvud 3D‑printad från sidan – Trade Federation droid"
-  - src: "/images/il_1140xN.6756726476_9ia5.jpg"
+  - src: "/images/B1-4.jpg"
     alt: "B1 Battle Droid huvud displaybust bakifrån – 3D‑printat kit för montering"
 
 kit_contents:
