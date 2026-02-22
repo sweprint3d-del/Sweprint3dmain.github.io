@@ -1,6 +1,7 @@
 ---
 layout: product
 category: kit-cards
+title: "TIE Fighter Modellkit – 3D-printad Imperial Star Wars modell på sprue"
 
 product_name: "TIE Fighter – Modellkit"
 subtitle: "Imperial starfighter från Star Wars på sprue"
