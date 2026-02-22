@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Hunter Hjälm The Bad Batch – 3D-printad Clone Force 99 cosplayhjälm | SwePrint3D"
+title: "Hunter Hjälm The Bad Batch – 3D-printad Clone Force 99 cosplayhjälm"
 description: "Köp fullskalig Hunter-hjälm från Star Wars: The Bad Batch 3D-printad i Sverige. Rått kit med kamouflage-look. Från 1600 kr. Beställ på SwePrint3D."
 
 product_name: "Hunter Hjälm – The Bad Batch"
