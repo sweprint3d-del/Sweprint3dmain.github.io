@@ -1,7 +1,7 @@
 ---
 layout: product
 category: helmets
-title: "Clone Trooper Hjälm Phase 1 – 3D-printad Star Wars cosplay | SwePrint3D"
+title: "Clone Trooper Hjälm Phase 1 – 3D-printad Star Wars cosplay"
 description: "Köp fullskalig Clone Trooper Phase 1-hjälm 3D-printad i Sverige. Rått kit känt från Attack of the Clones. Från 1500 kr. Beställ på SwePrint3D."
 
 product_name: "Clone Trooper Hjälm – Phase 1"
