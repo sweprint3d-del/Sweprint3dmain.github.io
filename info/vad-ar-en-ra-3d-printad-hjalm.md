@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Vad är en rå 3D‑printad hjälm?
+permalink: /info/vad-ar-en-ra-3d-printad-hjalm/
 
 ---
 
