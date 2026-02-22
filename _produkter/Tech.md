@@ -12,13 +12,15 @@ price_from: 1600
 tech_info: "ca 55–75h printtid | Skala 1:1 vuxen | Rå 3D‑print redo för finish"
 
 images:
-  - src: "/images/tech-helmet1.webp"
-    alt: "Tech-hjälm framifrån med dubbla visorer"
-  - src: "/images/tech-helmet2.webp"
+  - src: "/images/PXL_20201106_180503620_1024x1024.webp"
+    alt: "Tech-hjälm framifrån med visirdetaljer"
+  - src: "/images/PXL_20201106_180511883_1024x1024.webp"
     alt: "Tech-hjälm sidovy"
-  - src: "/images/tech-helmet3.webp"
+  - src: "/images/PXL_20201106_180542964_1024x1024.webp"
     alt: "Tech-hjälm alla delar uppställda"
-  - src: "/images/tech-helmet4.webp"
+  - src: "/images/PXL_20201106_180556437_1024x1024.webp"
+    alt: "Tech-hjälm närbild detaljer"
+  - src: "/images/PXL_20201106_180615471_1024x1024.webp"
     alt: "Tech-hjälm bakifrån"
 
 kit_contents:
