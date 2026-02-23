@@ -41,6 +41,21 @@ layout: default
       "shippingDestination": {
         "@type": "DefinedRegion",
         "addressCountry": "SE"
+      },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 1,
+          "maxValue": 3,
+          "unitCode": "d"
+        },
+        "transitTime": {
+          "@type": "QuantitativeValue",
+          "minValue": 2,
+          "maxValue": 5,
+          "unitCode": "d"
+        }
       }
     }
   }{% if page.images %},
