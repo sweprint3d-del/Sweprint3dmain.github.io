@@ -21,14 +21,32 @@ layout: default
     "seller": {
       "@type": "Organization",
       "name": "SwePrint3D"
+    },
+    "hasMerchantReturnPolicy": {
+      "@type": "MerchantReturnPolicy",
+      "applicableCountry": "SE",
+      "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+      "merchantReturnDays": 14,
+      "returnMethod": "https://schema.org/ReturnByMail",
+      "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
+      "returnPolicyUrl": "https://sweprint3d.se/returpolicy.html"
+    },
+    "shippingDetails": {
+      "@type": "OfferShippingDetails",
+      "shippingRate": {
+        "@type": "MonetaryAmount",
+        "value": "79",
+        "currency": "SEK"
+      },
+      "shippingDestination": {
+        "@type": "DefinedRegion",
+        "addressCountry": "SE"
+      }
     }
   }{% if page.images %},
   "image": "{{ site.url }}{{ page.images[0].src }}"{% endif %}
 }
 </script>
-
-<div class="page-wrapper product-page">
-  <section class="product-hero">
 
     <!-- ---------- BILDGALLERI ---------- -->
     <aside class="product-gallery">
