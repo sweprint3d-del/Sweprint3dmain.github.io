@@ -1,118 +1,133 @@
 ---
 layout: default
-title: Beställning
+title: Beställning – 3D‑printade hjälmar & kit
+description: "Beställ 3D-printade cosplayhjälmar och kit från SwePrint3D. Betala via PayPal, Swish eller skicka en förfrågan. Vi bekräftar din beställning via e-post."
 ---
 
 <div class="page-wrapper">
   <section class="hero">
     <div class="hero-inner">
-      <h1>Beställ din 3D-printade hjälm</h1>
-      <p class="load">Fyll i formuläret nedan och betala via PayPal, Swish eller skicka en förfrågan. Vi bekräftar din beställning via e-post.</p>
+      <h1>Beställ din 3D‑printade hjälm</h1>
+      <p class="lead">
+        Fyll i formuläret nedan och betala via PayPal, Swish eller skicka en förfrågan. Vi bekräftar din beställning via e‑post enligt våra villkor.
+      </p>
+      <p class="lead" style="font-size:0.95rem; color:var(--color-text-muted); margin-top:0.5rem;">
+        Osäker på pris, material eller leveranstid? Läs gärna <a href="/priser-och-faq.html">Priser &amp; FAQ</a> innan du skickar beställning.
+      </p>
     </div>
   </section>
 
-<section style="max-width: 600px; margin: 2rem auto;">
-  <form id="orderForm">
+  <section style="max-width: 600px; margin: 2rem auto;">
+    <form id="orderForm">
 
-    <div class="form-group">
-      <label for="product">Produkt *</label>
-      <select id="product" name="product" required>
-        <option value="">Välj produkt...</option>
-        <option value="Boba Fett Hjälm - 1600">Boba Fett Hjälm - 1600 kr</option>
-        <option value="Darth Vader Hjälm - 1500">Darth Vader Hjälm - 1500 kr</option>
-        <option value="Clone Trooper Phase 1 - 1500">Clone Trooper Phase 1 - 1500 kr</option>
-        <option value="The Mandalorian - 1500">The Mandalorian - 1500 kr</option>
-        <option value="Captain Rex - 1800">Captain Rex - 1800 kr</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="material">Material *</label>
-      <select id="material" name="material" required>
-        <option value="">Välj material...</option>
-        <option value="PLA (Standard)">PLA (Standard)</option>
-        <option value="PETG (Slagtåligt)">PETG (Slagtåligt)</option>
-        <option value="ABS (Värmetåligt)">ABS (Värmetåligt)</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="size">Storlek *</label>
-      <select id="size" name="size" required>
-        <option value="">Välj storlek...</option>
-        <option value="Standard (Vuxen 1:1)">Standard (Vuxen 1:1)</option>
-        <option value="Display / Barn">Display / Barn</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="quantity">Antal *</label>
-      <input type="number" id="quantity" name="quantity" min="1" value="1" required>
-    </div>
-
-    <div class="form-group">
-      <label for="name">Ditt namn *</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-
-    <div class="form-group">
-      <label for="email">E-post *</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="form-group">
-      <label for="phone">Telefon</label>
-      <input type="tel" id="phone" name="phone">
-    </div>
-
-    <div class="form-group">
-      <label for="message">Särskilda önskemål / Noteringar</label>
-      <textarea id="message" name="message" rows="4"></textarea>
-    </div>
-
-    <div class="form-group" style="background: rgba(34, 197, 94, 0.1); padding: 1rem 0.5rem 0; border-radius: 8px; border: 1px solid rgba(34, 197, 94, 0.3); margin-bottom: 1.5rem;">
-      <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: #f9fafb;">Totalpris: <span id="totalPrice" style="color: var(--accent);">0 kr</span></p>
-      <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Priset uppdateras när du väljer produkt och antal</p>
-    </div>
-
-    <button type="button" id="paypalBtn" class="btn-primary" style="width: 100%; padding: 0.7rem; margin-bottom: 0.75rem;">
-      💳 Betala via PayPal
-    </button>
-
-    <button type="button" id="swishBtn" class="btn-primary" style="width: 100%; padding: 0.7rem; margin-bottom: 0.5rem; background: #00B4FF; border-color: #00B4FF;">
-      📲 Betala via Swish
-    </button>
-
-    <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-bottom: 0.5rem;">
-      Eller skicka en enkel förfrågan utan betalning:
-    </p>
-
-    <button type="submit" style="width: 100%; padding: 0.7rem; background: transparent; border: 1px solid var(--accent); color: var(--accent); border-radius: 6px; cursor: pointer; font-size: 1rem;">
-      📧 Skicka förfrågan (utan betalning)
-    </button>
-
-  </form>
-
-  <!-- Swish-modal -->
-  <div id="swishModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
-    <div style="background:#0f172a; border:1px solid #c8c8d0; border-radius:12px; padding:2rem; max-width:380px; width:90%; text-align:center; position:relative;">
-      <button onclick="document.getElementById('swishModal').style.display='none'" style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:#e5e7eb; font-size:1.5rem; cursor:pointer;">✕</button>
-      <h2 style="color:#00B4FF; margin-bottom:0.5rem;">📲 Betala via Swish</h2>
-      <p style="color:#e5e7eb; margin-bottom:1rem;">Swisha beloppet till:</p>
-      <p style="font-size:2rem; font-weight:700; color:#ffffff; letter-spacing:2px; margin-bottom:0.25rem;">0729760824</p>
-      <p style="color:#9ca3af; font-size:0.85rem; margin-bottom:1.5rem;">SwePrint3D – Marcus</p>
-      <div style="background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.3); border-radius:8px; padding:1rem; margin-bottom:1.5rem;">
-        <p style="color:#f9fafb; margin:0 0 0.25rem 0;">Belopp: <strong id="swishAmount" style="color:var(--accent);">0 kr</strong></p>
-        <p style="color:#9ca3af; font-size:0.85rem; margin:0;">Ange produkt + namn i Swish-meddelandet</p>
+      <div class="form-group">
+        <label for="product">Produkt *</label>
+        <select id="product" name="product" required>
+          <option value="">Välj produkt...</option>
+          <option value="Boba Fett Hjälm - 1600">Boba Fett Hjälm - 1600 kr</option>
+          <option value="Darth Vader Hjälm - 1500">Darth Vader Hjälm - 1500 kr</option>
+          <option value="Clone Trooper Phase 1 - 1500">Clone Trooper Phase 1 - 1500 kr</option>
+          <option value="The Mandalorian - 1500">The Mandalorian - 1500 kr</option>
+          <option value="Captain Rex - 1800">Captain Rex - 1800 kr</option>
+          <option value="Annan produkt (specificera i meddelande)">Annan hjälm/produkt – skriv i meddelande</option>
+        </select>
       </div>
-      <p style="color:#e5e7eb; font-size:0.9rem; margin-bottom:1.5rem;">Efter betalning skickar vi orderbekräftelse till din e-post inom 24h.</p>
-      <button onclick="document.getElementById('swishModal').style.display='none'; document.getElementById('orderForm').dispatchEvent(new Event('submit'));" style="width:100%; padding:0.7rem; background:var(--accent); border:none; border-radius:6px; color:#000; font-weight:600; cursor:pointer; font-size:1rem;">
-        ✅ Jag har swishat – skicka beställning
-      </button>
-    </div>
-  </div>
 
-</section>
+      <div class="form-group">
+        <label for="material">Material *</label>
+        <select id="material" name="material" required>
+          <option value="">Välj material...</option>
+          <option value="PLA (Standard)">PLA (Standard)</option>
+          <option value="PETG (Slagtåligt)">PETG (Slagtåligt)</option>
+          <option value="ABS (Värmetåligt)">ABS (Värmetåligt)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="size">Storlek *</label>
+        <select id="size" name="size" required>
+          <option value="">Välj storlek...</option>
+          <option value="Standard (Vuxen 1:1)">Standard (Vuxen 1:1)</option>
+          <option value="Display / Barn">Display / Barn</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="quantity">Antal *</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="name">Ditt namn *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E‑post *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Telefon</label>
+        <input type="tel" id="phone" name="phone" placeholder="Rekommenderas vid större projekt eller snabba deadlines">
+      </div>
+
+      <div class="form-group">
+        <label for="message">Särskilda önskemål / Noteringar</label>
+        <textarea id="message" name="message" rows="4" placeholder="T.ex. huvudomkrets, önskemål om material/färg, deadline eller länkar till referensbilder."></textarea>
+      </div>
+
+      <div class="form-group" style="background: rgba(34, 197, 94, 0.1); padding: 1rem 0.5rem 0; border-radius: 8px; border: 1px solid rgba(34, 197, 94, 0.3); margin-bottom: 1.5rem;">
+        <p style="margin: 0 0 0.5rem 0; font-weight: 600; color: #111827;">Totalpris: <span id="totalPrice" style="color: var(--accent);">0 kr</span></p>
+        <p style="margin: 0; font-size: 0.9rem; color: var(--text-muted);">Priset uppdateras när du väljer produkt och antal</p>
+      </div>
+
+      <button type="button" id="paypalBtn" class="btn-primary" style="width: 100%; padding: 0.7rem; margin-bottom: 0.75rem;">
+        💳 Betala via PayPal
+      </button>
+
+      <button type="button" id="swishBtn" class="btn-primary" style="width: 100%; padding: 0.7rem; margin-bottom: 0.5rem; background: #00B4FF; border-color: #00B4FF;">
+        📲 Betala via Swish
+      </button>
+
+      <p style="font-size: 0.85rem; color: var(--text-muted); text-align: center; margin-bottom: 0.5rem;">
+        Eller skicka en enkel förfrågan utan betalning:
+      </p>
+
+      <button type="submit" style="width: 100%; padding: 0.7rem; background: transparent; border: 1px solid var(--accent); color: var(--accent); border-radius: 6px; cursor: pointer; font-size: 1rem;">
+        📧 Skicka förfrågan (utan betalning)
+      </button>
+
+      <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 0.75rem;">
+        Genom att skicka beställningen godkänner du våra <a href="/villkor.html">villkor</a>.
+      </p>
+
+    </form>
+
+    <!-- Swish-modal -->
+    <div id="swishModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1000; align-items:center; justify-content:center;">
+      <div style="background:#0f172a; border:1px solid #c8c8d0; border-radius:12px; padding:2rem; max-width:380px; width:90%; text-align:center; position:relative;">
+        <button onclick="document.getElementById('swishModal').style.display='none'" style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:#e5e7eb; font-size:1.5rem; cursor:pointer;">✕</button>
+        <h2 style="color:#00B4FF; margin-bottom:0.5rem;">📲 Betala via Swish</h2>
+        <p style="color:#e5e7eb; margin-bottom:1rem;">Swisha beloppet till:</p>
+        <p style="font-size:2rem; font-weight:700; color:#ffffff; letter-spacing:2px; margin-bottom:0.25rem;">0729760824</p>
+        <p style="color:#9ca3af; font-size:0.85rem; margin-bottom:1.5rem;">SwePrint3D – Marcus</p>
+        <div style="background:rgba(34,197,94,0.1); border:1px solid rgba(34,197,94,0.3); border-radius:8px; padding:1rem; margin-bottom:1.5rem;">
+          <p style="color:#f9fafb; margin:0 0 0.25rem 0;">Belopp: <strong id="swishAmount" style="color:var(--accent);">0 kr</strong></p>
+          <p style="color:#9ca3af; font-size:0.85rem; margin:0;">Ange produkt + namn i Swish‑meddelandet</p>
+        </div>
+        <p style="color:#e5e7eb; font-size:0.9rem; margin-bottom:1.5rem;">
+          Efter betalning skickar vi orderbekräftelse till din e‑post normalt inom 24h (senast inom 2 arbetsdagar).
+        </p>
+        <button onclick="document.getElementById('swishModal').style.display='none'; document.getElementById('orderForm').dispatchEvent(new Event('submit'));" style="width:100%; padding:0.7rem; background:var(--accent); border:none; border-radius:6px; color:#000; font-weight:600; cursor:pointer; font-size:1rem;">
+          ✅ Jag har swishat – skicka beställning
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+</div>
 
 <style>
   .form-group {
@@ -150,11 +165,11 @@ title: Beställning
   function updatePrice() {
     const product = document.getElementById('product').value;
     const quantity = parseInt(document.getElementById('quantity').value) || 1;
-    if (!product) {
+    if (!product || !product.match(/\\d+/)) {
       document.getElementById('totalPrice').textContent = '0 kr';
       return;
     }
-    const price = parseInt(product.match(/\d+/)[0]) * quantity;
+    const price = parseInt(product.match(/\\d+/)[0]) * quantity;
     document.getElementById('totalPrice').textContent = price + ' kr';
   }
   document.getElementById('product').addEventListener('change', updatePrice);
@@ -168,8 +183,9 @@ title: Beställning
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     if (!product) { alert('Välj en produkt först!'); return; }
-    if (!name || !email) { alert('Fyll i namn och e-post!'); return; }
-    const price = parseInt(product.match(/\d+/)[0]) * quantity;
+    if (!name || !email) { alert('Fyll i namn och e‑post!'); return; }
+    if (!product.match(/\\d+/)) { alert('Välj en prissatt produkt eller skriv önskad produkt i meddelandefältet.'); return; }
+    const price = parseInt(product.match(/\\d+/)[0]) * quantity;
     const note = encodeURIComponent(`${product} (x${quantity}) - ${name}`);
     window.location.href = `https://www.paypal.me/SwePrint3d/${price}?note=${note}`;
   });
@@ -182,8 +198,9 @@ title: Beställning
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     if (!product) { alert('Välj en produkt först!'); return; }
-    if (!name || !email) { alert('Fyll i namn och e-post!'); return; }
-    const price = parseInt(product.match(/\d+/)[0]) * quantity;
+    if (!name || !email) { alert('Fyll i namn och e‑post!'); return; }
+    if (!product.match(/\\d+/)) { alert('Välj en prissatt produkt eller skriv önskad produkt i meddelandefältet.'); return; }
+    const price = parseInt(product.match(/\\d+/)[0]) * quantity;
     document.getElementById('swishAmount').textContent = price + ' kr';
     const modal = document.getElementById('swishModal');
     modal.style.display = 'flex';
@@ -201,16 +218,17 @@ title: Beställning
     const phone = document.getElementById('phone').value;
     const message = document.getElementById('message').value;
     const body = encodeURIComponent(
-      `Beställningsförfrågan\n\n` +
-      `Namn: ${name}\n` +
-      `E-post: ${email}\n` +
-      `Telefon: ${phone}\n\n` +
-      `Produkt: ${product}\n` +
-      `Material: ${material}\n` +
-      `Storlek: ${size}\n` +
-      `Antal: ${quantity}\n\n` +
-      `Noteringar:\n${message}`
+      `Beställningsförfrågan\\n\\n` +
+      `Namn: ${name}\\n` +
+      `E-post: ${email}\\n` +
+      `Telefon: ${phone}\\n\\n` +
+      `Produkt: ${product}\\n` +
+      `Material: ${material}\\n` +
+      `Storlek: ${size}\\n` +
+      `Antal: ${quantity}\\n\\n` +
+      `Noteringar:\\n${message}`
     );
-    window.location.href = `mailto:sweprint3d@gmail.com?subject=Beställningsförfrågan: ${product}&body=${body}`;
+    window.location.href = `mailto:sweprint3d@gmail.com?subject=Beställningsförfrågan: ${encodeURIComponent(product)}&body=${body}`;
   });
 </script>
+
