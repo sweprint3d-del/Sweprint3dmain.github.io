@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "PlayStation kontrollerställ – display för DualShock 1 och 2 | 3D-printat"
 product_name: "PlayStation Kontrollerställ – DualShock"
 subtitle: "Displayställ med kontrollhållare och kabelvinda – 3D-printat"
