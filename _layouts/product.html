@@ -184,7 +184,7 @@ layout: default
           </div>
         </div>
 
-        <a href="/order.html" class="btn-primary product-order-button">Beställ nu</a>
+       <a href="/order.html" id="productOrderButton" class="btn-primary product-order-button">Beställ nu</a>
         <p class="product-order-note">
           Du skickar in dina val via beställningssidan och får sedan bekräftelse via e-post.
         </p>
@@ -196,21 +196,51 @@ layout: default
 </div>
 
 <script>
-  document.querySelectorAll('.product-thumb').forEach(button => {
+  const thumbs = document.querySelectorAll('.product-thumb');
+  const mainImg = document.querySelector('.product-image-main img');
+
+  thumbs.forEach(button => {
     button.addEventListener('click', function () {
       const newImg = this.querySelector('img');
-      const mainImg = document.querySelector('.product-image-main img');
-
       if (!newImg || !mainImg) return;
 
       mainImg.src = newImg.src;
       mainImg.alt = newImg.alt;
 
-      document.querySelectorAll('.product-thumb').forEach(btn => {
-        btn.classList.remove('is-active');
-      });
-
+      thumbs.forEach(btn => btn.classList.remove('is-active'));
       this.classList.add('is-active');
     });
   });
+
+  const orderButton = document.getElementById('productOrderButton');
+  const materialField = document.getElementById('material');
+  const sizeField = document.getElementById('size');
+  const quantityField = document.getElementById('quantity');
+
+  function updateOrderLink() {
+    if (!orderButton) return;
+
+    const url = new URL('/order.html', window.location.origin);
+    url.searchParams.set('product', {{ page.product_name | jsonify }});
+
+    if (materialField && materialField.options.length) {
+      url.searchParams.set('material', materialField.options[materialField.selectedIndex].text);
+    }
+
+    if (sizeField && sizeField.options.length) {
+      url.searchParams.set('size', sizeField.options[sizeField.selectedIndex].text);
+    }
+
+    if (quantityField && quantityField.value) {
+      url.searchParams.set('quantity', quantityField.value);
+    }
+
+    orderButton.href = url.pathname + url.search;
+  }
+
+  if (materialField) materialField.addEventListener('change', updateOrderLink);
+  if (sizeField) sizeField.addEventListener('change', updateOrderLink);
+  if (quantityField) quantityField.addEventListener('input', updateOrderLink);
+
+  updateOrderLink();
 </script>
