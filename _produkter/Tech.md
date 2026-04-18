@@ -1,25 +1,25 @@
 ---
 layout: product
 category: helmets
-title: "Tech Hjälm – 3D-printad Star Wars Bad Batch cosplayhälm"
+title: "Tech Hjälm – 3D-printad Star Wars Bad Batch cosplayhjälm"
 description: "Köp fullskalig Tech-hjälm från Star Wars: The Bad Batch 3D-printad i Sverige. Rått kit i skala 1:1 redo för slipning och målning. Från 1600 kr."
 product_name: "Tech Hjälm – The Bad Batch"
 subtitle: "Clone Force 99 – Tech Specialist"
 short_description: "Tech-hjälm från Star Wars: The Bad Batch i skala 1:1 – rått 3D-printat kit med ikoniska dubbla glasvisirer. Perfekt för cosplay eller display."
-description_long: "Fullskalig Tech-hjälm från Star Wars: The Bad Batch, inspirerad av Clone Force 99:s teknikexpert. Hjälmen 3D-printas i flera delar för enkel efterbehandling – perfekt för att återskapa teknikexperten med de ikoniska dubbla glasögon-visorerna och det unika grönbeige schemat. Du får ett rått 3D-printat kit som du själv slipar, monterar och målar. Produceras i Sverige och skickas med spårbar frakt."
+description_long: "Fullskalig Tech-hjälmen printas i flera delar för enkel efterbehandling – perfekt för att återskapa teknikexperten med de ikoniska dubbla glasögon-visorerna och det unika grönbeige schemat. Du får ett rått 3D-printat kit som du själv slipar, monterar och målar. Produceras i Sverige och skickas med spårbar frakt."
 price_from: 1600
-tech_info: "ca 55–75h printtid | Skala 1:1 | Rå 3D-print redo för finish"
+tech_info: "ca 55-75h printtid | Skala 1:1 | Rå 3D-print redo för finish"
 images:
-  - src: "/images/tech-hjalm-1.webp"
-    alt: "Tech-hjälm framifrån med visirdetaljer – rått 3D-printat Bad Batch kit"
-  - src: "/images/tech-hjalm-2.webp"
-    alt: "Tech-hjälm sidovy – 3D-printad Star Wars cosplayhälm"
-  - src: "/images/tech-hjalm-3.webp"
-    alt: "Tech-hjälm alla delar uppställda – rått kit i vitt PLA"
-  - src: "/images/tech-hjalm-4.webp"
-    alt: "Tech-hjälm närbild detaljer – dubbla glasvisirer och kommunikationspanel"
-  - src: "/images/tech-hjalm-5.webp"
-    alt: "Tech-hjälm bakifrån – 3D-printad Bad Batch cosplayhälm"
+  - src: "/images/PXL_20201106_180503620_1024x1024.webp"
+    alt: "Tech-hjälm framifrån med visirdetaljer"
+  - src: "/images/PXL_20201106_180511883_1024x1024.webp"
+    alt: "Tech-hjälm sidovy"
+  - src: "/images/PXL_20201106_180542964_1024x1024.webp"
+    alt: "Tech-hjälm alla delar uppställda"
+  - src: "/images/PXL_20201106_180556437_1024x1024.webp"
+    alt: "Tech-hjälm närbild detaljer"
+  - src: "/images/PXL_20201106_180615471_1024x1024.webp"
+    alt: "Tech-hjälm bakifrån"
 kit_contents:
   - "Hjälmskal i flera delar (front, bakstycke, kupol)"
   - "Dubbla visorramar – Techs ikoniska glasögon-look"
