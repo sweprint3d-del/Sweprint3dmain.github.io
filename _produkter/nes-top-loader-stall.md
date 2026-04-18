@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "NES Top Loader konsollställ + kontrolllerställ med kabelhållare – display | 3D-printat"
 product_name: "NES Top Loader – Displayställ"
 subtitle: "Displayställ med kontrollhållare och kabelvinda – 3D-printat"
