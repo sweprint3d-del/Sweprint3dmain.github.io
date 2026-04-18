@@ -10,12 +10,16 @@ description_long: "Visa upp din originala Xbox i all sin glans med detta robusta
 price_from: 119
 tech_info: "ca 3–5h printtid | Material: PLA/PLA+ | Snap-fit montering | För display"
 images:
-  - src: "/images/xbox-original-konsol-kontroll-1.jpg"
+    - src: "/images/PXL_20251210_061449498.jpg"
     alt: "Xbox Original (konsol + kontroll) displayställ framifrån – 3D-printat konsolställ"
-  - src: "/images/xbox-original-konsol-kontroll-2.jpg"
-    alt: "Xbox Original (konsol + kontroll) displayställ från sidan – snett perspektiv"
-  - src: "/images/xbox-original-konsol-kontroll-3.jpg"
-    alt: "Xbox Original (konsol + kontroll) displayställ bakifrån – kabelvinda synlig"
+  - src: "/images/PXL_20251210_061825430.jpg"
+    alt: "Xbox Original (konsol + kontroll) displayställ från sidan – S-kontroller monterad på armen"
+  - src: "/images/PXL_20251210_061838048.jpg"
+    alt: "Xbox Original (konsol + kontroll) displayställ bakifrån – anslutningar och kabelvinda synliga"
+  - src: "/images/PXL_20251210_061851635.jpg"
+    alt: "Xbox Original konsolställ från sidan – Duke-kontroller hålls av arm"
+  - src: "/images/PXL_20251210_062241348.jpg"
+    alt: "Xbox Original displayställ isärplockad – bas och kontrollhållare separat"
 kit_contents:
   - "Konsolställ (bas och stöd)"
   - "Kontrollerställ"
