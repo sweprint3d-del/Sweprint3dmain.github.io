@@ -1,16 +1,16 @@
 ---
 layout: default
-title: "Butik – 3D‑printade cosplayhjälmar, kit & organizers"
-description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från SwePrint3D i Sverige. Fysiska produkter printade på beställning – perfekta för cosplay och display."
+title: "Butik – 3D-printade cosplayhjälmar, kit & displayställ"
+description: "Beställ 3D-printade cosplayhjälmar, kit och displayställ för spelkonsoler från SwePrint3D i Sverige. Fysiska produkter printade på beställning."
 ---
 
 <div class="page-wrapper">
 
   <!-- TOPP / INTRO -->
   <section class="page-header">
-    <h1>Butik – 3D‑printade cosplayhjälmar, kit & organizers</h1>
+    <h1>Butik – 3D-printade cosplayhjälmar, kit &amp; displayställ</h1>
     <p class="section-intro">
-      Här hittar du råa 3D‑printade hjälmar, bustar, props och praktiska organizers. Alla hjälmar levereras som råa 3D‑printade kit i delar, redo för slipning, montering och målning.
+      Här hittar du råa 3D-printade hjälmar, bustar, props och displayställ för spelkonsoler. Alla hjälmar levereras som råa 3D-printade kit i delar, redo för slipning, montering och målning.
     </p>
     <p class="section-intro">
       Klicka på en produkt för att se fler bilder, detaljer och beställningsalternativ. När du är redo beställer du via vår <a href="/order.html">beställningssida</a>.
@@ -21,8 +21,8 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
   <section class="shop-section" data-section="helmets">
     <h2>Helmets &amp; Armor</h2>
     <p class="section-intro">
-      3D‑printade cosplay‑hjälmar i skala 1:1, levererade som råa kit redo för slipning, montering och målning.
-      Modeller från tredjepartsdesigners (t.ex. Galactic Armory), 3D‑printade under kommersiell licens.
+      3D-printade cosplay-hjälmar i skala 1:1, levererade som råa kit redo för slipning, montering och målning.
+      Modeller från tredjepartsdesigners (t.ex. Galactic Armory), 3D-printade under kommersiell licens.
     </p>
 
     <div class="cards">
@@ -55,7 +55,7 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
   <section class="shop-section" data-section="kit-cards">
     <h2>Kit &amp; Cards</h2>
     <p class="section-intro">
-      Mindre props, kit och samlarkort‑inspirerade prints – perfekta som insteg, present eller som komplement till större projekt.
+      Mindre props, kit och samlarkort-inspirerade prints – perfekta som insteg, present eller som komplement till större projekt.
     </p>
 
     <div class="cards">
@@ -84,16 +84,16 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
     </div>
   </section>
 
-  <!-- ORGANIZERS -->
-  <section class="shop-section" data-section="organizers">
-    <h2>Organizers</h2>
+  <!-- DISPLAY-STÄLL -->
+  <section class="shop-section" data-section="display-stands">
+    <h2>Displayställ för spelkonsoler</h2>
     <p class="section-intro">
-      Praktiska organizers och hållare för gaming, hobby och vardag – designade och 3D‑printade av SwePrint3D.
+      3D-printade displayställ för retrokonsolälskare – håll din samling snygg och organiserad. Passar NES, SNES, GameCube, PlayStation, Sega, Wii och fler. Printade på beställning i Sverige.
     </p>
 
     <div class="cards">
-      {% assign organizers = site.produkter | where: "category", "organizers" | sort: "product_name" %}
-      {% for produkt in organizers %}
+      {% assign stands = site.produkter | where: "category", "display-stands" | sort: "product_name" %}
+      {% for produkt in stands %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
           {% if produkt.tag %}
@@ -109,7 +109,7 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
             {% if produkt.material %}
             <span class="price-note">{{ produkt.material }}</span>
             {% endif %}
-            <span class="price-cta">Visa produkt</span>
+            <span class="price-cta">Visa stället</span>
           </div>
         </div>
       </a>
@@ -118,63 +118,44 @@ description: "Beställ 3D‑printade cosplayhjälmar, kit och organizers från S
   </section>
 
   <!-- KOMMANDE MODELLER -->
-  <section class="shop-section" id="coming-soon">
+  <section class="shop-section" data-section="coming-soon">
     <h2>Kommande modeller</h2>
-    <p class="section-intro">
-      Här ser du hjälmar och kit som är på väg in i sortimentet. Datumen är preliminära.
-    </p>
+    <p class="section-intro">Här ser du hjälmar och kit som är på väg in i sortimentet. Datumen är preliminära.</p>
 
-    <div class="cards">
-      <article class="card product-card is-coming-soon">
-        <div class="card-body">
-          <h3>
-            <span class="badge badge-soon">Kommer snart</span>
-            Green Ranger Hjälm
-          </h3>
-          <p class="product-kicker">Mighty Morphin‑inspirerat cosplaykit</p>
-          <ul class="product-meta-list">
-            <li>Planerad lansering: vår/sommar 2026</li>
-            <li>Rå 3D‑printad hjälm i delar (ej målad eller monterad)</li>
-            <li>Skala 1:1, avsedd att kunna bäras</li>
-          </ul>
-        </div>
-      </article>
-
-      <article class="card product-card is-coming-soon">
-        <div class="card-body">
-          <h3>
-            <span class="badge badge-soon">Kommer snart</span>
-            Clone Commander Hjälm – ny variant
-          </h3>
-          <p class="product-kicker">Star Wars‑inspirerad 1:1‑hjälm</p>
-          <ul class="product-meta-list">
-            <li>Planerad lansering: 2026</li>
-            <li>Samma finishnivå som övriga Clone‑hjälmar</li>
-            <li>Levereras som rått 3D‑printat kit</li>
-          </ul>
-        </div>
-      </article>
+    <div class="coming-soon-list">
+      <div class="coming-soon-item">
+        <span class="card-tag">Kommer snart</span>
+        <h3>Green Ranger Hjälm</h3>
+        <p>Mighty Morphin-inspirerat cosplaykit</p>
+        <ul>
+          <li>Planerad lansering: vår/sommar 2026</li>
+          <li>Rå 3D-printad hjälm i delar (ej målad eller monterad)</li>
+          <li>Skala 1:1, avsedd att kunna bäras</li>
+        </ul>
+      </div>
+      <div class="coming-soon-item">
+        <span class="card-tag">Kommer snart</span>
+        <h3>Clone Commander Hjälm – ny variant</h3>
+        <p>Star Wars-inspirerad 1:1-hjälm</p>
+        <ul>
+          <li>Planerad lansering: 2026</li>
+          <li>Samma finishnivå som övriga Clone-hjälmar</li>
+          <li>Levereras som rått 3D-printat kit</li>
+        </ul>
+      </div>
     </div>
-
-    <p class="section-intro" style="margin-top: 1rem;">
-      Intresserad av någon modell? Skicka en förfrågan via
-      <a href="/order.html">beställningssidan</a> så kan jag prioritera den i schemat.
-    </p>
+    <p>Intresserad av någon modell? Skicka en förfrågan via <a href="/order.html">beställningssidan</a> så kan jag prioritera den i schemat.</p>
   </section>
 
-  <!-- SÅ BESTÄLLER DU -->
-  <section class="shop-section">
+  <!-- SÅ HÄR BESTÄLLER DU -->
+  <section class="how-to-order">
     <h2>Så här beställer du</h2>
-    <ol class="section-intro">
-      <li>Välj en hjälm eller ett kit i butiken och läs igenom produktsidan.</li>
+    <ol>
+      <li>Välj en hjälm, ett kit eller ett displayställ i butiken och läs igenom produktsidan.</li>
       <li>Gå till <a href="/order.html">beställningssidan</a> och fyll i formuläret med produktnamn, material och storlek.</li>
-      <li>Betala via PayPal eller Swish – du får bekräftelse via e‑post.</li>
+      <li>Betala via PayPal eller Swish – du får bekräftelse via e-post.</li>
     </ol>
-    <p class="section-intro">
-      Osäker på storlek eller vad ett rått kit innebär? Läs vår <a href="/info/storleksguide.html">storleksguide</a> och guiden om
-      <a href="/ra-3d-printad-hjalm/">rå 3D‑printad hjälm</a>.
-    </p>
+    <p>Osäker på storlek eller vad ett rått kit innebär? Läs vår <a href="/hjaelmstorlek.html">storleksguide</a> och guiden om <a href="/ra-3d-printad-hjalm.html">rå 3D-printad hjälm</a>.</p>
   </section>
 
 </div>
-
