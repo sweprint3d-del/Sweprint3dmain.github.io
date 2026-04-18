@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "PS2 Slim konsolställ + kontrollerställ med kabelhållare – display för PlayStation 2 | 3D-printat"
 product_name: "PlayStation 2 Slim – Displayställ"
 subtitle: "Lutande display med flytande kontrollhållare – 3D-printat"
