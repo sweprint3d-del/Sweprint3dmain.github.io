@@ -8,9 +8,9 @@ short_description: "3D-printat displayställ för Xbox Original – designat fö
 description: "Köp Xbox Original (konsol + kontroll) displayställ – 3D-printat konsolställ med kontrollhållare. Från 119 kr. Beställ på SwePrint3D."
 description_long: "Visa upp din originala Xbox i all sin glans med detta robusta displayställ. Det mest robusta stället i serien – designat för Xboxens tunga konsol. Välj variant med hållare för Duke- eller S-kontrollern, eller enbart konsol. Integrerad kontrollarm, lutande display – sätt i framsidan först, klicka fast baksidan."
 price_from: 119
-tech_info: "ca 3–5h printtid | Material: PLA/PLA+ | Snap-fit montering | För display"
+tech_info: "ca 3-5h printtid | Material: PLA/PLA+ | Snap-fit montering | För display"
 images:
-    - src: "/images/PXL_20251210_061449498.jpg"
+  - src: "/images/PXL_20251210_061449498.jpg"
     alt: "Xbox Original (konsol + kontroll) displayställ framifrån – 3D-printat konsolställ"
   - src: "/images/PXL_20251210_061825430.jpg"
     alt: "Xbox Original (konsol + kontroll) displayställ från sidan – S-kontroller monterad på armen"
@@ -25,20 +25,20 @@ kit_contents:
   - "Kontrollerställ"
 materials:
   - name: "PLA (Standard – bäst detaljer)"
-    value: "pla"
+    value: pla
   - name: "PLA+ (Extra tålig)"
-    value: "pla-plus"
+    value: pla-plus
   - name: "PETG (Slagtåligt)"
-    value: "petg"
+    value: petg
 colors:
   - name: "Svart"
-    value: "svart"
+    value: svart
   - name: "Vit"
-    value: "vit"
+    value: vit
   - name: "Grå"
-    value: "gra"
+    value: gra
   - name: "Annan färg (skriv i meddelande)"
-    value: "annan"
+    value: annan
 notes:
   - "Konsol och tillbehör på bilderna ingår ej – endast stället säljs."
   - "Printas på beställning, normal produktionstid 3–7 arbetsdagar."
