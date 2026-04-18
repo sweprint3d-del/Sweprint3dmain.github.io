@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "Xbox Original konsolställ + kontrollerställ – display med Duke eller S-kontroll | 3D-printat"
 product_name: "Xbox Original (konsol + kontroll) – Displayställ"
 subtitle: "Displayställ med kontrollhållare och kabelvinda – 3D-printat"
