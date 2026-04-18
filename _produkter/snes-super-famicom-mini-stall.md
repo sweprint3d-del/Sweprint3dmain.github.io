@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "SNES Mini ställ + kontrollerställ med kabelhållare – display för Super Famicom Classic Mini | 3D-printat"
 product_name: "SNES / Super Famicom Mini – Displayställ"
 subtitle: "Displayställ med kontrollhållare och kabelvinda – 3D-printat"
