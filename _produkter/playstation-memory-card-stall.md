@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "PlayStation minneskortshållare – förvaring för PS1 och PS2 Memory Cards | 3D-printat"
 product_name: "PlayStation Minneskortshållare"
 subtitle: "Kompakt förvaring för PS1/PS2-minneskort – 3D-printat"
