@@ -2,38 +2,31 @@
 layout: product
 category: kit-cards
 title: "TIE Fighter Modellkit – 3D-printad Imperial Star Wars modell på sprue"
-
+description: "Köp 3D-printad TIE Fighter som modellkit på sprue från Sverige. Montera själv – precis som en plastmodell. Från 249 kr. Enfargad eller multicolor."
 product_name: "TIE Fighter – Modellkit"
 subtitle: "Imperial starfighter från Star Wars på sprue"
-
-description: "Detaljerad 3D‑printad TIE Fighter som modellkit – montera själv från delarna på sprueplattan."
-description_long: "En klassisk Imperial TIE Fighter som 3D‑printat modellkit. Levereras på sprues precis som en plastmodell – knipsa loss, montera och ställ upp med det medföljande displaystället. Perfekt som samlarmodell eller displaystycke. Vid 100 % skala är modellen ca 13 cm lång och lika bred över vingarna. Finns både enfärgad och i multicolor (olika färg på kropp och vingar)."
-
+short_description: "Detaljerad 3D-printad TIE Fighter som modellkit – montera själv från delarna på sprueplattan. Perfekt Star Wars displaymodell."
+description_long: "En klassisk Imperial TIE Fighter som 3D-printat modellkit. Levereras på sprues precis som en plastmodell – knipsa loss, montera och ställ upp med det medföljande displaystället. Perfekt som samlarmodell eller displaystycke. Vid 100 % skala är modellen ca 13 cm lång och lika bred över vingarna. Finns både enfärgad och i multicolor (olika färg på kropp och vingar)."
 price_from: 249
-tech_info: "Printas på beställning. Rek. skala: 100 %. Multicolor‑alternativ kräver AMS (+30 kr)."
-
+tech_info: "Printas på beställning. Rek. skala: 100 %. Multicolor-alternativ kräver AMS (+30 kr)."
 images:
   - src: "/images/tie-fighter1.jpg"
-    alt: "TIE Fighter framifrån på vit bakgrund."
+    alt: "TIE Fighter modellkit framifrån på vit bakgrund – grå enfärgad"
   - src: "/images/tie-fighter2.jpg"
-    alt: "TIE Fighter‑delar på sprueplattor."
+    alt: "TIE Fighter delar på sprueplatta – 3D-printat modellkit"
   - src: "/images/tie-fighter3.jpg"
-    alt: "Närbild på TIE Fighter‑vinge framifrån."
+    alt: "Närbild på TIE Fighter-vinge framifrån – detaljerad Star Wars modell"
   - src: "/images/tie-fighter4.jpg"
-    alt: "TIE Fighter från sidan med synliga vingdetaljer."
-
-
+    alt: "TIE Fighter från sidan med synliga vingdetaljer – 3D-printad"
 kit_contents:
-  - "Kropp‑ och vingdelar på sprue"
-  - "Displayställ med Imperial‑logotyp"
+  - "Kropp- och vingdelar på sprue"
+  - "Displayställ med Imperial-logotyp"
   - "Monteringsguide (länk eller PDF)"
-
 materials:
   - name: "PLA (Standard – bra detalj och styvhet)"
     value: "pla"
   - name: "PETG (Mer slagtåligt, lite mer flex)"
     value: "petg"
-
 colors:
   - name: "Grå enfärgad (standard Imperial)"
     value: "grey-solid"
@@ -43,7 +36,6 @@ colors:
     value: "black-solid"
   - name: "Vit enfärgad"
     value: "white-solid"
-
 sizes:
   - name: "75 % – Mindre modell (249 kr enfärgad / 279 kr multicolor)"
     value: "75"
@@ -51,9 +43,8 @@ sizes:
     value: "100"
   - name: "150 % – Stor displaymodell (499 kr enfärgad / 549 kr multicolor)"
     value: "150"
-
 notes:
   - "Levereras omonterad – knipsa loss delarna och montera enligt guide."
-  - "Stand ingår. Multicolor‑print kostar +30 kr pga filamentbyte."
+  - "Stand ingår. Multicolor-print kostar +30 kr pga filamentbyte."
   - "Printas på beställning, normal produktionstid 5–10 arbetsdagar."
 ---
