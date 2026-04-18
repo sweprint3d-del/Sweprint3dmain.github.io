@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "NES konsollställ + kontrolllerställ med kabelhållare – display för Nintendo Entertainment System | 3D-printat"
 product_name: "Nintendo NES – Displayställ"
 subtitle: "Displayställ med kontrollhållare och kabelvinda – 3D-printat"
