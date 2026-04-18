@@ -4,23 +4,22 @@ layout: default
 
 {% assign main_image = page.images | first %}
 
-{% comment %} Schema.org JSON-LD {% endcomment %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "{{ page.product_name | escape }}",
-  "description": "{{ page.description | escape }}",
+  "name": {{ page.product_name | jsonify }},
+  "description": {{ page.description | jsonify }},
   "brand": {
     "@type": "Brand",
     "name": "SwePrint3D"
   }{% if main_image %},
-  "image": "{{ site.url }}{{ main_image.src }}"{% endif %},
+  "image": {{ site.url | append: main_image.src | jsonify }}{% endif %},
   "offers": {
     "@type": "Offer",
-    "url": "{{ site.url }}{{ page.url }}",
+    "url": {{ site.url | append: page.url | jsonify }},
     "priceCurrency": "SEK",
-    "price": "{{ page.price_from }}",
+    "price": {{ page.price_from | jsonify }},
     "availability": "https://schema.org/InStock",
     "itemCondition": "https://schema.org/NewCondition",
     "seller": {
@@ -40,7 +39,7 @@ layout: default
       "@type": "OfferShippingDetails",
       "shippingRate": {
         "@type": "MonetaryAmount",
-        "value": "79",
+        "value": 79,
         "currency": "SEK"
       },
       "shippingDestination": {
@@ -81,19 +80,19 @@ layout: default
           </figure>
 
           {% if page.images.size > 1 %}
-          <div class="product-thumbs" aria-label="Fler produktbilder">
-            {% for image in page.images %}
-            <button
-              class="product-thumb{% if forloop.first %} is-active{% endif %}"
-              type="button"
-              aria-label="Visa bild {{ forloop.index }} för {{ page.product_name }}">
-              <img
-                src="{{ image.src }}"
-                alt="{{ image.alt }}"
-                loading="lazy">
-            </button>
-            {% endfor %}
-          </div>
+            <div class="product-thumbs" aria-label="Fler produktbilder">
+              {% for image in page.images %}
+                <button
+                  class="product-thumb{% if forloop.first %} is-active{% endif %}"
+                  type="button"
+                  aria-label="Visa bild {{ forloop.index }} för {{ page.product_name }}">
+                  <img
+                    src="{{ image.src }}"
+                    alt="{{ image.alt }}"
+                    loading="lazy">
+                </button>
+              {% endfor %}
+            </div>
           {% endif %}
         </div>
       {% endif %}
@@ -119,15 +118,15 @@ layout: default
       <div class="product-info-links">
         <a href="/hjaelmstorlek/">Storleksguide</a>
         <a href="/ra-3d-printad-hjalm/">Vad är ett raw kit?</a>
-        <a href="/priser-och-faq.html">Priser & FAQ</a>
+        <a href="/priser-och-faq.html">Priser &amp; FAQ</a>
       </div>
 
       {% if page.kit_contents %}
         <div class="product-kit">
           <h2>Kitet innehåller</h2>
           <ul>
-            {% for item in page.kit_contents s %}
-            >{{ item }}</li>
+            {% for item in page.kit_contents %}
+              <li>{{ item }}</li>
             {% endfor %}
           </ul>
         </div>
@@ -137,8 +136,8 @@ layout: default
         <div class="product-notes">
           <h2>Bra att veta</h2>
           <ul>
-            {% for note in page.notes s %}
-            >{{ note }}</li>
+            {% for note in page.notes %}
+              <li>{{ note }}</li>
             {% endfor %}
           </ul>
         </div>
@@ -159,60 +158,11 @@ layout: default
 
         <div class="product-field-row">
           {% if page.materials %}
-          <div class="product-field">
-            abel for="material">Material</label>
-            <select id="material" name="material">
-              {% for material in page.materials %}
-              <option value="{{ material.value }}">{{ material.name }}</option>
-              {% endfor %}
-            </select>
-          </div>
-          {% endif %}
-
-          {% if page.sizes %}
-          <div class="product-field">
-            abel for="size">Storlek</label>
-            <select id="size" name="size">
-              {% for size in page.sizes %}
-              <option value="{{ size.value }}">{{ size.name }}</option>
-              {% endfor %}
-            </select>
-          </div>
-          {% endif %}
-        </div>
-
-        <div class="product-field">
-          abel for="quantity">Antal</label>
-          <input type="number" id="quantity" name="quantity" min="1" value="1">
-        </div>
-
-        <a href="/order.html" class="btn-primary product-order-button">Beställ nu</a>
-        <p class="product-order-note">
-          Du skickar in dina val via beställningssidan och får sedan bekräftelse via e-post.[web:2]
-        </p>
-      </div>
-    </div>
-  </section>
-
-  {{ content }}
-</div>
-
-<script>
-document.querySelectorAll('.product-thumb').forEach(button => {
-  button.addEventListener('click', function () {
-    const newImg = this.querySelector('img');
-    const mainImg = document.querySelector('.product-image-main img');
-
-    if (!newImg || !mainImg) return;
-
-    mainImg.src = newImg.src;
-    mainImg.alt = newImg.alt;
-
-    document.querySelectorAll('.product-thumb').forEach(btn => {
-      btn.classList.remove('is-active');
-    });
-
-    this.classList.add('is-active');
-  });
-});
-</script>
+            <div class="product-field">
+              <label for="material">Material</label>
+              <select id="material" name="material">
+                {% for material in page.materials %}
+                  <option value="{{ material.value }}">{{ material.name }}</option>
+                {% endfor %}
+              </select>
+            
