@@ -2,22 +2,27 @@
 layout: default
 ---
 
-{% comment %}Schema.org JSON-LD{% endcomment %}
+{% assign main_image = page.images | first %}
+
+{% comment %} Schema.org JSON-LD {% endcomment %}
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org/",
+  "@context": "https://schema.org",
   "@type": "Product",
-  "name": "{{ page.product_name }}",
-  "description": "{{ page.description }}",
+  "name": "{{ page.product_name | escape }}",
+  "description": "{{ page.description | escape }}",
   "brand": {
     "@type": "Brand",
     "name": "SwePrint3D"
-  },
+  }{% if main_image %},
+  "image": "{{ site.url }}{{ main_image.src }}"{% endif %},
   "offers": {
     "@type": "Offer",
+    "url": "{{ site.url }}{{ page.url }}",
     "priceCurrency": "SEK",
     "price": "{{ page.price_from }}",
     "availability": "https://schema.org/InStock",
+    "itemCondition": "https://schema.org/NewCondition",
     "seller": {
       "@type": "Organization",
       "name": "SwePrint3D"
@@ -28,8 +33,8 @@ layout: default
       "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
       "merchantReturnDays": 14,
       "returnMethod": "https://schema.org/ReturnByMail",
-      "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
-      "returnPolicyUrl": "https://sweprint3d.se/returpolicy.html"
+      "returnFees": "https://schema.org/ReturnShippingFees",
+      "merchantReturnLink": "https://sweprint3d.se/returpolicy.html"
     },
     "shippingDetails": {
       "@type": "OfferShippingDetails",
@@ -48,38 +53,44 @@ layout: default
           "@type": "QuantitativeValue",
           "minValue": 1,
           "maxValue": 3,
-          "unitCode": "d"
+          "unitCode": "DAY"
         },
         "transitTime": {
           "@type": "QuantitativeValue",
           "minValue": 2,
           "maxValue": 5,
-          "unitCode": "d"
+          "unitCode": "DAY"
         }
       }
     }
-  }{% if page.images %},
-  "image": "{{ site.url }}{{ page.images[0].src }}"{% endif %}
+  }
 }
 </script>
 
 <div class="page-wrapper product-page">
   <section class="product-hero">
 
-    <!-- ---------- BILDGALLERI ---------- -->
     <aside class="product-gallery">
       {% if page.images %}
         <div class="product-images">
-          {% assign main_image = page.images | first %}
           <figure class="product-image product-image-main">
-            <img src="{{ main_image.src }}" alt="{{ main_image.alt }}">
+            <img
+              src="{{ main_image.src }}"
+              alt="{{ main_image.alt }}"
+              loading="eager">
           </figure>
 
           {% if page.images.size > 1 %}
-          <div class="product-thumbs">
+          <div class="product-thumbs" aria-label="Fler produktbilder">
             {% for image in page.images %}
-            <button class="product-thumb">
-              <img src="{{ image.src }}" alt="{{ image.alt }}">
+            <button
+              class="product-thumb{% if forloop.first %} is-active{% endif %}"
+              type="button"
+              aria-label="Visa bild {{ forloop.index }} för {{ page.product_name }}">
+              <img
+                src="{{ image.src }}"
+                alt="{{ image.alt }}"
+                loading="lazy">
             </button>
             {% endfor %}
           </div>
@@ -88,7 +99,6 @@ layout: default
       {% endif %}
     </aside>
 
-    <!-- ---------- PRODUKTINFORMATION ---------- -->
     <div class="product-main">
       {% if page.category %}
         <p class="hero-kicker">{{ page.category | upcase }}</p>
@@ -106,18 +116,34 @@ layout: default
         <p class="product-description">{{ page.description }}</p>
       {% endif %}
 
+      <div class="product-info-links">
+        <a href="/hjaelmstorlek/">Storleksguide</a>
+        <a href="/ra-3d-printad-hjalm/">Vad är ett raw kit?</a>
+        <a href="/priser-och-faq.html">Priser & FAQ</a>
+      </div>
+
       {% if page.kit_contents %}
         <div class="product-kit">
-          <h2>Kitet innehåller:</h2>
+          <h2>Kitet innehåller</h2>
           <ul>
-            {% for item in page.kit_contents %}
-            <li>{{ item }}</li>
+            {% for item in page.kit_contents s %}
+            >{{ item }}</li>
             {% endfor %}
           </ul>
         </div>
       {% endif %}
 
-      <!-- ---------- PRIS & VAL (material / storlek / antal) ---------- -->
+      {% if page.notes %}
+        <div class="product-notes">
+          <h2>Bra att veta</h2>
+          <ul>
+            {% for note in page.notes s %}
+            >{{ note }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
       <div class="product-purchase">
         <p class="product-price">Pris från {{ page.price_from }} kr</p>
 
@@ -125,12 +151,17 @@ layout: default
           <p class="product-tech">{{ page.tech_info }}</p>
         {% endif %}
 
-        <!-- Rad med alla valbara fält -->
+        <div class="product-trust">
+          <span>Fysiskt kit, inte STL-fil</span>
+          <span>Betala med Swish eller PayPal</span>
+          <span>Printat i Sverige</span>
+        </div>
+
         <div class="product-field-row">
           {% if page.materials %}
           <div class="product-field">
-            <label for="material">Material</label>
-            <select id="material">
+            abel for="material">Material</label>
+            <select id="material" name="material">
               {% for material in page.materials %}
               <option value="{{ material.value }}">{{ material.name }}</option>
               {% endfor %}
@@ -140,8 +171,8 @@ layout: default
 
           {% if page.sizes %}
           <div class="product-field">
-            <label for="size">Storlek</label>
-            <select id="size">
+            abel for="size">Storlek</label>
+            <select id="size" name="size">
               {% for size in page.sizes %}
               <option value="{{ size.value }}">{{ size.name }}</option>
               {% endfor %}
@@ -151,11 +182,14 @@ layout: default
         </div>
 
         <div class="product-field">
-          <label for="quantity">Antal</label>
-          <input type="number" id="quantity" min="1" value="1">
+          abel for="quantity">Antal</label>
+          <input type="number" id="quantity" name="quantity" min="1" value="1">
         </div>
 
-        <a href="/order.html" class="btn btn-primary" style="display:block;width:100%;text-align:center;padding:0.8rem;font-size:1.1rem;margin-bottom:0.5rem;">Beställ nu</a>
+        <a href="/order.html" class="btn-primary product-order-button">Beställ nu</a>
+        <p class="product-order-note">
+          Du skickar in dina val via beställningssidan och får sedan bekräftelse via e-post.[web:2]
+        </p>
       </div>
     </div>
   </section>
@@ -165,19 +199,20 @@ layout: default
 
 <script>
 document.querySelectorAll('.product-thumb').forEach(button => {
-  button.addEventListener('click', function (e) {
-    e.preventDefault();
+  button.addEventListener('click', function () {
     const newImg = this.querySelector('img');
-    const newSrc = newImg.src;
-    const newAlt = newImg.alt;
     const mainImg = document.querySelector('.product-image-main img');
-    mainImg.src = newSrc;
-    mainImg.alt = newAlt;
-    document.querySelectorAll('.product-thumb').forEach(btn => { btn.style.opacity = '0.6'; });
-    this.style.opacity = '1';
+
+    if (!newImg || !mainImg) return;
+
+    mainImg.src = newImg.src;
+    mainImg.alt = newImg.alt;
+
+    document.querySelectorAll('.product-thumb').forEach(btn => {
+      btn.classList.remove('is-active');
+    });
+
+    this.classList.add('is-active');
   });
 });
-const firstThumb = document.querySelector('.product-thumb');
-if (firstThumb) firstThumb.style.opacity = '1';
 </script>
-
