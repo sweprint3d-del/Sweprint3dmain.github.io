@@ -6,11 +6,11 @@ product_name: "Sega Saturn – Displayställ"
 subtitle: "Lutande display med flytande kontrollhållare – 3D-printat"
 short_description: "3D-printat displayställ för Sega Saturn – med flytande kontrollhållare och kompakt minimalistisk retro-design."
 description: "Köp Sega Saturn displayställ – 3D-printat konsolställ med kontrollhållare. Från 99 kr. Beställ på SwePrint3D."
-description_long: "Visa upp din Sega Saturn i en snygg lutande display med kontrollern monterad i en flytande hållare. Passar Sega Saturn med original handkontroll. Flytande kontrollhållare med tiltat displaylage, minimalistisk retro-design. Enkel ihopsättning av bas och kontrollarm."
+description_long: "Visa upp din Sega Saturn i en snygg lutande display med kontrollern monterad i en flytande hållare. Passar Sega Saturn med original handkontroll. Flytande kontrollhållare med tiltat displaylage, minimalistisk retro-design. Enkel ihopsättning av bas och kontrollern."
 price_from: 99
-tech_info: "ca 2–4h printtid | Material: PLA/PLA+ | Snap-fit montering | För display"
+tech_info: "ca 2-4h printtid | Material: PLA/PLA+ | Snap-fit montering | För display"
 images:
-    - src: "/images/PXL_20251015_030136052.jpg"
+  - src: "/images/PXL_20251015_030136052.jpg"
     alt: "Sega Saturn displayställ framifrån – 3D-printat konsolställ med kontrollhållare"
   - src: "/images/PXL_20251015_030147573.jpg"
     alt: "Sega Saturn displayställ från sidan – kontrollhållaren monterad på armen"
@@ -23,7 +23,7 @@ images:
   - src: "/images/PXL_20251015_030517062.jpg"
     alt: "Sega Saturn bakifrån på ställ – kablar och anslutningar synliga"
   - src: "/images/PXL_20251015_030529323.jpg"
-    alt: "Sega Saturn på ställ från sidan – lutande displayläge"
+    alt: "Sega Saturn på ställ från sidan – lutande displaylage"
   - src: "/images/PXL_20251015_030538933.jpg"
     alt: "Närbild på Sega Saturn ställets kabelhållare – håller sladden ordnad"
 kit_contents:
@@ -31,23 +31,23 @@ kit_contents:
   - "Flytande kontrollhållare med arm"
 materials:
   - name: "PLA (Standard – bäst detaljer)"
-    value: "pla"
+    value: pla
   - name: "PLA+ (Extra tålig)"
-    value: "pla-plus"
-  - name: "PETG (Slagtåligt)"
-    value: "petg"
+    value: pla-plus
+  - name: "PETG (Slägttåligt)"
+    value: petg
 colors:
   - name: "Svart"
-    value: "svart"
+    value: svart
   - name: "Vit"
-    value: "vit"
+    value: vit
   - name: "Grå"
-    value: "gra"
+    value: gra
   - name: "Annan färg (skriv i meddelande)"
-    value: "annan"
+    value: annan
 notes:
   - "Konsol och tillbehör på bilderna ingår ej – endast stället säljs."
-  - "Printas på beställning, normal produktionstid 3–7 arbetsdagar."
+  - "Printas på beställning, normal produktionstid 3-7 arbetsdagar."
   - "Levereras från Sverige med spårbar frakt."
   - "Snap-fit montering – inga verktyg behövs."
 ---
