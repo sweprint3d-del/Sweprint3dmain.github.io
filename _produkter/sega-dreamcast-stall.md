@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "Sega Dreamcast konsolställ + kontrollerställ – retro display med flytande kontrollhållare | 3D-printat"
 product_name: "Sega Dreamcast – Displayställ"
 subtitle: "Lutande display med flytande kontrollhållare – 3D-printat"
