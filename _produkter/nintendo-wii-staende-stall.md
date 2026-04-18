@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "Nintendo Wii ställ med kontroll- och Nunchuck-hållare – stående display | 3D-printat"
 product_name: "Nintendo Wii (stående) – Displayställ"
 subtitle: "Display med kontroll- och Nunchuck-hållare – 3D-printat"
