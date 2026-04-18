@@ -315,6 +315,57 @@ description: "Beställ 3D-printade cosplayhjälmar och kit från SwePrint3D. Bet
     window.location.href = `mailto:sweprint3d@gmail.com?subject=Beställningsförfrågan: ${encodeURIComponent(product)}&body=${body}`;
   });
 
+  // NYTT: autofyll från querystring
+  function prefillOrderFormFromQuery() {
+    const params = new URLSearchParams(window.location.search);
+
+    const product = params.get('product');
+    const material = params.get('material');
+    const size = params.get('size');
+    const quantity = params.get('quantity');
+
+    const productField = document.getElementById('product');
+    const materialField = document.getElementById('material');
+    const sizeField = document.getElementById('size');
+    const quantityField = document.getElementById('quantity');
+
+    if (product && productField) {
+      const matchingProduct = Array.from(productField.options).find(option =>
+        option.value.toLowerCase().includes(product.toLowerCase())
+      );
+
+      if (matchingProduct) {
+        productField.value = matchingProduct.value;
+      }
+    }
+
+    if (material && materialField) {
+      const matchingMaterial = Array.from(materialField.options).find(option =>
+        option.text.toLowerCase().includes(material.toLowerCase()) ||
+        option.value.toLowerCase().includes(material.toLowerCase())
+      );
+
+      if (matchingMaterial) {
+        materialField.value = matchingMaterial.value;
+      }
+    }
+
+    if (size && sizeField) {
+      const matchingSize = Array.from(sizeField.options).find(option =>
+        option.text.toLowerCase().includes(size.toLowerCase()) ||
+        option.value.toLowerCase().includes(size.toLowerCase())
+      );
+
+      if (matchingSize) {
+        sizeField.value = matchingSize.value;
+      }
+    }
+
+    if (quantity && quantityField && !isNaN(quantity)) {
+      quantityField.value = Math.max(1, parseInt(quantity, 10));
+    }
+  }
+
+  prefillOrderFormFromQuery();
   updatePrice();
 </script>
-
