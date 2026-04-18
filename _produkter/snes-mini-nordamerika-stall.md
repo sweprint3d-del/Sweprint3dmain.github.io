@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "SNES Classic Mini ställ (USA-version) + kontrollerställ med kabelhållare – display | 3D-printat"
 product_name: "SNES Mini (Nordamerika) – Displayställ"
 subtitle: "Displayställ med kontrollhållare och kabelvinda – 3D-printat"
