@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "PS2 konsolställ + kontrollerställ med kabelhållare – display för PlayStation 2 Original | 3D-printat"
 product_name: "PlayStation 2 Original – Displayställ"
 subtitle: "Lutande display med flytande kontrollhållare – 3D-printat"
