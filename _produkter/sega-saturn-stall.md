@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "Sega Saturn konsolställ + kontrollerställ – retro display med flytande kontrollhållare | 3D-printat"
 product_name: "Sega Saturn – Displayställ"
 subtitle: "Lutande display med flytande kontrollhållare – 3D-printat"
