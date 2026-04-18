@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "GameCube + Game Boy Player ställ med kontrolllerställ och kabelhållare – display | 3D-printat"
 product_name: "GameCube + Game Boy Player – Displayställ"
 subtitle: "Lutande display med flytande kontrollhållare – 3D-printat"
