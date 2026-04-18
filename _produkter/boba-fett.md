@@ -8,7 +8,7 @@ description: "Beställ en fullskalig Boba Fett‑hjälm 3D‑printad i Sverige. 
 product_name: "Boba Fett Hjälm"
 subtitle: "Ikonisk bounty hunter‑hjälm för cosplay och display"
 
-description: "Den legendariska mandalorianska hjälmen med den ikoniska bucklan, perfekt för både cosplay och samlarhylla."
+short_description: "Den legendariska mandalorianska hjälmen med den ikoniska bucklan, perfekt för både cosplay och samlarhylla."
 description_long: "Boba Fetts hjälm är en klassiker för alla Star Wars‑fans. Den här 3D‑printade versionen levereras som ett rått kit med rörlig rangefinder och delas upp i delar för enklare slipning, spackling, montering och målning. Perfekt om du vill göra din egen weathering och finish men slippa hela 3D‑printprocessen."
 
 price_from: 1600
@@ -30,7 +30,7 @@ kit_contents:
   - "Hjälmskal i flera delar (front, bakstycke, kupol)"
   - "Rangefinder‑arm"
   - "Rangefinder‑topp"
-  - "Smådetaljer runt öron/\"ears\""
+  - "Smådetaljer runt öron/ears"
   - "Delar separerade för enklare målning och montering"
 
 materials:
@@ -47,6 +47,11 @@ sizes:
   - name: "Display / mindre"
     value: "display"
 
+notes:
+  - "Levereras som rått 3D‑printat kit i delar – du slipar, spacklar och målar själv."
+  - "Läs gärna vår sida om rå 3D‑printade hjälmar för att se exakt vad som ingår i ett kit."
+  - "Osäker på storlek? Kolla vår hjälmstorleksguide innan du beställer."
+---
 notes:
   - "Levereras som rått 3D‑printat kit i delar – du slipar, spacklar och målar själv."
   - "Läs gärna vår sida om rå 3D‑printade hjälmar för att se exakt vad som ingår i ett kit."
