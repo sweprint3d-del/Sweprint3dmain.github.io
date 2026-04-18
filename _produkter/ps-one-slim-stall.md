@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "PS One konsolställ + kontrollerställ med kabelhållare – display för PlayStation | 3D-printat"
 product_name: "PS One (slim) – Displayställ"
 subtitle: "Lutande display med flytande kontrollhållare – 3D-printat"
