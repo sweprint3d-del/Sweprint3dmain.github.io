@@ -68,7 +68,6 @@ layout: default
 
 <div class="page-wrapper product-page">
   <section class="product-hero">
-
     <aside class="product-gallery">
       {% if page.images %}
         <div class="product-images">
@@ -165,4 +164,53 @@ layout: default
                   <option value="{{ material.value }}">{{ material.name }}</option>
                 {% endfor %}
               </select>
-            
+            </div>
+          {% endif %}
+
+          {% if page.sizes %}
+            <div class="product-field">
+              <label for="size">Storlek</label>
+              <select id="size" name="size">
+                {% for size in page.sizes %}
+                  <option value="{{ size.value }}">{{ size.name }}</option>
+                {% endfor %}
+              </select>
+            </div>
+          {% endif %}
+
+          <div class="product-field">
+            <label for="quantity">Antal</label>
+            <input type="number" id="quantity" name="quantity" min="1" value="1">
+          </div>
+        </div>
+
+        <a href="/order.html" class="btn-primary product-order-button">Beställ nu</a>
+        <p class="product-order-note">
+          Du skickar in dina val via beställningssidan och får sedan bekräftelse via e-post.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {{ content }}
+</div>
+
+<script>
+  document.querySelectorAll('.product-thumb').forEach(button => {
+    button.addEventListener('click', function () {
+      const newImg = this.querySelector('img');
+      const mainImg = document.querySelector('.product-image-main img');
+
+      if (!newImg || !mainImg) return;
+
+      mainImg.src = newImg.src;
+      mainImg.alt = newImg.alt;
+
+      document.querySelectorAll('.product-thumb').forEach(btn => {
+        btn.classList.remove('is-active');
+      });
+
+      this.classList.add('is-active');
+    });
+  });
+</script>
