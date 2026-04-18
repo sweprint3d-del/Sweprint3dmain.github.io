@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "Sega Master System II konsolställ + kontrollerställ – retro display | 3D-printat"
 product_name: "Sega Master System 2 – Displayställ"
 subtitle: "Lutande display med flytande kontrollhållare – 3D-printat"
