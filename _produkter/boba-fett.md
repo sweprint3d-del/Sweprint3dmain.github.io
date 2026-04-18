@@ -28,8 +28,8 @@ images:
 
 kit_contents:
   - "Hjälmskal i flera delar (front, bakstycke, kupol)"
-  - "Rangefinder‑arm"
-  - "Rangefinder‑topp"
+  - "Rangefinder-arm"
+  - "Rangefinder-topp"
   - "Smådetaljer runt öron/ears"
   - "Delar separerade för enklare målning och montering"
 
@@ -47,11 +47,6 @@ sizes:
   - name: "Display / mindre"
     value: "display"
 
-notes:
-  - "Levereras som rått 3D‑printat kit i delar – du slipar, spacklar och målar själv."
-  - "Läs gärna vår sida om rå 3D‑printade hjälmar för att se exakt vad som ingår i ett kit."
-  - "Osäker på storlek? Kolla vår hjälmstorleksguide innan du beställer."
----
 notes:
   - "Levereras som rått 3D‑printat kit i delar – du slipar, spacklar och målar själv."
   - "Läs gärna vår sida om rå 3D‑printade hjälmar för att se exakt vad som ingår i ett kit."
