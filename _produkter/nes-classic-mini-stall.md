@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "NES Classic Mini ställ + kontrolllerställ med kabelhållare – display för Nintendo Mini | 3D-printat"
 product_name: "NES Classic Mini – Displayställ"
 subtitle: "Displayställ med kontrollhållare och kabelvinda – 3D-printat"
