@@ -147,70 +147,78 @@ description: "Beställ 3D-printade cosplayhjälmar och kit från SwePrint3D. Bet
       <div class="panel">
         <h3>Trygg beställning</h3>
         <ul class="order-info-list">
-          <li>Betala via Swish eller PayPal.[web:3]</li>
-          <li>Bekräftelse skickas via e-post efter beställning.[web:2]</li>
-          <li>Normalt 2–4 veckor för större hjälmprojekt.[web:3]</li>
+          <li>Betala via Swish eller PayPal.</li>
+          <li>Bekräftelse skickas via e-post efter beställning.</li>
+          <li>Normalt 2–4 veckor för större hjälmprojekt.</li>
         </ul>
       </div>
 
       <div class="panel">
         <h3>Bra att veta</h3>
         <ul class="order-info-list">
-          <li>Du beställer ett fysiskt raw kit, inte STL-filer.[web:1]</li>
-          <li>Osäker produkt kan skrivas i meddelandefältet.[web:2]</li>
-          <li>Kontakta SwePrint3D direkt för ändringar i beställningen.[web:5]</li>
+          <li>Du beställer ett fysiskt raw kit, inte STL-filer.</li>
+          <li>Osäker produkt kan skrivas i meddelandefältet.</li>
+          <li>Kontakta SwePrint3D direkt för ändringar i beställningen.</li>
         </ul>
       </div>
     </aside>
   </section>
+</div>
 
-  <div id="swishModal" class="swish-modal" aria-hidden="true">
-    <div class="swish-modal-card">
-      <button type="button" class="swish-close" id="closeSwishModal" aria-label="Stäng">✕</button>
-      <h2>Betala via Swish</h2>
-      <p class="swish-lead">Swisha beloppet till numret nedan och skicka sedan beställningen.</p>
+<div id="swishModal" class="swish-modal" aria-hidden="true">
+  <div class="swish-modal-card">
+    <button type="button" class="swish-close" id="swishCloseBtn" aria-label="Stäng Swish-fönster">✕</button>
+    <h2>Betala via Swish</h2>
+    <p class="swish-lead">Swisha beloppet till:</p>
+    <p class="swish-number">0729760824</p>
+    <p class="swish-recipient">SwePrint3D – Marcus</p>
 
-      <p class="swish-number">0729760824</p>
-      <p class="swish-recipient">SwePrint3D – Marcus</p>
-
-      <div class="swish-amount-box">
-        <p>Belopp: <strong id="swishAmount">0 kr</strong></p>
-        <p>Ange produkt + namn i Swish-meddelandet.</p>
-      </div>
-
-      <p class="swish-note">
-        Efter betalning skickas orderbekräftelse normalt via e-post inom 24 timmar, senast inom 2 arbetsdagar.[web:2]
-      </p>
-
-      <button type="button" id="confirmSwishOrder" class="btn-primary order-pay-button">
-        Jag har swishat – skicka beställning
-      </button>
+    <div class="swish-amount-box">
+      <p>Belopp: <strong id="swishAmount">0 kr</strong></p>
+      <p>Ange produkt + namn i Swish-meddelandet.</p>
     </div>
+
+    <p class="swish-note">
+      Efter betalning skickas orderbekräftelse normalt via e-post inom 24 timmar, senast inom 2 arbetsdagar.
+    </p>
+
+    <button type="button" id="swishConfirmBtn" class="btn-primary order-pay-button">
+      Jag har swishat – skicka beställning
+    </button>
   </div>
 </div>
 
 <script>
-  function updatePrice() {
+  function getSelectedBasePrice() {
     const product = document.getElementById('product').value;
-    const quantity = parseInt(document.getElementById('quantity').value, 10) || 1;
-    const totalPrice = document.getElementById('totalPrice');
-
-    if (!product || !product.match(/\d+/)) {
-      totalPrice.textContent = '0 kr';
-      return;
-    }
-
-    const basePrice = parseInt(product.match(/\d+/)[0], 10);
-    totalPrice.textContent = (basePrice * quantity) + ' kr';
+    const match = product.match(/\d+/);
+    return match ? parseInt(match[0], 10) : 0;
   }
 
-  function validateOrderBasics() {
+  function updatePrice() {
+    const quantity = parseInt(document.getElementById('quantity').value, 10) || 1;
+    const price = getSelectedBasePrice() * quantity;
+    document.getElementById('totalPrice').textContent = price > 0 ? `${price} kr` : '0 kr';
+    document.getElementById('swishAmount').textContent = price > 0 ? `${price} kr` : '0 kr';
+  }
+
+  document.getElementById('product').addEventListener('change', updatePrice);
+  document.getElementById('quantity').addEventListener('input', updatePrice);
+
+  function validateRequiredFields() {
     const product = document.getElementById('product').value;
+    const material = document.getElementById('material').value;
+    const size = document.getElementById('size').value;
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
 
     if (!product) {
       alert('Välj en produkt först.');
+      return false;
+    }
+
+    if (!material || !size) {
+      alert('Välj material och storlek.');
       return false;
     }
 
@@ -222,17 +230,67 @@ description: "Beställ 3D-printade cosplayhjälmar och kit från SwePrint3D. Bet
     return true;
   }
 
-  function getCalculatedPrice() {
+  document.getElementById('paypalBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (!validateRequiredFields()) return;
+
     const product = document.getElementById('product').value;
     const quantity = parseInt(document.getElementById('quantity').value, 10) || 1;
+    const name = document.getElementById('name').value.trim();
 
-    if (!product || !product.match(/\d+/)) return null;
+    const price = getSelectedBasePrice() * quantity;
 
-    const basePrice = parseInt(product.match(/\d+/)[0], 10);
-    return basePrice * quantity;
+    if (!price) {
+      alert('Välj en prissatt produkt eller skicka en förfrågan utan betalning.');
+      return;
+    }
+
+    const note = encodeURIComponent(`${product} (x${quantity}) - ${name}`);
+    window.location.href = `https://www.paypal.me/SwePrint3d/${price}?note=${note}`;
+  });
+
+  const swishModal = document.getElementById('swishModal');
+
+  document.getElementById('swishBtn').addEventListener('click', function (e) {
+    e.preventDefault();
+
+    if (!validateRequiredFields()) return;
+
+    const quantity = parseInt(document.getElementById('quantity').value, 10) || 1;
+    const price = getSelectedBasePrice() * quantity;
+
+    if (!price) {
+      alert('Välj en prissatt produkt eller skicka en förfrågan utan betalning.');
+      return;
+    }
+
+    document.getElementById('swishAmount').textContent = `${price} kr`;
+    swishModal.classList.add('is-open');
+    swishModal.setAttribute('aria-hidden', 'false');
+  });
+
+  function closeSwishModal() {
+    swishModal.classList.remove('is-open');
+    swishModal.setAttribute('aria-hidden', 'true');
   }
 
-  function submitInquiry() {
+  document.getElementById('swishCloseBtn').addEventListener('click', closeSwishModal);
+
+  swishModal.addEventListener('click', function (e) {
+    if (e.target === swishModal) {
+      closeSwishModal();
+    }
+  });
+
+  document.getElementById('swishConfirmBtn').addEventListener('click', function () {
+    closeSwishModal();
+    document.getElementById('orderForm').dispatchEvent(new Event('submit', { cancelable: true }));
+  });
+
+  document.getElementById('orderForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
     const product = document.getElementById('product').value;
     const material = document.getElementById('material').value;
     const size = document.getElementById('size').value;
@@ -255,77 +313,6 @@ description: "Beställ 3D-printade cosplayhjälmar och kit från SwePrint3D. Bet
     );
 
     window.location.href = `mailto:sweprint3d@gmail.com?subject=Beställningsförfrågan: ${encodeURIComponent(product)}&body=${body}`;
-  }
-
-  const orderForm = document.getElementById('orderForm');
-  const productField = document.getElementById('product');
-  const quantityField = document.getElementById('quantity');
-  const paypalBtn = document.getElementById('paypalBtn');
-  const swishBtn = document.getElementById('swishBtn');
-  const swishModal = document.getElementById('swishModal');
-  const closeSwishModal = document.getElementById('closeSwishModal');
-  const confirmSwishOrder = document.getElementById('confirmSwishOrder');
-
-  productField.addEventListener('change', updatePrice);
-  quantityField.addEventListener('input', updatePrice);
-
-  paypalBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    if (!validateOrderBasics()) return;
-
-    const product = document.getElementById('product').value;
-    const quantity = parseInt(document.getElementById('quantity').value, 10) || 1;
-    const name = document.getElementById('name').value.trim();
-    const price = getCalculatedPrice();
-
-    if (!price) {
-      alert('Välj en prissatt produkt eller skriv önskad produkt i meddelandefältet.');
-      return;
-    }
-
-    const note = encodeURIComponent(`${product} (x${quantity}) - ${name}`);
-    window.location.href = `https://www.paypal.me/SwePrint3d/${price}?note=${note}`;
-  });
-
-  swishBtn.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    if (!validateOrderBasics()) return;
-
-    const price = getCalculatedPrice();
-
-    if (!price) {
-      alert('Välj en prissatt produkt eller skriv önskad produkt i meddelandefältet.');
-      return;
-    }
-
-    document.getElementById('swishAmount').textContent = price + ' kr';
-    swishModal.classList.add('is-open');
-    swishModal.setAttribute('aria-hidden', 'false');
-  });
-
-  closeSwishModal.addEventListener('click', function () {
-    swishModal.classList.remove('is-open');
-    swishModal.setAttribute('aria-hidden', 'true');
-  });
-
-  confirmSwishOrder.addEventListener('click', function () {
-    swishModal.classList.remove('is-open');
-    swishModal.setAttribute('aria-hidden', 'true');
-    submitInquiry();
-  });
-
-  orderForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    submitInquiry();
-  });
-
-  swishModal.addEventListener('click', function (e) {
-    if (e.target === swishModal) {
-      swishModal.classList.remove('is-open');
-      swishModal.setAttribute('aria-hidden', 'true');
-    }
   });
 
   updatePrice();
