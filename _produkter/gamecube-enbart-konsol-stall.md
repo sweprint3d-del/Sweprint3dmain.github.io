@@ -1,6 +1,6 @@
 ---
 layout: product
-category: organizers
+category: display-stands
 title: "GameCube konsollställ – lutande display för Nintendo GameCube | 3D-printat"
 product_name: "GameCube (enbart konsol) – Displayställ"
 subtitle: "Displayställ med kontrollhållare och kabelvinda – 3D-printat"
