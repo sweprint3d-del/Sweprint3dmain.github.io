@@ -10,12 +10,6 @@ description_long: "Högdetaljerad Republic Commando-hjälm inspirerad av elitklo
 price_from: 950
 tech_info: "ca 30–35h printtid | Skala 1:1 | Rå 3D-print redo för finish"
 images:
-  - src: "/images/republic-commando-1.jpg"
-    alt: "3D-printad Republic Commando hjälm i delar – rått kit i vitt PLA"
-  - src: "/images/republic-commando-2.jpg"
-    alt: "Monterad Republic Commando hjälm framifrån – rå 3D-print för cosplay"
-  - src: "/images/republic-commando-3.jpg"
-    alt: "Republic Commando hjälm 3D-printad snett från sidan – omonterad och omålad"
   - src: "/images/republic-commando-4.webp"
     alt: "Republic Commando hjälm framifrån med detaljer – rå 3D-print i vit PLA"
   - src: "/images/republic-commando-5.webp"
