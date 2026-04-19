@@ -51,4 +51,5 @@ notes:
   - "Levereras som rått 3D‑printat kit i delar – du slipar, spacklar och målar själv."
   - "Läs gärna vår sida om rå 3D‑printade hjälmar för att se exakt vad som ingår i ett kit."
   - "Osäker på storlek? Kolla vår hjälmstorleksguide innan du beställer."
+  - "Hjälmen är baserad på Galactic Armory's modell med 24 tums (ca 61 cm) standardhuvud."
 ---
