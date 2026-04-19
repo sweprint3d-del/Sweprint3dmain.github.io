@@ -43,6 +43,11 @@ sizes:
     value: "adult"
   - name: "Display / Barn"
     value: "display"
+notes:
+  - "Levereras som rått 3D-printad kit i delar – du slipar, spacklar och målar själv."
+  - "Läs gärna vår sida om rå 3D-printade hjälmar för att se exakt vad som ingår i ett kit."
+  - "Osäker på storlek? Kolla vår hjälmstorleksguide innan du beställer."
+  - "Baserad på Galactic Armory standardmodell – innerstorlek ca 61 cm (24 tum)."
 ---
 ## Versioner
 **Regular**: Klassisk antenn med roterbar funktion
