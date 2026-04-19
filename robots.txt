@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /google390185167b60b5d5.html
+Disallow: /order.html
 
 Sitemap: https://sweprint3d.se/sitemap.xml
