@@ -43,4 +43,5 @@ notes:
   - "Antennfunktion: Antennen kan roteras nedåt 90 grader – för montering behövs 8 st 6x3mm magneter (ingår ej)."
   - "Läs gärna vår sida om rå 3D-printade hjälmar för att se exakt vad som ingår i ett kit."
   - "Osäker på storlek? Kolla vår hjälmstorleksguide innan du beställer."
+  - "Baserad på Galactic Armory standardmodell – innerstorlek ca 61 cm (24 tum)."
 ---
