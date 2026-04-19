@@ -223,12 +223,13 @@ layout: default
     const url = new URL('/order.html', window.location.origin);
     url.searchParams.set('product', {{ page.product_name | jsonify }});
 
-    if (materialField && materialField.options.length) {
-      url.searchParams.set('material', materialField.options[materialField.selectedIndex].text);
-    }
+   if (materialField && materialField.value) {
+  url.searchParams.set('material', materialField.value);
+}
 
-    if (sizeField && sizeField.options.length) {
-      url.searchParams.set('size', sizeField.options[sizeField.selectedIndex].text);
+if (sizeField && sizeField.value) {
+  url.searchParams.set('size', sizeField.value);
+}
     }
 
     if (quantityField && quantityField.value) {
