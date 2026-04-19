@@ -316,7 +316,7 @@ description: "Beställ 3D-printade cosplayhjälmar och kit från SwePrint3D. Bet
   });
 
   // NYTT: autofyll från querystring
-  function prefillOrderFormFromQuery() {
+   function prefillOrderFormFromQuery() {
     const params = new URLSearchParams(window.location.search);
 
     const product = params.get('product');
@@ -340,24 +340,38 @@ description: "Beställ 3D-printade cosplayhjälmar och kit från SwePrint3D. Bet
     }
 
     if (material && materialField) {
-      const matchingMaterial = Array.from(materialField.options).find(option =>
-        option.text.toLowerCase().includes(material.toLowerCase()) ||
-        option.value.toLowerCase().includes(material.toLowerCase())
+      const exactMaterial = Array.from(materialField.options).find(option =>
+        option.value.toLowerCase() === material.toLowerCase()
       );
 
-      if (matchingMaterial) {
-        materialField.value = matchingMaterial.value;
+      if (exactMaterial) {
+        materialField.value = exactMaterial.value;
+      } else {
+        const fallbackMaterial = Array.from(materialField.options).find(option =>
+          option.text.toLowerCase().includes(material.toLowerCase())
+        );
+
+        if (fallbackMaterial) {
+          materialField.value = fallbackMaterial.value;
+        }
       }
     }
 
     if (size && sizeField) {
-      const matchingSize = Array.from(sizeField.options).find(option =>
-        option.text.toLowerCase().includes(size.toLowerCase()) ||
-        option.value.toLowerCase().includes(size.toLowerCase())
+      const exactSize = Array.from(sizeField.options).find(option =>
+        option.value.toLowerCase() === size.toLowerCase()
       );
 
-      if (matchingSize) {
-        sizeField.value = matchingSize.value;
+      if (exactSize) {
+        sizeField.value = exactSize.value;
+      } else {
+        const fallbackSize = Array.from(sizeField.options).find(option =>
+          option.text.toLowerCase().includes(size.toLowerCase())
+        );
+
+        if (fallbackSize) {
+          sizeField.value = fallbackSize.value;
+        }
       }
     }
 
@@ -365,7 +379,4 @@ description: "Beställ 3D-printade cosplayhjälmar och kit från SwePrint3D. Bet
       quantityField.value = Math.max(1, parseInt(quantity, 10));
     }
   }
-
-  prefillOrderFormFromQuery();
-  updatePrice();
 </script>
