@@ -184,7 +184,7 @@ layout: default
           </div>
         </div>
 
-       <a href="/order.html" id="productOrderButton" class="btn-primary product-order-button">Beställ nu</a>
+        <a href="/order.html" id="productOrderButton" class="btn-primary product-order-button">Beställ nu</a>
         <p class="product-order-note">
           Du skickar in dina val via beställningssidan och får sedan bekräftelse via e-post.
         </p>
@@ -223,13 +223,12 @@ layout: default
     const url = new URL('/order.html', window.location.origin);
     url.searchParams.set('product', {{ page.product_name | jsonify }});
 
-   if (materialField && materialField.value) {
-  url.searchParams.set('material', materialField.value);
-}
+    if (materialField && materialField.value) {
+      url.searchParams.set('material', materialField.value);
+    }
 
-if (sizeField && sizeField.value) {
-  url.searchParams.set('size', sizeField.value);
-}
+    if (sizeField && sizeField.value) {
+      url.searchParams.set('size', sizeField.value);
     }
 
     if (quantityField && quantityField.value) {
