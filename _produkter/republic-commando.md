@@ -16,6 +16,12 @@ images:
     alt: "Monterad Republic Commando hjälm framifrån – rå 3D-print för cosplay"
   - src: "/images/republic-commando-3.jpg"
     alt: "Republic Commando hjälm 3D-printad snett från sidan – omonterad och omålad"
+  - src: "/images/republic-commando-4.webp"
+    alt: "Republic Commando hjälm framifrån med detaljer – rå 3D-print i vit PLA"
+  - src: "/images/republic-commando-5.webp"
+    alt: "Republic Commando hjälm framifrån med visir och T-visirram utlagd – rå 3D-print"
+  - src: "/images/republic-commando-6.webp"
+    alt: "Republic Commando hjälm fullständigt isärplockat kit – alla delar synliga"
 kit_contents:
   - "Främre hjälmskal med ansiktssektion"
   - "Bakre hjälmskal / nackdel"
