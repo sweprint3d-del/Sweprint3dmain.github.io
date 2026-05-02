@@ -10,11 +10,11 @@ description_long: "Denna replica är baserad på den klassiska White Ranger-desi
 price_from: 1800
 tech_info: "ca 40h printtid | Skala 1:1 vuxen | Rå 3D-print redo för finish"
 images:
-  - src: "/images/white-ranger-helmet-1.jpg"
+  - src: "/images/c5493e2c-3742-4436-9236-c8947ae0fb9d.avif"
     alt: "White Ranger-hjälm framifrån – 3D-printad cosplayhjälm i skala 1:1"
-  - src: "/images/white-ranger-helmet-2.jpg"
+  - src: "/images/35732765-5145-4257-a939-55f5e79db071.avif"
     alt: "White Ranger-hjälm från sidan – vit hjälm med gulddetaljer"
-  - src: "/images/white-ranger-helmet-3.jpg"
+  - src: "/images/f782458f-7d3e-416f-8003-45f98bb6e8a5.avif"
     alt: "Närbild på detaljer på White Ranger-hjälmen"
 kit_contents:
   - "Ansiktsdel / front"
