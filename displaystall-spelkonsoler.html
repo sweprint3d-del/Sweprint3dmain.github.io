@@ -1,0 +1,77 @@
+---
+layout: default
+title: "Displayställ för spelkonsoler – 3D-printade ställ från Sverige"
+description: "Köp 3D-printade displayställ för retro- och spelkonsoler från SwePrint3D. Perfekt för NES, SNES, PlayStation, GameCube och fler konsoler."
+---
+
+<div class="page-wrapper">
+
+  <section class="page-header">
+    <h1>Displayställ för spelkonsoler – 3D-printade ställ för retro &amp; gaming</h1>
+    <p class="section-intro">
+      Letar du efter ett snyggt sätt att visa upp din spelkonsol? Här hittar du 3D-printade displayställ för retro- och spelkonsoler, framtagna för att ge samlingen ett renare och mer genomtänkt uttryck hemma i spelrummet eller på hyllan.
+    </p>
+    <p class="section-intro">
+      Alla displayställ printas på beställning i Sverige och levereras som färdiga fysiska produkter.
+    </p>
+    <div class="hero-links">
+      <a href="/butik.html">Se hela butiken</a>
+      <a href="/order.html">Beställ via orderformuläret</a>
+      <a href="/priser-och-faq.html">Läs priser &amp; FAQ</a>
+    </div>
+  </section>
+
+  <section class="shop-section">
+    <h2>Displayställ i sortimentet</h2>
+    <p class="section-intro">
+      Nedan ser du de displayställ som för närvarande finns tillgängliga att beställa. Klicka på ett ställ för att se fler bilder och detaljer.
+    </p>
+    <div class="cards">
+      {% assign stands = site.produkter | where: "category", "display-stands" | sort: "product_name" %}
+      {% for produkt in stands %}
+      <a href="{{ produkt.url }}" class="card">
+        <div class="card-image">
+          {% if produkt.tag %}<span class="card-tag">{{ produkt.tag }}</span>{% endif %}
+          <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+        </div>
+        <div class="card-body">
+          <h3>{{ produkt.product_name }}</h3>
+          <p>{{ produkt.subtitle }}</p>
+          <div class="price-row">
+            <span class="price">Från {{ produkt.price_from }} kr</span>
+            {% if produkt.material %}<span class="price-note">{{ produkt.material }}</span>{% endif %}
+            <span class="price-cta">Visa stället</span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="/butik.html" class="btn-secondary">Se hela butiken</a>
+      <a href="/order.html" class="btn-primary">Skicka beställning</a>
+    </div>
+  </section>
+
+  <section class="shop-section">
+    <h2>Vanliga frågor om displayställ för spelkonsoler</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Vilka konsoler passar displayställen till?</h3>
+        <p>Vi har ställ för NES, SNES, GameCube, PlayStation, Sega och Wii bland annat. Fler modeller läggs till löpande. Skriv i beställningsformuläret om du letar efter en specifik konsol.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Är displayställen 3D-printade i Sverige?</h3>
+        <p>Ja, alla displayställ printas på beställning hos SwePrint3D i Sverige och levereras som färdiga produkter.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Kan jag beställa flera ställ samtidigt?</h3>
+        <p>Ja, det går bra att beställa flera ställ i samma order. Ange önskade modeller och antal i meddelandefältet på <a href="/order.html">beställningssidan</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Går det att önska ett ställ för en annan konsolmodell?</h3>
+        <p>Absolut. Skicka en förfrågan via <a href="/order.html">orderformuläret</a> så kollar vi vad som är möjligt.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
