@@ -1,0 +1,78 @@
+---
+layout: default
+title: "Star Wars hjälmar – 3D-printade cosplayhjälmar från Sverige"
+description: "Köp 3D-printade Star Wars-hjälmar från SwePrint3D. Råa kit för cosplay, display och samling – printat i Sverige med fokus på passform och detalj."
+---
+
+<div class="page-wrapper">
+
+  <section class="page-header">
+    <h1>Star Wars hjälmar – 3D-printade raw kits för cosplay &amp; display</h1>
+    <p class="section-intro">
+      Letar du efter en 3D-printad Star Wars-hjälm för cosplay, display eller samling? Här hittar du hjälmar inspirerade av ikoniska karaktärer och soldater från galaxen långt, långt borta – levererade som råa 3D-printade kit redo för slipning, montering och målning.
+    </p>
+    <p class="section-intro">
+      Alla hjälmar hos SwePrint3D printas i Sverige och skickas som fysiska kit – inte digitala STL-filer.
+    </p>
+    <div class="hero-links">
+      <a href="/ra-3d-printad-hjalm.html">Läs mer om vad ett raw kit är</a>
+      <a href="/hjaelmstorlek.html">Osäker på passform? Se storleksguiden</a>
+      <a href="/order.html">Redo att köpa? Gå till beställning</a>
+      <a href="/clone-trooper-hjalmar.html">Se Clone Trooper hjälmar</a>
+    </div>
+  </section>
+
+  <section class="shop-section">
+    <h2>Star Wars hjälmar i sortimentet</h2>
+    <p class="section-intro">
+      Nedan ser du de Star Wars-hjälmar som för närvarande finns tillgängliga att beställa. Klicka på en hjälm för att se fler bilder, detaljer och beställningsinfo.
+    </p>
+    <div class="cards">
+      {% assign helmets = site.produkter | where: "category", "helmets" | sort: "product_name" %}
+      {% for produkt in helmets %}
+      <a href="{{ produkt.url }}" class="card">
+        <div class="card-image">
+          {% if produkt.tag %}<span class="card-tag">{{ produkt.tag }}</span>{% endif %}
+          <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+        </div>
+        <div class="card-body">
+          <h3>{{ produkt.product_name }}</h3>
+          <p>{{ produkt.subtitle }}</p>
+          <div class="price-row">
+            <span class="price">Från {{ produkt.price_from }} kr</span>
+            {% if produkt.material %}<span class="price-note">{{ produkt.material }}</span>{% endif %}
+            <span class="price-cta">Visa hjälmen</span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="/butik.html" class="btn-secondary">Se hela butiken</a>
+      <a href="/order.html" class="btn-primary">Skicka beställning</a>
+    </div>
+  </section>
+
+  <section class="shop-section">
+    <h2>Vanliga frågor om Star Wars-hjälmar</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Vad innebär en rå 3D-printad Star Wars-hjälm?</h3>
+        <p>Du får hjälmen i delar, osprutad och omonterad. Det är avsedd för dig som vill slipa, montera och måla själv. Läs mer i <a href="/ra-3d-printad-hjalm.html">guiden om raw kits</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Kan jag beställa hjälmen i vuxenstorlek?</h3>
+        <p>Ja, de flesta hjälmar finns i vuxenstorlek och displaystorlek. Se <a href="/hjaelmstorlek.html">storleksguiden</a> för mer info.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Vilket material passar bäst för cosplay?</h3>
+        <p>PETG är ett populärt val för bärbara hjälmar tack vare dess hållfasthet. PLA är vanligare för displayhjälmar. Läs mer under <a href="/priser-och-faq.html">priser &amp; FAQ</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Är detta en fysisk hjälm eller en STL-fil?</h3>
+        <p>Det är alltid en fysisk, 3D-printad hjälm som skickas till dig – inte en digital fil.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
