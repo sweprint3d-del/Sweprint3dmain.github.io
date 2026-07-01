@@ -1,0 +1,78 @@
+---
+layout: default
+title: "Clone Trooper hjälmar – 3D-printade hjälmar i Sverige"
+description: "Beställ Clone Trooper-hjälmar som 3D-printade raw kits från SwePrint3D. Perfekt för cosplay, display och samling."
+---
+
+<div class="page-wrapper">
+
+  <section class="page-header">
+    <h1>Clone Trooper hjälmar – 3D-printade 1:1-kit för Star Wars-cosplay</h1>
+    <p class="section-intro">
+      Här samlar vi våra 3D-printade Clone Trooper-hjälmar för dig som vill bygga en egen hjälm för cosplay, display eller samling. Hjälmarna levereras som råa kit i delar – tänkta för dig som själv vill slipa, montera och måla slutresultatet.
+    </p>
+    <p class="section-intro">
+      Alla hjälmar printas i Sverige på beställning och skickas som fysiska kit – inte digitala STL-filer.
+    </p>
+    <div class="hero-links">
+      <a href="/star-wars-hjalmar.html">Se fler Star Wars hjälmar</a>
+      <a href="/hjaelmstorlek.html">Läs storleksguiden</a>
+      <a href="/order.html">Skicka beställning eller förfrågan</a>
+      <a href="/ra-3d-printad-hjalm.html">Vad är ett raw kit?</a>
+    </div>
+  </section>
+
+  <section class="shop-section">
+    <h2>Clone Trooper hjälmar i sortimentet</h2>
+    <p class="section-intro">
+      Nedan ser du de Clone Trooper-hjälmar som för närvarande finns tillgängliga att beställa. Klicka på en hjälm för att se fler bilder och detaljer.
+    </p>
+    <div class="cards">
+      {% assign helmets = site.produkter | where: "category", "helmets" | sort: "product_name" %}
+      {% for produkt in helmets %}
+      <a href="{{ produkt.url }}" class="card">
+        <div class="card-image">
+          {% if produkt.tag %}<span class="card-tag">{{ produkt.tag }}</span>{% endif %}
+          <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+        </div>
+        <div class="card-body">
+          <h3>{{ produkt.product_name }}</h3>
+          <p>{{ produkt.subtitle }}</p>
+          <div class="price-row">
+            <span class="price">Från {{ produkt.price_from }} kr</span>
+            {% if produkt.material %}<span class="price-note">{{ produkt.material }}</span>{% endif %}
+            <span class="price-cta">Visa hjälmen</span>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="section-cta">
+      <a href="/butik.html" class="btn-secondary">Se hela butiken</a>
+      <a href="/order.html" class="btn-primary">Skicka beställning</a>
+    </div>
+  </section>
+
+  <section class="shop-section">
+    <h2>Vanliga frågor om Clone Trooper-hjälmar</h2>
+    <div class="faq">
+      <div class="faq-item">
+        <h3>Vad är skillnaden mellan Phase 1 och andra Clone Trooper-hjälmar?</h3>
+        <p>Phase 1 är den klassiska Clone Trooper-designen från Attack of the Clones och The Clone Wars. Commander-varianter har färgmarkeringar och annan design som skijer sig åt per karaktär.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Kan jag få hjälmen i displaystorlek eller vuxenstorlek?</h3>
+        <p>Ja, de flesta hjälmar finns i både vuxenstorlek (bärbar) och displaystorlek. Se <a href="/hjaelmstorlek.html">storleksguiden</a> för mer info.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Hur lång leveranstid har en Clone Trooper-hjälm?</h3>
+        <p>Leveranstiden beror på aktuell orderkö och modell. Läs mer om leveranstider under <a href="/priser-och-faq.html">priser &amp; FAQ</a>.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Vilket material ska jag välja för bästa hållfasthet?</h3>
+        <p>PETG rekommenderas för bärbara hjälmar tack vare högre tålighet mot värme och mekanisk påfrestning. PLA är ett bra val för displayhjälmar.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
