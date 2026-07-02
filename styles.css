@@ -1375,3 +1375,489 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+/* =====================
+   PREMIUM PATCH – SwePrint3D
+   Klistra in längst ner i styles.css
+===================== */
+
+/* 1) Premium-fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap');
+
+:root {
+  --color-primary: #111827;
+  --color-primary-dark: #0b1120;
+  --color-accent: #d72638;
+  --color-accent-soft: rgba(215, 38, 56, 0.12);
+
+  --color-bg: #f3eee6;
+  --color-bg-deep: #ebe3d8;
+  --color-surface: rgba(255, 252, 247, 0.88);
+  --color-surface-strong: #fffaf3;
+  --color-card: rgba(255, 253, 249, 0.96);
+
+  --color-text: #141922;
+  --color-text-light: #5c6370;
+  --text-main: #141922;
+  --text-muted: #5c6370;
+
+  --border-subtle: rgba(17, 24, 39, 0.10);
+  --border-strong: rgba(17, 24, 39, 0.16);
+
+  --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 14px 38px rgba(15, 23, 42, 0.10);
+  --shadow-premium: 0 22px 60px rgba(15, 23, 42, 0.16);
+
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --transition-fast: 0.22s ease;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(215, 38, 56, 0.07), transparent 28%),
+    linear-gradient(180deg, #f6f1e8 0%, #f3eee6 42%, #eee6db 100%);
+  color: var(--color-text);
+}
+
+p,
+span,
+li,
+.lead,
+.hero-subtext,
+.section-intro,
+.faq-answer,
+.card-body p,
+.product-subtitle,
+.product-tech,
+.product-order-note,
+.order-legal,
+.order-info-list li,
+.video-note,
+.price-note {
+  color: var(--text-muted);
+}
+
+/* 2) Typografi */
+h1,
+h2,
+h3,
+.logo-title,
+.hero-kicker,
+.filter-button,
+.card-tag,
+.product-field label {
+  font-family: "Sora", "Inter", sans-serif;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 4.2rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+  color: var(--color-primary);
+  max-width: 11ch;
+}
+
+h2 {
+  font-size: clamp(1.65rem, 2.2vw, 2.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+  margin-bottom: 0.9rem;
+  color: var(--color-primary);
+}
+
+h3,
+.card-body h3,
+.panel h3,
+.hero-panel h3,
+.faq-question,
+.order-total-title,
+.form-group label {
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+}
+
+.logo-title {
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+}
+
+.hero-kicker {
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
+  color: var(--color-accent);
+}
+
+.lead {
+  font-size: 1.12rem;
+  max-width: 36rem;
+}
+
+.hero-subtext {
+  max-width: 38rem;
+}
+
+/* 3) Header */
+header {
+  background: rgba(255, 250, 243, 0.80);
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+}
+
+header nav a {
+  color: rgba(20, 25, 34, 0.76);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+header nav a:hover {
+  color: var(--color-primary);
+}
+
+header nav a::after {
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent), #ef4444);
+}
+
+/* 4) Hero */
+.hero {
+  padding: 4.25rem 0 2.5rem;
+}
+
+.hero-grid {
+  gap: 2.25rem;
+  align-items: stretch;
+}
+
+.hero-panel {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,250,243,0.94)),
+    var(--color-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-soft);
+  padding: 1.5rem 1.5rem;
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-accent), rgba(215, 38, 56, 0.18));
+}
+
+.hero-meta {
+  color: var(--color-text-light);
+  font-size: 0.95rem;
+}
+
+.hero-links a {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.hero-links a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* 5) Buttons */
+.btn-primary,
+.btn-secondary,
+.primary-button,
+.order-pay-button,
+.order-swish-button,
+.order-inquiry-button,
+.product-order-button {
+  min-height: 46px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary,
+.primary-button,
+.order-pay-button,
+.product-order-button {
+  background: linear-gradient(135deg, #d72638, #b91c2c);
+  color: #ffffff;
+  box-shadow: 0 12px 26px rgba(215, 38, 56, 0.26);
+}
+
+.btn-primary:hover,
+.primary-button:hover,
+.order-pay-button:hover,
+.product-order-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(215, 38, 56, 0.28);
+}
+
+.btn-secondary,
+.order-inquiry-button {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: var(--border-strong);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover,
+.order-inquiry-button:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(255, 250, 243, 0.95);
+}
+
+/* 6) Cards / panels */
+.panel,
+.card,
+.faq-section,
+.order-form,
+.order-total-box,
+.swish-modal-card {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.75), rgba(255,250,243,0.96)),
+    var(--color-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-card);
+}
+
+.panel,
+.faq-section,
+.order-form {
+  border-radius: var(--radius-lg);
+}
+
+.card {
+  border-radius: var(--radius-lg);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.012);
+  border-color: rgba(215, 38, 56, 0.34);
+  box-shadow: var(--shadow-premium);
+}
+
+.card-image {
+  background:
+    linear-gradient(180deg, rgba(17, 24, 39, 0.04), rgba(17, 24, 39, 0.01)),
+    #ede7de;
+}
+
+.card-image img {
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.04);
+}
+
+.card-body {
+  padding: 1rem 1.05rem 1.1rem;
+  gap: 0.48rem;
+}
+
+.card-body h3 {
+  font-size: 1.06rem;
+}
+
+.card-tag,
+.product-trust span,
+.badge.badge-soon {
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.card-tag {
+  background: rgba(255, 248, 249, 0.84);
+  color: #b91c2c;
+  border: 1px solid rgba(215, 38, 56, 0.34);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.price {
+  font-size: 1.08rem;
+  color: var(--color-accent);
+}
+
+/* 7) CTA / sections */
+.cta-section {
+  background:
+    radial-gradient(circle at top, rgba(215, 38, 56, 0.12), transparent 55%),
+    linear-gradient(180deg, rgba(255,250,243,0.95), rgba(246,238,230,0.95));
+  border: 1px solid rgba(215, 38, 56, 0.22);
+  box-shadow: var(--shadow-soft);
+}
+
+.section-intro.narrow {
+  max-width: 48rem;
+}
+
+/* 8) Product pages */
+.product-image img {
+  border-radius: 14px;
+  box-shadow: var(--shadow-soft);
+}
+
+.product-thumb {
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.88);
+}
+
+.product-thumb:hover,
+.product-thumb.is-active {
+  border-color: rgba(215, 38, 56, 0.45);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+}
+
+.product-field select,
+.product-field input[type="number"],
+.form-group input,
+.form-group select,
+.form-group textarea {
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+.product-field select:focus,
+.product-field input[type="number"]:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: rgba(215, 38, 56, 0.55);
+  box-shadow: 0 0 0 4px rgba(215, 38, 56, 0.10);
+}
+
+/* 9) Filters */
+.shop-filters {
+  gap: 0.8rem;
+}
+
+.filter-button {
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--color-primary);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.05);
+}
+
+.filter-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(15, 23, 42, 0.10);
+  border-color: rgba(215, 38, 56, 0.28);
+}
+
+.filter-button.is-active {
+  background: linear-gradient(135deg, #d72638, #b91c2c);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+/* 10) FAQ / order / footer */
+.faq-item + .faq-item {
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+}
+
+.order-total-box {
+  background:
+    linear-gradient(180deg, rgba(255,250,243,0.9), rgba(255,244,245,0.95));
+  border: 1px solid rgba(215, 38, 56, 0.16);
+}
+
+.order-divider::before {
+  background: rgba(17, 24, 39, 0.10);
+}
+
+.order-divider span {
+  background: rgba(255, 250, 243, 0.95);
+}
+
+footer {
+  background:
+    linear-gradient(180deg, rgba(244,239,232,0.95), rgba(232,224,214,0.98));
+  border-top: 1px solid rgba(17, 24, 39, 0.08);
+  color: var(--text-muted);
+}
+
+.footer-links a,
+.footer-right p,
+.logo-subtitle {
+  color: var(--text-muted);
+}
+
+.footer-social a {
+  background: rgba(255,255,255,0.82);
+  border: 1px solid rgba(17, 24, 39, 0.12);
+  box-shadow: 0 8px 16px rgba(15, 23, 42, 0.05);
+}
+
+.footer-social a:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* 11) Small polish */
+.video-embed {
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+}
+
+.product-card.is-coming-soon {
+  border: 1px dashed rgba(17, 24, 39, 0.22);
+  background: rgba(255, 252, 247, 0.8);
+}
+
+.badge.badge-soon {
+  background: #f6c453;
+  color: #1f2937;
+  border: 1px solid rgba(31, 41, 55, 0.08);
+}
+
+/* 12) Mobile premium tuning */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 2.6rem;
+  }
+
+  h1,
+  .hero h1,
+  .product-main h1 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+    max-width: 100%;
+  }
+
+  .hero-panel,
+  .panel,
+  .faq-section,
+  .order-form,
+  .card-body {
+    border-radius: 18px;
+  }
+
+  .btn-primary,
+  .btn-secondary,
+  .primary-button,
+  .order-pay-button,
+  .order-swish-button,
+  .order-inquiry-button,
+  .product-order-button,
+  .filter-button {
+    width: 100%;
+  }
+
+  .hero-actions,
+  .shop-filters {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .header-content {
+    gap: 0.8rem;
+  }
+}
