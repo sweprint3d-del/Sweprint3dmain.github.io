@@ -9,38 +9,44 @@
 }
 
 :root {
-  /* Färger från SwePrint3D logotyp - LJUST TEMA */
-  --color-primary: #0f1f2e;
-  --color-primary-dark: #0a131f;
-  --color-accent: #db2732;
-  --color-accent-soft: rgba(219, 39, 50, 0.1);
-  --color-bg: #f5f1e6;
-  --color-text: #0f1f2e;
-  --color-text-light: #555;
+  /* SwePrint3D – PREMIUM */
+  --color-primary: #111827;
+  --color-primary-dark: #0b1120;
+  --color-accent: #d72638;
+  --color-accent-soft: rgba(215, 38, 56, 0.12);
+  --color-bg: #f3eee6;
+  --color-bg-deep: #ebe3d8;
+  --color-surface: rgba(255, 252, 247, 0.88);
+  --color-card: rgba(255, 253, 249, 0.96);
+  --color-text: #141922;
+  --color-text-light: #5c6370;
 
-  /* Gamla variabler för kompatibilitet - UPPDATERADE */
-  --bg-main: #f5f1e6;
-  --bg-section: #f5f1e6;
-  --bg-card: #ffffff;
-  --accent: #db2732;
-  --accent-soft: rgba(219, 39, 50, 0.1);
-  --text-main: #0f1f2e;
-  --text-muted: #555;
-  --border-subtle: #ddd;
-  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --transition-fast: 0.18s ease-out;
+  /* Kompatibilitetsvariabler */
+  --bg-main: #f3eee6;
+  --bg-section: #f3eee6;
+  --bg-card: rgba(255, 253, 249, 0.96);
+  --accent: #d72638;
+  --accent-soft: rgba(215, 38, 56, 0.12);
+  --text-main: #141922;
+  --text-muted: #5c6370;
+  --border-subtle: rgba(17, 24, 39, 0.10);
+  --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 14px 38px rgba(15, 23, 42, 0.10);
+  --shadow-premium: 0 22px 60px rgba(15, 23, 42, 0.16);
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --transition-fast: 0.22s ease;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: var(--color-bg);
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(215, 38, 56, 0.07), transparent 28%),
+    linear-gradient(180deg, #f6f1e8 0%, #f3eee6 42%, #eee6db 100%);
   color: var(--color-text);
   line-height: 1.6;
   font-size: 16px;
 }
-
 .page-wrapper {
   max-width: 1200px;
   margin: 0 auto;
