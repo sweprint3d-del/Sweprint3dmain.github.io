@@ -2030,3 +2030,117 @@ footer {
     max-width: 100%;
   }
 }
+
+
+/* ===== PREMIUM MOTION LAYER =====
+   Staggered hero, scroll reveal, hover-lift, knappfeedback
+   ================================================== */
+
+/* ---- Ease & timing tokens ---- */
+:root {
+  --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-fast: 220ms;
+  --motion-base: 680ms;
+  --motion-slow: 1000ms;
+}
+
+/* ---- Hero stagger ---- */
+.hero > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: sp3d-heroReveal var(--motion-base) var(--ease-premium) forwards;
+}
+.hero > *:nth-child(1) { animation-delay: 0.06s; }
+.hero > *:nth-child(2) { animation-delay: 0.14s; }
+.hero > *:nth-child(3) { animation-delay: 0.22s; }
+.hero > *:nth-child(4) { animation-delay: 0.30s; }
+.hero > *:nth-child(5) { animation-delay: 0.38s; }
+.hero > *:nth-child(6) { animation-delay: 0.46s; }
+
+@keyframes sp3d-heroReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Scroll reveal ---- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity var(--motion-base) var(--ease-premium),
+    transform var(--motion-base) var(--ease-premium);
+  will-change: transform, opacity;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal[data-delay="1"] { transition-delay: 0.07s; }
+.reveal[data-delay="2"] { transition-delay: 0.14s; }
+.reveal[data-delay="3"] { transition-delay: 0.21s; }
+.reveal[data-delay="4"] { transition-delay: 0.28s; }
+
+/* ---- Panel hover (komplement till befintlig .panel:hover) ---- */
+.panel {
+  transition:
+    transform var(--motion-fast) var(--ease-premium),
+    box-shadow var(--motion-fast) var(--ease-premium),
+    border-color var(--motion-fast) var(--ease-premium),
+    background-color var(--motion-fast) var(--ease-premium);
+}
+
+/* ---- CTA-knappar ---- */
+.btn-primary,
+.btn-secondary {
+  transition:
+    transform var(--motion-fast) var(--ease-premium),
+    box-shadow var(--motion-fast) var(--ease-premium),
+    background-color var(--motion-fast) var(--ease-premium),
+    color var(--motion-fast) var(--ease-premium);
+}
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(215, 38, 56, 0.22);
+}
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: none;
+}
+
+/* ---- Header scroll-state ---- */
+header,
+.site-header {
+  transition:
+    background-color 280ms ease,
+    box-shadow 280ms ease,
+    backdrop-filter 280ms ease;
+}
+header.is-scrolled,
+.site-header.is-scrolled {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.14);
+}
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  .hero > *,
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .btn-primary,
+  .btn-secondary,
+  .panel {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
+/* ===== END PREMIUM MOTION LAYER ===== */
