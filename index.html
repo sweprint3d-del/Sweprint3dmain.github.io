@@ -135,3 +135,34 @@ image: "/images/logo.jpg"
   </section>
 
 </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // Auto-märk sektioner med reveal (utom hero)
+  document.querySelectorAll('section:not(.hero)').forEach(function(s, i) {
+    s.classList.add('reveal');
+    if (i > 0) s.setAttribute('data-delay', Math.min(i, 4).toString());
+  });
+  // Scroll reveal
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -36px 0px' });
+  reveals.forEach(function (el) { observer.observe(el); });
+
+  // Header scroll-state
+  var header = document.querySelector('header');
+  function onScroll() {
+    if (!header) return;
+    header.classList.toggle('is-scrolled', window.scrollY > 20);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+});
+</script>
