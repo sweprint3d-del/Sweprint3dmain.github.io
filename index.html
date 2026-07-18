@@ -65,20 +65,66 @@ image: "/images/logo.jpg"
   </section>
 
   <!-- POPULÄRA PRODUKTER -->
-  <section class="shop-section">
-    <h2>Populära hjälmar just nu</h2>
-    <p class="section-intro">
-      Några av de mest beställda hjälmarna i butiken.
-    </p>
+    <section class="home-products" id="populara">
+      <h2>Populära hjälmar just nu</h2>
+      <p class="home-products-sub">Några av de mest beställda produkterna i butiken.</p>
 
-    <div class="cards">
-      {{ content_from_your_original_cards_here }}
-    </div>
+      <div class="product-grid">
 
-    <div class="section-cta">
-      <a href="/butik.html" class="btn-secondary">Till hela butiken</a>
-    </div>
-  </section>
+        <!-- Darth Vader -->
+        <article class="product-card">
+          <a href="/produkter/vader-helmet/">
+            <div class="product-img-wrap">
+              <img src="/images/vader-kort.jpg" alt="Darth Vader Hjälm – 3D-printat raw kit">
+              <span class="product-badge">Populär</span>
+            </div>
+          </a>
+          <div class="product-card-body">
+            <h3 class="product-title"><a href="/produkter/vader-helmet/">Darth Vader Hjälm</a></h3>
+            <p class="product-meta">Fullskalig 1:1-replika för cosplay och display. Levereras som rått kit i delar.</p>
+            <p class="product-price">Från <strong>1 500 kr</strong></p>
+            <a class="product-button" href="/produkter/vader-helmet/">Visa hjälmen</a>
+          </div>
+        </article>
+
+        <!-- Boba Fett -->
+        <article class="product-card">
+          <a href="/produkter/boba-fett/">
+            <div class="product-img-wrap">
+              <img src="/images/boba-kort.jpg" alt="Boba Fett Hjälm – 3D-printat raw kit">
+              <span class="product-badge product-badge--hot">Bästsäljare</span>
+            </div>
+          </a>
+          <div class="product-card-body">
+            <h3 class="product-title"><a href="/produkter/boba-fett/">Boba Fett Hjälm</a></h3>
+            <p class="product-meta">Ikonisk bounty hunter-hjälm. Rått 3D-printat kit redo för slipning och målning.</p>
+            <p class="product-price">Från <strong>1 600 kr</strong></p>
+            <a class="product-button" href="/produkter/boba-fett/">Visa hjälmen</a>
+          </div>
+        </article>
+
+        <!-- GameCube Displayställ -->
+        <article class="product-card">
+          <a href="/produkter/nintendo-gamecube-komplett-stall/">
+            <div class="product-img-wrap">
+              <img src="/images/gamecube-kort.jpg" alt="Nintendo GameCube Displayställ – 3D-printat">
+              <span class="product-badge product-badge--new">Från 99 kr</span>
+            </div>
+          </a>
+          <div class="product-card-body">
+            <h3 class="product-title"><a href="/produkter/nintendo-gamecube-komplett-stall/">Displayställ – Nintendo GameCube</a></h3>
+            <p class="product-meta">Lutande displayställ med kontrollhållare. Perfekt för retrosamlaren.</p>
+            <p class="product-price">Från <strong>99 kr</strong></p>
+            <a class="product-button" href="/produkter/nintendo-gamecube-komplett-stall/">Visa stället</a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="home-products-link">
+        <a href="/butik.html">→ Se hela butiken</a>
+      </p>
+    </section>
 
   <!-- BESTÄLLNING -->
   <section class="how-it-works">
