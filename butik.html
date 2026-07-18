@@ -9,11 +9,14 @@ description: "Beställ 3D-printade cosplayhjälmar, Clone Trooper-hjälmar, kit 
   <section class="page-header">
     <h1>Butik – 3D-printade cosplayhjälmar, kit &amp; displayställ</h1>
     <p class="section-intro">
-      Här hittar du 3D-printade Star Wars-hjälmar, Clone Trooper-hjälmar, cosplay-props, raw kits och displayställ för spelkonsoler. Alla produkter är fysiska prints från SwePrint3D i Sverige.
+      Här hittar du 3D-printade Star Wars-hjälmar, Clone Trooper-hjälmar, cosplay-props, raw kits och displayställ för spelkonsoler.
+      Alla produkter är fysiska prints från SwePrint3D i Sverige. [web:29]
     </p>
     <p class="section-intro">
-      Klicka på en produkt för att se fler bilder, detaljer och beställningsalternativ. När du är redo beställer du via vår <a href="/order.html">beställningssida</a>.
+      Klicka på en produkt för att se fler bilder, detaljer och beställningsalternativ.
+      När du är redo beställer du via vår <a href="/order.html">beställningssida</a>. [web:49]
     </p>
+
     <div class="hero-links">
       <a href="#helmets">Gå till hjälmar</a>
       <a href="#kit-cards">Gå till kit &amp; props</a>
@@ -26,87 +29,137 @@ description: "Beställ 3D-printade cosplayhjälmar, Clone Trooper-hjälmar, kit 
   </section>
 
   <section id="helmets" class="shop-section" data-section="helmets">
-    <h2>Star Wars hjälmar &amp; Armor</h2>
+    <h2>Star Wars hjälmar</h2>
     <p class="section-intro">
-      3D-printade cosplay-hjälmar i skala 1:1, levererade som råa kit redo för slipning, montering och målning.
-      Modeller från tredjepartsdesigners (t.ex. Galactic Armory), 3D-printade under kommersiell licens.
-      Se även vår samlingssida för <a href="/star-wars-hjalmar.html">Star Wars hjälmar</a> och <a href="/clone-trooper-hjalmar.html">Clone Trooper hjälmar</a>.
+      3D-printade cosplayhjälmar i skala 1:1, levererade som råa kit redo för slipning, montering och målning.
+      Se även våra samlingssidor för <a href="/star-wars-hjalmar.html">Star Wars hjälmar</a> och <a href="/clone-trooper-hjalmar.html">Clone Trooper hjälmar</a>.
     </p>
+
+    {% assign helmets = site.produkter | where: "category", "helmets" | sort: "product_name" %}
+    {% if helmets.size > 0 %}
     <div class="cards">
-      {% assign helmets = site.produkter | where: "category", "helmets" | sort: "product_name" %}
       {% for produkt in helmets %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
-          {% if produkt.tag %}<span class="card-tag">{{ produkt.tag }}</span>{% endif %}
-          <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+          {% if produkt.tag %}
+            <span class="card-tag">{{ produkt.tag }}</span>
+          {% endif %}
+
+          {% if produkt.images and produkt.images.size > 0 and produkt.images[0].src %}
+            <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+          {% else %}
+            <img src="/images/logo.jpg" alt="{{ produkt.product_name }}">
+          {% endif %}
         </div>
+
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
           <div class="price-row">
             <span class="price">Från {{ produkt.price_from }} kr</span>
-            {% if produkt.material %}<span class="price-note">{{ produkt.material }}</span>{% endif %}
-            <span class="price-cta">Visa hjälmen</span>
+            {% if produkt.material %}
+              <span class="price-note">{{ produkt.material }}</span>
+            {% endif %}
           </div>
+          <p class="price-note">Visa hjälmen</p>
         </div>
       </a>
       {% endfor %}
     </div>
+    {% else %}
+    <div class="panel">
+      <p>Inga hjälmar hittades i denna kategori just nu.</p>
+    </div>
+    {% endif %}
   </section>
 
   <section id="kit-cards" class="shop-section" data-section="kit-cards">
-    <h2>Kit &amp; Props</h2>
+    <h2>Kit &amp; props</h2>
     <p class="section-intro">
-      Mindre props, kit och samlarkort-inspirerade prints – perfekta som insteg, present eller som komplement till större projekt.
+      Mindre props, kit och samlarvänliga prints – perfekta som insteg, present eller komplement till större projekt.
     </p>
+
+    {% assign kitcards = site.produkter | where: "category", "kit-cards" | sort: "product_name" %}
+    {% if kitcards.size > 0 %}
     <div class="cards">
-      {% assign kitcards = site.produkter | where: "category", "kit-cards" | sort: "product_name" %}
       {% for produkt in kitcards %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
-          {% if produkt.tag %}<span class="card-tag">{{ produkt.tag }}</span>{% endif %}
-          <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+          {% if produkt.tag %}
+            <span class="card-tag">{{ produkt.tag }}</span>
+          {% endif %}
+
+          {% if produkt.images and produkt.images.size > 0 and produkt.images[0].src %}
+            <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+          {% else %}
+            <img src="/images/logo.jpg" alt="{{ produkt.product_name }}">
+          {% endif %}
         </div>
+
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
           <div class="price-row">
             <span class="price">Från {{ produkt.price_from }} kr</span>
-            {% if produkt.material %}<span class="price-note">{{ produkt.material }}</span>{% endif %}
-            <span class="price-cta">Visa kitet</span>
+            {% if produkt.material %}
+              <span class="price-note">{{ produkt.material }}</span>
+            {% endif %}
           </div>
+          <p class="price-note">Visa kitet</p>
         </div>
       </a>
       {% endfor %}
     </div>
+    {% else %}
+    <div class="panel">
+      <p>Inga kit eller props hittades i denna kategori just nu.</p>
+    </div>
+    {% endif %}
   </section>
 
   <section id="display-stands" class="shop-section" data-section="display-stands">
     <h2>Displayställ för spelkonsoler</h2>
     <p class="section-intro">
-      3D-printade displayställ för retrokonsolsamlare. Passar NES, SNES, GameCube, PlayStation, Sega, Wii och fler. Printade på beställning i Sverige.
-      Se även vår samlingssida för <a href="/displaystall-spelkonsoler.html">displayställ för spelkonsoler</a>.
+      3D-printade displayställ för retrokonsolsamlare.
+      Se även samlingssidan för <a href="/displaystall-spelkonsoler.html">displayställ för spelkonsoler</a>.
     </p>
+
+    {% assign stands = site.produkter | where: "category", "display-stands" | sort: "product_name" %}
+    {% if stands.size > 0 %}
     <div class="cards">
-      {% assign stands = site.produkter | where: "category", "display-stands" | sort: "product_name" %}
       {% for produkt in stands %}
       <a href="{{ produkt.url }}" class="card">
         <div class="card-image">
-          {% if produkt.tag %}<span class="card-tag">{{ produkt.tag }}</span>{% endif %}
-          <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+          {% if produkt.tag %}
+            <span class="card-tag">{{ produkt.tag }}</span>
+          {% endif %}
+
+          {% if produkt.images and produkt.images.size > 0 and produkt.images[0].src %}
+            <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}">
+          {% else %}
+            <img src="/images/logo.jpg" alt="{{ produkt.product_name }}">
+          {% endif %}
         </div>
+
         <div class="card-body">
           <h3>{{ produkt.product_name }}</h3>
           <p>{{ produkt.subtitle }}</p>
           <div class="price-row">
             <span class="price">Från {{ produkt.price_from }} kr</span>
-            {% if produkt.material %}<span class="price-note">{{ produkt.material }}</span>{% endif %}
-            <span class="price-cta">Visa stället</span>
+            {% if produkt.material %}
+              <span class="price-note">{{ produkt.material }}</span>
+            {% endif %}
           </div>
+          <p class="price-note">Visa stället</p>
         </div>
       </a>
       {% endfor %}
     </div>
+    {% else %}
+    <div class="panel">
+      <p>Inga displayställ hittades i denna kategori just nu.</p>
+    </div>
+    {% endif %}
   </section>
 
   <section class="shop-section">
@@ -114,20 +167,23 @@ description: "Beställ 3D-printade cosplayhjälmar, Clone Trooper-hjälmar, kit 
     <p class="section-intro">
       Är du osäker på storlek, material eller vad ett raw kit innebär? Börja med våra guider.
     </p>
+
     <div class="grid-3col">
       <div class="panel">
         <h3>Hjälmstorlek</h3>
         <p>Lär dig hur du väljer rätt storlek för vuxen, display eller barnvariant.</p>
-        <a href="/hjaelmstorlek.html">Läs storleksguiden</a>
+        <a href="/hjaelmstorlek/">Läs storleksguiden</a>
       </div>
+
       <div class="panel">
         <h3>Vad är ett raw kit?</h3>
         <p>Förstå hur råa 3D-printade hjälmkit levereras och vad du gör själv efter köp.</p>
-        <a href="/ra-3d-printad-hjalm.html">Läs guiden</a>
+        <a href="/info/vad-ar-en-ra-3d-printad-hjalm/">Läs guiden</a>
       </div>
+
       <div class="panel">
         <h3>Priser &amp; material</h3>
-        <p>Se skillnader mellan PLA, PETG och andra material samt ungefärliga prisnivåer.</p>
+        <p>Se skillnader mellan material samt ungefärliga prisnivåer och leveranstider.</p>
         <a href="/priser-och-faq.html">Se priser &amp; FAQ</a>
       </div>
     </div>
@@ -135,7 +191,10 @@ description: "Beställ 3D-printade cosplayhjälmar, Clone Trooper-hjälmar, kit 
 
   <section class="shop-section" data-section="coming-soon">
     <h2>Kommande modeller</h2>
-    <p class="section-intro">Här ser du hjälmar och kit som är på väg in i sortimentet. Datumen är preliminära.</p>
+    <p class="section-intro">
+      Här ser du hjälmar och kit som är på väg in i sortimentet. Datumen är preliminära.
+    </p>
+
     <div class="coming-soon-list">
       <div class="coming-soon-item">
         <span class="card-tag">Kommer snart</span>
@@ -143,10 +202,11 @@ description: "Beställ 3D-printade cosplayhjälmar, Clone Trooper-hjälmar, kit 
         <p>Mighty Morphin-inspirerat cosplaykit</p>
         <ul>
           <li>Planerad lansering: vår/sommar 2026</li>
-          <li>Rå 3D-printad hjälm i delar (ej målad eller monterad)</li>
+          <li>Rå 3D-printad hjälm i delar, ej målad eller monterad</li>
           <li>Skala 1:1, avsedd att kunna bäras</li>
         </ul>
       </div>
+
       <div class="coming-soon-item">
         <span class="card-tag">Kommer snart</span>
         <h3>Clone Commander Hjälm – ny variant</h3>
@@ -158,17 +218,24 @@ description: "Beställ 3D-printade cosplayhjälmar, Clone Trooper-hjälmar, kit 
         </ul>
       </div>
     </div>
-    <p>Intresserad av någon modell? Skicka en förfrågan via <a href="/order.html">beställningssidan</a>.</p>
+
+    <p>
+      Intresserad av någon modell? Skicka en förfrågan via <a href="/order.html">beställningssidan</a>. [web:49]
+    </p>
   </section>
 
-  <section class="how-to-order">
+  <section class="shop-section">
     <h2>Så här beställer du</h2>
     <ol>
       <li>Välj en hjälm, ett kit eller ett displayställ och läs igenom produktsidan.</li>
       <li>Gå till <a href="/order.html">beställningssidan</a> och fyll i formuläret med produktnamn, material och storlek.</li>
-      <li>Betala via PayPal eller Swish – du får bekräftelse via e-post.</li>
+      <li>Betala via Swish eller PayPal och invänta bekräftelse via e-post. [web:49][web:11]
+</li>
     </ol>
-    <p>Osäker på storlek eller vad ett rått kit innebär? Läs vår <a href="/hjaelmstorlek.html">storleksguide</a> och guiden om <a href="/ra-3d-printad-hjalm.html">rå 3D-printad hjälm</a>.</p>
+
+    <p>
+      Osäker på storlek eller vad ett rått kit innebär? Läs vår <a href="/hjaelmstorlek/">storleksguide</a> och guiden om <a href="/info/vad-ar-en-ra-3d-printad-hjalm/">rå 3D-printad hjälm</a>. [web:45][web:40]
+    </p>
   </section>
 
 </div>
