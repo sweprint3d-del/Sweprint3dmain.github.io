@@ -1719,3 +1719,17 @@ footer {
     transform: none !important;
   }
 }
+
+.coming-soon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.coming-soon-item {
+  background: rgba(255, 252, 247, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 22px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
