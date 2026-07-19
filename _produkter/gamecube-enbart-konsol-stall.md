@@ -9,13 +9,17 @@ description: "Köp GameCube (enbart konsol) displayställ – 3D-printat konsoll
 description_long: "Enkelt och stilrent displayställ för din GameCube. Visar upp konsolen i en lutande position utan kontrollarm, för dig som vill ha en ren och minimalistisk look. Passar Nintendo GameCube, konsolen sitter stadigt och stället monteras utan verktyg via snap-fit. Levereras från Sverige med spårbar frakt."
 price_from: 69
 tech_info: "ca 1.5–3h printtid | Material: PLA/PLA+ | Snap-fit montering | För display"
-images:
-  - src: "/images/gamecube-enbart-konsol-1.jpg"
-    alt: "GameCube (enbart konsol) displayställ framifrån – 3D-printat konsollställ"
-  - src: "/images/gamecube-enbart-konsol-2.jpg"
-    alt: "GameCube (enbart konsol) displayställ från sidan – snett perspektiv"
-  - src: "/images/gamecube-enbart-konsol-3.jpg"
-    alt: "GameCube (enbart konsol) displayställ bakifrån – kabelvinda synlig"
+  images:
+  - src: /images/2025-01-27_c5c0be11f0b4f-3.jpg
+    alt: "Nintendo GameCube enbart konsol på vitt displayställ framifrån"
+  - src: /images/2025-01-27_31905541dd2ae-4.jpg
+    alt: "Nintendo GameCube enbart konsol framifrån på displayställ"
+  - src: /images/2025-01-27_cf0ba8f18489d-2.jpg
+    alt: "Nintendo GameCube enbart konsol på vitt displayställ bakifrån"
+  - src: /images/2025-01-27_227d53f95171d-5.jpg
+    alt: "Närbild på stödarm till Nintendo GameCube displayställ"
+  - src: /images/2025-01-27_ef45d1014127a.jpg
+    alt: "Delar till Nintendo GameCube displayställ i vit 3D-print"
 kit_contents:
   - "Konsollställ (bas och stöd)"
   - "Kontrolllerställ"
