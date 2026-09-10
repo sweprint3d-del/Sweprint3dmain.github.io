@@ -24,8 +24,6 @@ permalink: /butik/
   <p><strong>För cosplay &amp; samling</strong><span>Redo för montering och målning</span></p>
 </section>
 
-{% assign helmet_products = site.produkter | where: "product_type", "hjalm" %}
-{% assign display_products = site.produkter | where: "product_type", "konsolstall" %}
 {% assign featured_products = site.produkter | where: "featured", true %}
 
 <section class="shop-section" id="populart" aria-labelledby="popular-title">
@@ -59,7 +57,7 @@ permalink: /butik/
   </div>
   <div class="product-grid">
     {% for product in site.produkter %}
-      {% if product.category == 'star-wars-hjalmar' and product.product_type == 'hjalm' %}
+      {% if product.shop_category == 'star-wars-hjalmar' %}
         {% include product-card.html product=product %}
       {% endif %}
     {% endfor %}
@@ -76,7 +74,7 @@ permalink: /butik/
   </div>
   <div class="product-grid">
     {% for product in site.produkter %}
-      {% if product.category == 'clone-trooper' %}
+      {% if product.shop_category == 'clone-trooper' %}
         {% include product-card.html product=product %}
       {% endif %}
     {% endfor %}
@@ -92,7 +90,7 @@ permalink: /butik/
   </div>
   <div class="product-grid">
     {% for product in site.produkter %}
-      {% if product.category == 'gaming-cosplay' %}
+      {% if product.shop_category == 'gaming-cosplay' %}
         {% include product-card.html product=product %}
       {% endif %}
     {% endfor %}
@@ -108,7 +106,7 @@ permalink: /butik/
   </div>
   <div class="product-grid">
     {% for product in site.produkter %}
-      {% if product.category == 'props-kit' %}
+      {% if product.shop_category == 'props-kit' %}
         {% include product-card.html product=product %}
       {% endif %}
     {% endfor %}
@@ -125,7 +123,7 @@ permalink: /butik/
   </div>
   <div class="product-grid">
     {% for product in site.produkter %}
-      {% if product.category == 'displaystall' or product.product_type == 'konsolstall' %}
+      {% if product.shop_category == 'displaystall' %}
         {% include product-card.html product=product %}
       {% endif %}
     {% endfor %}

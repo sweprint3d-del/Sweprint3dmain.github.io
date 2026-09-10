@@ -1,26 +1,28 @@
+{% assign card_image = include.product.images | first %}
+
 <article class="product-card">
-  <a class="product-card__link" href="{{ include.product.url | relative_url }}" aria-label="Visa {{ include.product.title }}">
+  <a class="product-card__link" href="{{ include.product.url | relative_url }}" aria-label="Visa {{ include.product.product_name | default: include.product.title }}">
     <div class="product-card__image-wrap">
       {% if include.product.badge %}
         <span class="product-card__badge">{{ include.product.badge }}</span>
       {% endif %}
-      {% if include.product.image %}
-        <img class="product-card__image" src="{{ include.product.image | relative_url }}" alt="{{ include.product.image_alt | default: include.product.title }}" loading="lazy" width="600" height="600">
+      {% if card_image %}
+        <img class="product-card__image" src="{{ card_image.src | relative_url }}" alt="{{ card_image.alt | default: include.product.product_name | default: include.product.title }}" loading="lazy" width="600" height="600">
       {% else %}
         <div class="product-card__placeholder" aria-hidden="true">SwePrint3D</div>
       {% endif %}
     </div>
     <div class="product-card__content">
-      {% if include.product.product_type %}
-        <p class="product-card__eyebrow">{{ include.product.product_type }}</p>
+      {% if include.product.category %}
+        <p class="product-card__eyebrow">{{ include.product.category | replace: '-', ' ' }}</p>
       {% endif %}
-      <h3 class="product-card__title">{{ include.product.title }}</h3>
+      <h3 class="product-card__title">{{ include.product.product_name | default: include.product.title }}</h3>
       {% if include.product.short_description %}
         <p class="product-card__description">{{ include.product.short_description }}</p>
       {% endif %}
       <div class="product-card__footer">
-        {% if include.product.price %}
-          <p class="product-card__price">Från {{ include.product.price }} kr</p>
+        {% if include.product.price_from %}
+          <p class="product-card__price">Från {{ include.product.price_from }} kr</p>
         {% else %}
           <p class="product-card__price">Se produkt</p>
         {% endif %}
