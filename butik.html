@@ -1,317 +1,105 @@
 ---
 layout: default
-title: "Butik – 3D-printade cosplayhjälmar, kit & displayställ | SwePrint3D"
-description: "Beställ 3D-printade cosplayhjälmar i skala 1:1, Star Wars & Clone Trooper-hjälmar, raw kits och displayställ för spelkonsoler från SwePrint3D i Sverige."
+title: "Butik – 3D-printade cosplayhjälmar & kit"
+description: "Köp 3D-printade Star Wars-hjälmar, cosplay-props och displayställ."
 ---
 
-<!-- Schema.org E-handel & Kollektions-strukturerad data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "SwePrint3D",
-  "description": "Svensk tillverkare av 3D-printade cosplayhjälmar, props och displayställ.",
-  "url": "{{ site.url }}{{ page.url }}"
-}
-</script>
-
-<div class="page-wrapper container">
-
-  <!-- HERO / SIDHUVUD -->
-  <header class="page-header section-spacing">
-    <h1 class="page-title">Butik – 3D-printade cosplayhjälmar, kit &amp; displayställ</h1>
-    
-    <div class="header-intro">
-      <p class="lead">
-        Utforska vårt sortiment av 3D-printade Star Wars-hjälmar, cosplay-props, raw kits och specialanpassade displayställ för spelkonsoler.
-        Alla produkter tillverkas och skickas direkt från <strong>SwePrint3D i Sverige</strong>.
-      </p>
-      <p class="sub-lead">
-        Klicka på en produkt för specifikationer och tillval. När du är redo lägger du enkelt din förfrågan via vår <a href="/order.html" class="link-highlight">beställningssida</a>.
-      </p>
-    </div>
-
-    <!-- Snabblänkar / Kategori-navigation -->
-    <nav class="hero-nav" aria-label="Snabbnavigering butikskategorier">
-      <span class="nav-label">Hoppa till kategori:</span>
-      <div class="hero-links">
-        <a href="#helmets" class="btn btn-outline">Hjälmar (1:1)</a>
-        <a href="#kit-cards" class="btn btn-outline">Kit &amp; Props</a>
-        <a href="#display-stands" class="btn btn-outline">Displayställ</a>
-      </div>
-      
-      <span class="nav-label">Temasidor &amp; info:</span>
-      <div class="hero-links-secondary">
-        <a href="/star-wars-hjalmar.html">Star Wars-hjälmar</a>
-        <a href="/clone-trooper-hjalmar.html">Clone Trooper-hjälmar</a>
-        <a href="/displaystall-spelkonsoler.html">Spelkonsolställ</a>
-        <a href="/priser-och-faq.html">Priser &amp; FAQ</a>
-      </div>
+<div class="store-container">
+  
+  <!-- SIDHUVUD / BREADCRUMB -->
+  <header class="store-header">
+    <nav class="breadcrumb">
+      <a href="/">Hem</a> / <span>Alla produkter</span>
     </nav>
+    <h1 class="store-title">Alla produkter</h1>
+    <p class="store-count">{{ site.produkter.size }} produkter</p>
   </header>
 
-  <hr class="section-divider" />
-
-  <!-- SEKTION 1: STAR WARS HJÄLMAR -->
-  <section id="helmets" class="shop-section section-spacing" data-section="helmets" aria-labelledby="heading-helmets">
-    <div class="section-header">
-      <h2 id="heading-helmets">Star Wars &amp; Cosplayhjälmar</h2>
-      <p class="section-intro">
-        3D-printade hjälmar i full skala (1:1), levererade som råa kit (raw kits) redo för slipning, grundmålning och montering. 
-        Se även våra fördjupningssidor för <a href="/star-wars-hjalmar.html">Star Wars-hjälmar</a> och <a href="/clone-trooper-hjalmar.html">Clone Trooper-hjälmar</a>.
-      </p>
-    </div>
-
-    {% assign helmets = site.produkter | where: "category", "helmets" | sort: "product_name" %}
-    {% if helmets.size > 0 %}
-    <div class="product-grid">
-      {% for produkt in helmets %}
-      <article class="product-card">
-        <a href="{{ produkt.url }}" class="card-link-wrapper" aria-label="{{ produkt.product_name }} - Läs mer och se detaljer">
-          <div class="card-image">
-            {% if produkt.tag %}
-              <span class="card-tag">{{ produkt.tag }}</span>
-            {% endif %}
-
-            {% if produkt.images and produkt.images.size > 0 and produkt.images[0].src %}
-              <img src="{{ produkt.images[0].src }}" alt="3D-printad {{ produkt.product_name }}" loading="lazy" decoding="async" width="400" height="300">
-            {% else %}
-              <img src="/images/logo.jpg" alt="{{ produkt.product_name }} produktbild saknas" loading="lazy" decoding="async" width="400" height="300">
-            {% endif %}
-          </div>
-
-          <div class="card-body">
-            <h3 class="card-title">{{ produkt.product_name }}</h3>
-            {% if produkt.subtitle %}
-              <p class="card-subtitle">{{ produkt.subtitle }}</p>
-            {% endif %}
-            
-            <div class="price-row">
-              <span class="price-amount">Från {{ produkt.price_from }} kr</span>
-              {% if produkt.material %}
-                <span class="material-badge">{{ produkt.material }}</span>
-              {% endif %}
-            </div>
-            
-            <span class="btn-card-action">Visa detaljer &rarr;</span>
-          </div>
-        </a>
-      </article>
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-state-panel">
-      <p>Just nu finns inga hjälmar i den här kategorin. Återkom gärna snart!</p>
-    </div>
-    {% endif %}
-  </section>
-
-  <!-- SEKTION 2: KIT & PROPS -->
-  <section id="kit-cards" class="shop-section section-spacing" data-section="kit-cards" aria-labelledby="heading-kits">
-    <div class="section-header">
-      <h2 id="heading-kits">Kit &amp; Props</h2>
-      <p class="section-intro">
-        Mindre props, samlarobjekt och tillbehörs-kits. Utmärkta som instegsprojekt, gåvor eller detaljer till större cosplay-dräkter.
-      </p>
-    </div>
-
-    {% assign kitcards = site.produkter | where: "category", "kit-cards" | sort: "product_name" %}
-    {% if kitcards.size > 0 %}
-    <div class="product-grid">
-      {% for produkt in kitcards %}
-      <article class="product-card">
-        <a href="{{ produkt.url }}" class="card-link-wrapper" aria-label="{{ produkt.product_name }} - Läs mer och se detaljer">
-          <div class="card-image">
-            {% if produkt.tag %}
-              <span class="card-tag">{{ produkt.tag }}</span>
-            {% endif %}
-
-            {% if produkt.images and produkt.images.size > 0 and produkt.images[0].src %}
-              <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}" loading="lazy" decoding="async" width="400" height="300">
-            {% else %}
-              <img src="/images/logo.jpg" alt="{{ produkt.product_name }}" loading="lazy" decoding="async" width="400" height="300">
-            {% endif %}
-          </div>
-
-          <div class="card-body">
-            <h3 class="card-title">{{ produkt.product_name }}</h3>
-            {% if produkt.subtitle %}
-              <p class="card-subtitle">{{ produkt.subtitle }}</p>
-            {% endif %}
-            
-            <div class="price-row">
-              <span class="price-amount">Från {{ produkt.price_from }} kr</span>
-              {% if produkt.material %}
-                <span class="material-badge">{{ produkt.material }}</span>
-              {% endif %}
-            </div>
-            
-            <span class="btn-card-action">Visa kitet &rarr;</span>
-          </div>
-        </a>
-      </article>
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-state-panel">
-      <p>Inga kit eller props hittades i denna kategori just nu.</p>
-    </div>
-    {% endif %}
-  </section>
-
-  <!-- SEKTION 3: DISPLAYSTÄLL -->
-  <section id="display-stands" class="shop-section section-spacing" data-section="display-stands" aria-labelledby="heading-stands">
-    <div class="section-header">
-      <h2 id="heading-stands">Displayställ för spelkonsoler</h2>
-      <p class="section-intro">
-        Anpassade 3D-printade ställ och väggfästen för spelkontroller och retrokonsoler. 
-        Utforska även vår dedikerade sida för <a href="/displaystall-spelkonsoler.html">displayställ för spelkonsoler</a>.
-      </p>
-    </div>
-
-    {% assign stands = site.produkter | where: "category", "display-stands" | sort: "product_name" %}
-    {% if stands.size > 0 %}
-    <div class="product-grid">
-      {% for produkt in stands %}
-      <article class="product-card">
-        <a href="{{ produkt.url }}" class="card-link-wrapper" aria-label="{{ produkt.product_name }} - Läs mer och se detaljer">
-          <div class="card-image">
-            {% if produkt.tag %}
-              <span class="card-tag">{{ produkt.tag }}</span>
-            {% endif %}
-
-            {% if produkt.images and produkt.images.size > 0 and produkt.images[0].src %}
-              <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}" loading="lazy" decoding="async" width="400" height="300">
-            {% else %}
-              <img src="/images/logo.jpg" alt="{{ produkt.product_name }}" loading="lazy" decoding="async" width="400" height="300">
-            {% endif %}
-          </div>
-
-          <div class="card-body">
-            <h3 class="card-title">{{ produkt.product_name }}</h3>
-            {% if produkt.subtitle %}
-              <p class="card-subtitle">{{ produkt.subtitle }}</p>
-            {% endif %}
-            
-            <div class="price-row">
-              <span class="price-amount">Från {{ produkt.price_from }} kr</span>
-              {% if produkt.material %}
-                <span class="material-badge">{{ produkt.material }}</span>
-              {% endif %}
-            </div>
-            
-            <span class="btn-card-action">Visa stället &rarr;</span>
-          </div>
-        </a>
-      </article>
-      {% endfor %}
-    </div>
-    {% else %}
-    <div class="empty-state-panel">
-      <p>Inga displayställ hittades i denna kategori just nu.</p>
-    </div>
-    {% endif %}
-  </section>
-
-  <!-- HJÄLP & GUIDER -->
-  <section class="help-section section-spacing" aria-labelledby="heading-guides">
-    <div class="section-header">
-      <h2 id="heading-guides">Behöver du hjälp att välja?</h2>
-      <p class="section-intro">
-        Är du osäker på storleksval, vilket material du ska välja eller vad ett raw kit innebär? Läs våra guider innan du beställer.
-      </p>
-    </div>
-
-    <div class="grid-3col">
-      <article class="info-card">
-        <h3>Hjälmstorlek &amp; Passform</h3>
-        <p>Lär dig hur du mäter ditt huvud korrekt för att välja rätt skala (vuxen, barn eller ren displayvariant).</p>
-        <a href="/hjaelmstorlek/" class="card-link">Läs storleksguiden &rarr;</a>
-      </article>
-
-      <article class="info-card">
-        <h3>Vad är ett Raw Kit?</h3>
-        <p>Förstå hur ett rått 3D-printat kit levereras, vilka verktyg du behöver och hur efterarbetet går till.</p>
-        <a href="/ra-3d-printad-hjalm/" class="card-link">Läs efterbehandlingsguiden &rarr;</a>
-      </article>
-
-      <article class="info-card">
-        <h3>Priser &amp; Materialjämförelse</h3>
-        <p>Se skillnader mellan PLA+, PETG och Resin samt ungefärliga tillverkningstider och priser.</p>
-        <a href="/priser-och-faq.html" class="card-link">Se priser &amp; FAQ &rarr;</a>
-      </article>
-    </div>
-  </section>
-
-  <!-- KOMMANDE MODELLER -->
-  <section class="coming-soon-section section-spacing" data-section="coming-soon" aria-labelledby="heading-coming">
-    <div class="section-header">
-      <h2 id="heading-coming">Kommande modeller</h2>
-      <p class="section-intro">
-        Här är 3D-modeller och projekt som för närvarande testprintas eller ligger i vår utvecklingskö.
-      </p>
-    </div>
-
-    <div class="coming-soon-grid">
-      <article class="coming-soon-card">
-        <span class="badge-status">Kommande 2026</span>
-        <h3>Green Ranger Hjälm</h3>
-        <p class="card-desc">Mighty Morphin-inspirerat cosplaykit i skala 1:1.</p>
-        <ul class="feature-list">
-          <li><strong>Planerad lansering:</strong> Vår/Sommar 2026</li>
-          <li><strong>Utförande:</strong> Rått 3D-printat kit uppdelat i sektioner</li>
-          <li><strong>Skala:</strong> 1:1 (Anpassad för att bäras)</li>
+  <!-- STORE LAYOUT (FILTER + GRID) -->
+  <div class="store-layout">
+    
+    <!-- SIDOPANEL: FILTER & KATEGORIER -->
+    <aside class="store-sidebar">
+      <div class="filter-group">
+        <h3>Kategorier</h3>
+        <ul class="filter-list">
+          <li><a href="#all" class="active">Alla produkter</a></li>
+          <li><a href="#helmets">Star Wars Hjälmar</a></li>
+          <li><a href="#kit-cards">Kit & Props</a></li>
+          <li><a href="#display-stands">Displayställ</a></li>
         </ul>
-      </article>
+      </div>
 
-      <article class="coming-soon-card">
-        <span class="badge-status">Kommande 2026</span>
-        <h3>Clone Commander Hjälm – Ny variant</h3>
-        <p class="card-desc">Star Wars-inspirerad hjälm med förhöjd detaljrikedom.</p>
-        <ul class="feature-list">
-          <li><strong>Planerad lansering:</strong> Höst 2026</li>
-          <li><strong>Finish:</strong> Samma höga standard som övriga Clone-hjälmar</li>
-          <li><strong>Utförande:</strong> Levereras som kompletta delar för egen montering</li>
-        </ul>
-      </article>
-    </div>
+      <div class="filter-group">
+        <h3>Tillgänglighet</h3>
+        <label class="filter-checkbox">
+          <input type="checkbox" checked> I lager / Utskrift på beställning
+        </label>
+      </div>
 
-    <div class="preorder-notice">
-      <p>
-        Vill du reservera en kommande modell eller ställa en fråga? <a href="/order.html">Skicka en intresseanmälan via beställningssidan</a>.
-      </p>
-    </div>
-  </section>
+      <div class="filter-group">
+        <h3>Material</h3>
+        <label class="filter-checkbox"><input type="checkbox"> PLA+</label>
+        <label class="filter-checkbox"><input type="checkbox"> PETG</label>
+        <label class="filter-checkbox"><input type="checkbox"> Resin</label>
+      </div>
+    </aside>
 
-  <!-- BESTÄLLNINGSSTEG -->
-  <section class="order-process-section section-spacing" aria-labelledby="heading-order">
-    <div class="section-header">
-      <h2 id="heading-order">Så här beställer du i 3 enkla steg</h2>
-    </div>
-
-    <ol class="process-steps">
-      <li class="step-item">
-        <div class="step-number">1</div>
-        <div class="step-content">
-          <h3>Välj din modell</h3>
-          <p>Bläddra bland produktkortena ovan och läs specifikationerna för produkten du vill ha.</p>
+    <!-- HUVUDINNEHÅLL: PRODUKTER -->
+    <main class="store-products-wrapper">
+      
+      <!-- TOPPBAR: SORTERING -->
+      <div class="store-toolbar">
+        <div class="sort-by">
+          <label for="sort">Sortera efter:</label>
+          <select id="sort">
+            <option value="featured">Utvalda</option>
+            <option value="price-asc">Pris: Lågt till Högt</option>
+            <option value="price-desc">Pris: Högt till Lågt</option>
+            <option value="title-asc">Alfabetiskt, A-Ö</option>
+          </select>
         </div>
-      </li>
-      <li class="step-item">
-        <div class="step-number">2</div>
-        <div class="step-content">
-          <h3>Skicka förfrågan</h3>
-          <p>Gå till <a href="/order.html">beställningsformuläret</a> och ange önskad modell, storlek och leveransadress.</p>
-        </div>
-      </li>
-      <li class="step-item">
-        <div class="step-number">3</div>
-        <div class="step-content">
-          <h3>Bekräftelse &amp; Betalning</h3>
-          <p>Vi granskar din order, återkopplar med tillverkningstid och betalningsdetaljer (Swish eller PayPal).</p>
-        </div>
-      </li>
-    </ol>
-  </section>
+      </div>
 
+      <!-- PRODUKTGRID (4 KOLUMNER) -->
+      <div class="product-grid-4col">
+        {% for produkt in site.produkter %}
+        <article class="shop-card">
+          <a href="{{ produkt.url }}" class="shop-card-link">
+            <div class="shop-card-image">
+              {% if produkt.tag %}
+                <span class="badge-tag">{{ produkt.tag }}</span>
+              {% endif %}
+              
+              {% if produkt.images and produkt.images.size > 0 %}
+                <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}" loading="lazy" class="primary-img">
+                {% if produkt.images.size > 1 %}
+                  <img src="{{ produkt.images[1].src }}" alt="{{ produkt.product_name }}" loading="lazy" class="hover-img">
+                {% endif %}
+              {% else %}
+                <img src="/images/logo.jpg" alt="{{ produkt.product_name }}" loading="lazy">
+              {% endif %}
+            </div>
+
+            <div class="shop-card-details">
+              <span class="vendor-name">SwePrint3D</span>
+              <h2 class="shop-card-title">{{ produkt.product_name }}</h2>
+              <div class="shop-card-price">
+                <span class="price-from">Från</span>
+                <span class="price-amount">{{ produkt.price_from }} kr</span>
+              </div>
+            </div>
+          </a>
+        </article>
+        {% endfor %}
+      </div>
+
+      <!-- PAGINERING / LÄS MER -->
+      <footer class="pagination">
+        <span class="page-info">Visar 1–12 av {{ site.produkter.size }} produkter</span>
+      </footer>
+
+    </main>
+
+  </div>
 </div>
