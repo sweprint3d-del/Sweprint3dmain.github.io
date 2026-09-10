@@ -13,6 +13,7 @@
 }
 
 :root {
+  /* Color System */
   --color-primary: #111827;
   --color-primary-dark: #0b1120;
   --color-accent: #d72638;
@@ -31,22 +32,30 @@
   --bg-section: #f3eee6;
   --bg-card: rgba(255, 253, 249, 0.96);
   --accent: #d72638;
+  --accent-hover: #b81d2c;
   --accent-soft: rgba(215, 38, 56, 0.12);
   --text-main: #141922;
   --text-muted: #5c6370;
 
   --border-subtle: rgba(17, 24, 39, 0.1);
   --border-strong: rgba(17, 24, 39, 0.16);
+  --border-light: rgba(17, 24, 39, 0.08);
 
   --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
   --shadow-soft: 0 14px 38px rgba(15, 23, 42, 0.1);
   --shadow-premium: 0 22px 60px rgba(15, 23, 42, 0.16);
 
+  --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 22px;
 
-  --transition-fast: 0.22s ease;
+  /* Typography */
+  --font-heading: 'Sora', 'Inter', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
+  /* Motion Tokens */
+  --transition-fast: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
   --ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
   --motion-fast: 220ms;
   --motion-base: 680ms;
@@ -62,7 +71,7 @@ html {
 }
 
 body {
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
   color: var(--color-text);
@@ -70,6 +79,8 @@ body {
     radial-gradient(ellipse 80% 40% at 50% -10%, rgba(215, 38, 56, 0.1) 0%, transparent 60%),
     radial-gradient(ellipse 60% 30% at 90% 60%, rgba(215, 38, 56, 0.05) 0%, transparent 50%),
     linear-gradient(180deg, #f4ede3 0%, #ede5d8 35%, #e8dece 100%);
+  margin: 0;
+  padding: 0;
 }
 
 img,
@@ -141,12 +152,15 @@ li + li {
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 .logo-title,
 .hero-kicker,
 .filter-button,
 .card-tag,
 .product-field label {
-  font-family: "Sora", "Inter", sans-serif;
+  font-family: var(--font-heading);
 }
 
 h1 {
@@ -391,9 +405,70 @@ header nav a:hover::after {
 }
 
 /* =====================
+   Form Controls
+===================== */
+
+.form-control,
+.product-field select,
+.product-field input[type="number"],
+.form-group input,
+.form-group select,
+.form-group textarea,
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-main);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  outline: none;
+  box-sizing: border-box;
+  will-change: transform;
+  transition: var(--transition-fast), border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-field select,
+.product-field input[type="number"],
+.form-group input,
+.form-group select {
+  max-width: 260px;
+  border-radius: 999px;
+  appearance: none;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+}
+
+.form-group textarea {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.form-control:focus,
+.product-field select:focus,
+.product-field input[type="number"]:focus,
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+  transform: translateY(-1px);
+}
+
+/* =====================
    Buttons
 ===================== */
 
+.btn,
 .btn-primary,
 .btn-secondary,
 .primary-button,
@@ -401,19 +476,23 @@ header nav a:hover::after {
 .order-swish-button,
 .order-inquiry-button,
 .product-order-button,
-.product-button {
+.product-button,
+button,
+input[type="submit"] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 46px;
-  border-radius: 999px;
   padding: 0.65rem 1.3rem;
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 0.95rem;
+  font-family: var(--font-heading);
   font-weight: 700;
+  font-size: 0.95rem;
   letter-spacing: 0.01em;
+  border-radius: 999px;
+  cursor: pointer;
+  text-decoration: none;
   border: 1px solid transparent;
+  will-change: transform;
   transition:
     transform var(--motion-fast) var(--ease-premium),
     box-shadow var(--motion-fast) var(--ease-premium),
@@ -422,13 +501,38 @@ header nav a:hover::after {
     border-color var(--motion-fast) var(--ease-premium);
 }
 
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+.primary-button:hover,
+.order-pay-button:hover,
+.product-order-button:hover,
+.product-button:hover,
+button:hover,
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.primary-button:active,
+.product-button:active,
+button:active,
+input[type="submit"]:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: none;
+}
+
 .btn-primary,
 .primary-button,
 .order-pay-button,
 .product-order-button,
-.product-button {
+.product-button,
+button.primary,
+input[type="submit"] {
   background: linear-gradient(135deg, #e02030 0%, #b91c2c 100%);
-  color: #fff;
+  color: #ffffff;
   box-shadow:
     0 4px 14px rgba(215, 38, 56, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.18);
@@ -439,48 +543,44 @@ header nav a:hover::after {
 .primary-button:hover,
 .order-pay-button:hover,
 .product-order-button:hover,
-.product-button:hover {
+.product-button:hover,
+button.primary:hover,
+input[type="submit"]:hover {
   background: linear-gradient(135deg, #d72638 0%, #a8172a 100%);
-  transform: translateY(-2px);
   box-shadow:
     0 10px 28px rgba(215, 38, 56, 0.36),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .btn-secondary,
-.order-inquiry-button {
+.order-inquiry-button,
+button.secondary {
   background: rgba(255, 255, 255, 0.75);
   border-color: var(--border-strong);
   color: var(--color-primary);
 }
 
 .btn-secondary:hover,
-.order-inquiry-button:hover {
+.order-inquiry-button:hover,
+button.secondary:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
   background: rgba(255, 250, 243, 0.95);
-  transform: translateY(-2px);
-}
-
-.btn-primary:active,
-.btn-secondary:active,
-.primary-button:active,
-.product-button:active {
-  transform: translateY(0) scale(0.97);
-  box-shadow: none;
 }
 
 /* =====================
-   Shared Surfaces
+   Shared Surfaces & Panels
 ===================== */
 
 .panel,
 .card,
+.card-item,
 .faq-section,
 .order-form,
 .order-total-box,
 .swish-modal-card,
-.hero-panel {
+.hero-panel,
+.product-card {
   background: rgba(255, 252, 247, 0.72);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -492,6 +592,7 @@ header nav a:hover::after {
 
 .panel,
 .card,
+.card-item,
 .faq-section,
 .order-form,
 .hero-panel,
@@ -501,6 +602,7 @@ header nav a:hover::after {
 
 .panel {
   padding: 1.1rem 1.3rem;
+  will-change: transform;
   transition:
     transform var(--motion-fast) var(--ease-premium),
     box-shadow var(--motion-fast) var(--ease-premium),
@@ -523,7 +625,7 @@ header nav a:hover::after {
 }
 
 /* =====================
-   Cards
+   Cards & Shop Grid
 ===================== */
 
 .shop-section {
@@ -536,13 +638,15 @@ header nav a:hover::after {
   gap: 1.5rem;
 }
 
-.card {
+.card,
+.card-item {
   overflow: hidden;
   text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  will-change: transform;
   transition:
     transform var(--transition-fast),
     box-shadow var(--transition-fast),
@@ -550,7 +654,8 @@ header nav a:hover::after {
     background-color var(--transition-fast);
 }
 
-.card:hover {
+.card:hover,
+.card-item:hover {
   background: rgba(255, 253, 250, 0.92);
   border-color: rgba(215, 38, 56, 0.3);
   box-shadow:
@@ -633,7 +738,7 @@ header nav a:hover::after {
 }
 
 /* =====================
-   Layout helpers
+   Layout Helpers
 ===================== */
 
 .grid-simple {
@@ -660,7 +765,7 @@ header nav a:hover::after {
 }
 
 /* =====================
-   CTA section
+   CTA Section
 ===================== */
 
 .cta-section {
@@ -747,7 +852,7 @@ header nav a:hover::after {
 }
 
 /* =====================
-   Product pages
+   Product Pages
 ===================== */
 
 .product-page {
@@ -876,42 +981,6 @@ header nav a:hover::after {
   min-width: 160px;
 }
 
-.product-field select,
-.product-field input[type="number"],
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  max-width: 260px;
-  padding: 0.75rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid rgba(17, 24, 39, 0.12);
-  background: rgba(255, 255, 255, 0.92);
-  color: #1a1a2e;
-  appearance: none;
-  outline: none;
-  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
-  transition:
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast),
-    transform var(--transition-fast);
-}
-
-.form-group textarea {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.product-field select:focus,
-.product-field input[type="number"]:focus,
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  border-color: rgba(215, 38, 56, 0.55);
-  box-shadow: 0 0 0 4px rgba(215, 38, 56, 0.1);
-  transform: translateY(-1px);
-}
-
 .product-info-links {
   display: flex;
   flex-wrap: wrap;
@@ -953,7 +1022,7 @@ header nav a:hover::after {
 }
 
 .product-order-button {
-  display: block;
+  display: flex;
   width: 100%;
   text-align: center;
   padding: 0.8rem;
@@ -997,7 +1066,7 @@ header nav a:hover::after {
 }
 
 /* =====================
-   Shop filters
+   Shop Filters
 ===================== */
 
 .shop-filters {
@@ -1044,7 +1113,7 @@ header nav a:hover::after {
 }
 
 /* =====================
-   Order page
+   Order Page
 ===================== */
 
 .order-layout {
@@ -1185,7 +1254,7 @@ header nav a:hover::after {
 }
 
 /* =====================
-   Swish modal
+   Swish Modal
 ===================== */
 
 .swish-modal {
@@ -1358,7 +1427,7 @@ footer {
 }
 
 /* =====================
-   Home product cards
+   Home Product Cards
 ===================== */
 
 .home-products {
@@ -1397,6 +1466,7 @@ footer {
   display: flex;
   flex-direction: column;
   box-shadow: var(--shadow-card);
+  will-change: transform;
   transition:
     transform var(--transition-fast),
     box-shadow var(--transition-fast),
@@ -1496,13 +1566,28 @@ footer {
   border-color: var(--color-accent);
 }
 
+.coming-soon-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.coming-soon-item {
+  background: rgba(255, 252, 247, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 22px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
 /* =====================
-   Motion
+   Motion & Animations
 ===================== */
 
 .hero > * {
   opacity: 0;
   transform: translateY(20px);
+  will-change: transform, opacity;
   animation: sp3d-heroReveal var(--motion-base) var(--ease-premium) forwards;
 }
 
@@ -1540,7 +1625,7 @@ footer {
 .reveal[data-delay="4"] { transition-delay: 0.28s; }
 
 /* =====================
-   Responsive
+   Responsive Layout
 ===================== */
 
 @media (max-width: 1024px) {
@@ -1605,6 +1690,7 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .btn,
   .btn-primary,
   .btn-secondary,
   .primary-button,
@@ -1612,7 +1698,9 @@ footer {
   .order-swish-button,
   .order-inquiry-button,
   .product-order-button,
-  .filter-button {
+  .filter-button,
+  button,
+  input[type="submit"] {
     width: 100%;
   }
 
@@ -1695,6 +1783,7 @@ footer {
   }
 }
 
+/* Reduced Motion Override */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
@@ -1708,28 +1797,21 @@ footer {
     transition: none !important;
   }
 
+  .btn,
   .btn-primary,
   .btn-secondary,
   .primary-button,
   .product-button,
   .panel,
   .card,
-  .product-card {
+  .card-item,
+  .product-card,
+  .form-control,
+  input,
+  select,
+  textarea,
+  button {
     transition: none !important;
     transform: none !important;
   }
-}
-
-.coming-soon-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-.coming-soon-item {
-  background: rgba(255, 252, 247, 0.72);
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  border-radius: 22px;
-  padding: 1.25rem;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
 }
