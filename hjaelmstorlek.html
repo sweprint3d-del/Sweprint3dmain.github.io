@@ -23,6 +23,27 @@ permalink: /hjaelmstorlek/
       Notera måttet i centimeter.
     </p>
 
+    <!-- STORLEKSKALKYLATOR START -->
+    <div class="size-calculator">
+      <h3>Interaktiv storlekskalkylator</h3>
+      <p>Fyll i ditt huvudmått i centimeter för att se om vår standardstorlek passar dig:</p>
+
+      <div class="calc-input-group">
+        <label for="head-size">Huvudomkrets (cm):</label>
+        <div class="calc-form-row">
+          <input type="number" id="head-size" placeholder="t.ex. 58" min="45" max="70" step="0.5">
+          <button type="button" onclick="calculateSize()">Testa storlek</button>
+        </div>
+      </div>
+
+      <div id="calc-result" class="calc-result hidden">
+        <span class="result-title">Rekommendation:</span>
+        <span id="recommended-size" class="size-output">-</span>
+        <p id="size-advice" class="size-advice-text"></p>
+      </div>
+    </div>
+    <!-- STORLEKSKALKYLATOR SLUT -->
+
     <h2>2. Jämför med produktens storleksinfo</h2>
     <p>
       Varje hjälm har angiven innerstorlek i produktbeskrivningen. Jämför ditt mått med rekommenderad huvudomkrets
@@ -32,7 +53,7 @@ permalink: /hjaelmstorlek/
     <h2>Om våra hjälmars storlek</h2>
     <p>
       Alla våra cosplay-hjälmar är baserade på Galactic Armory's standardmodell med en innerstorlek avsedd för
-      <strong>24 tum (ca 61 cm) huvudomkrets</strong>. Det är ett vanligt vuxenstorlek som passar de flesta.
+      <strong>24 tum (ca 61 cm) huvudomkrets</strong>. Det är en vanlig vuxenstorlek som passar de flesta.
       Innermåttet anges inte alltid separat i varje produktsida – men grundregeln gäller för alla hjälmar.
     </p>
     <p>
@@ -51,3 +72,140 @@ permalink: /hjaelmstorlek/
     </p>
   </section>
 </div>
+
+<!-- INNEBYGGDA STILER OCH JAVASCRIPT -->
+<style>
+.size-calculator {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 30px 0;
+  color: #fff;
+}
+
+.size-calculator h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #00d2ff;
+}
+
+.calc-input-group {
+  margin-top: 15px;
+}
+
+.calc-input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.calc-form-row {
+  display: flex;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.calc-form-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #2b2b2b;
+  color: #fff;
+  font-size: 16px;
+}
+
+.calc-form-row button {
+  padding: 10px 20px;
+  background-color: #00d2ff;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.calc-form-row button:hover {
+  background-color: #00a8cc;
+}
+
+.calc-result {
+  margin-top: 20px;
+  padding: 16px;
+  background: #282c34;
+  border-left: 4px solid #00d2ff;
+  border-radius: 4px;
+}
+
+.calc-result.hidden {
+  display: none;
+}
+
+.result-title {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #aaa;
+}
+
+.size-output {
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin: 6px 0;
+}
+
+.size-advice-text {
+  font-size: 14px;
+  color: #ddd;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .calc-form-row {
+    flex-direction: column;
+  }
+}
+</style>
+
+<script>
+function calculateSize() {
+  const input = document.getElementById('head-size');
+  const resultDiv = document.getElementById('calc-result');
+  const sizeOutput = document.getElementById('recommended-size');
+  const adviceOutput = document.getElementById('size-advice');
+  
+  const cm = parseFloat(input.value);
+
+  if (!cm || cm < 45 || cm > 70) {
+    alert("Vänligen fyll i en giltig huvudomkrets mellan 45 och 70 cm.");
+    return;
+  }
+
+  let size = "";
+  let advice = "";
+
+  if (cm <= 56) {
+    size = "Standard (61 cm) + Extra padding";
+    advice = "Vår standardmodell passar bra, men du kommer behöva lägga i lite tjockare skum-padding inuti så att hjälmen sitter stabilt på plats.";
+  } else if (cm <= 62) {
+    size = "Standard (1:1 Vuxen) – Perfekt passform!";
+    advice = "Våra hjälmar är skalade efter 61 cm ( Galactic Armory standard ). Denna storlek kommer sitta utmärkt och lämnar lagom utrymme för lite vaddering och skön komfort.";
+  } else if (cm <= 63.5) {
+    size = "Standard (Tät passform)";
+    advice = "Hjälmen kommer sitta ganska tight. Du kommer behöva använda tunn padding (ca 3–5 mm) för komfort.";
+  } else {
+    size = "Specialskalning krävs";
+    advice = "Ditt huvudmått är större än standard 61–63 cm. Vi rekommenderar att du kontaktar oss innan du beställer så att vi kan sk skala upp filen åt dig vid utskrift!";
+  }
+
+  sizeOutput.textContent = size;
+  adviceOutput.textContent = advice;
+  resultDiv.classList.remove('hidden');
+}
+</script>
