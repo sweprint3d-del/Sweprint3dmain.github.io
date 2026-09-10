@@ -1,16 +1,32 @@
 ---
 layout: default
-title: 3D-printade cosplayhjälmar & kit – SwePrint3D
+title: "3D-printade cosplayhjälmar & kit – SwePrint3D"
 description: "Beställ 3D-printade cosplayhjälmar och kit från Sverige. Råa 3D-printade hjälmar i delar, redo för slipning, montering och målning."
 image: "/images/logo.jpg"
 ---
 
-<div class="page-wrapper">
+<!-- Schema.org Strukturerad Data för Startsida & Varumärke -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "SwePrint3D",
+  "url": "{{ site.url }}",
+  "description": "3D-printade cosplayhjälmar, raw kits och displayställ tillverkade i Sverige.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "SwePrint3D",
+    "logo": "{{ site.url }}/images/logo.jpg"
+  }
+}
+</script>
 
-  <!-- HERO -->
-  <section class="hero">
+<div class="page-wrapper container">
+
+  <!-- HERO-SEKTION -->
+  <header class="hero section-spacing">
     <p class="hero-kicker">3D-printade hjälmar och kit från Sverige</p>
-    <h1>3D-printade cosplayhjälmar och raw kits på beställning</h1>
+    <h1 class="hero-title">3D-printade cosplayhjälmar och raw kits på beställning</h1>
 
     <p class="lead">
       Beställ fullskaliga 3D-printade hjälmar och kit för cosplay, display och samling.
@@ -22,208 +38,262 @@ image: "/images/logo.jpg"
     </p>
 
     <div class="hero-actions">
-      <a class="btn-primary" href="/butik.html">Se alla hjälmar &amp; kit</a>
-      <a class="btn-secondary" href="/order.html">Så beställer du</a>
+      <a class="btn btn-primary" href="/butik.html">Se alla hjälmar &amp; kit</a>
+      <a class="btn btn-secondary" href="/order.html">Så beställer du</a>
     </div>
 
     <p class="hero-meta">
-      Printat i Sverige • Swish &amp; PayPal • Licensierade designers • 100+ beställningar
+      <span class="meta-item">Printat i Sverige</span> • 
+      <span class="meta-item">Swish &amp; PayPal</span> • 
+      <span class="meta-item">Licensierade designers</span> • 
+      <span class="meta-item">100+ beställningar</span>
     </p>
 
-    <div class="hero-links">
-      <a href="/hjaelmstorlek/">Osäker på storlek? Läs storleksguiden</a>
-      <a href="/ra-3d-printad-hjalm/">Ny till raw kits? Läs mer här</a>
-      <a href="/priser-och-faq.html">Se priser, materialval och vanliga frågor</a>
-    </div>
-  </section>
+    <nav class="hero-links" aria-label="Snabbnavigering för nya besökare">
+      <a href="/hjaelmstorlek/">Osäker på storlek? Läs storleksguiden &rarr;</a>
+      <a href="/ra-3d-printad-hjalm/">Ny till raw kits? Läs mer här &rarr;</a>
+      <a href="/priser-och-faq.html">Se priser, materialval och vanliga frågor &rarr;</a>
+    </nav>
+  </header>
 
-  <!-- KATEGORIER -->
-  <section class="shop-section">
-    <h2>Utforska våra huvudkategorier</h2>
-    <p class="section-intro">
-      SwePrint3D erbjuder 3D-printade Star Wars-hjälmar, inklusive Clone Troopers, cosplay-props och displayställ för spelkonsoler.
-    </p>
-
-    <div class="grid-4col">
-      <div class="panel">
-        <h3>Star Wars hjälmar</h3>
-        <p>Star Wars- och Clone Trooper-hjälmar för cosplay, display och samling.</p>
-        <a href="/star-wars-hjalmar.html">Se Star Wars hjälmar</a>
+  <main>
+    <!-- KATEGORISEKTION -->
+    <section class="shop-section section-spacing" aria-labelledby="heading-categories">
+      <div class="section-header">
+        <h2 id="heading-categories">Utforska våra huvudkategorier</h2>
+        <p class="section-intro">
+          SwePrint3D erbjuder 3D-printade Star Wars-hjälmar, inklusive Clone Troopers, cosplay-props och displayställ för spelkonsoler.
+        </p>
       </div>
 
-      <div class="panel">
-        <h3>Cosplay props &amp; kit</h3>
-        <p>Mindre kit och props för cosplay och samling.</p>
-        <a href="/butik.html">Se kit &amp; props</a>
+      <div class="grid-3col">
+        <article class="info-card">
+          <h3>Star Wars-hjälmar</h3>
+          <p>Star Wars- och Clone Trooper-hjälmar i skala 1:1 för cosplay, display och samling.</p>
+          <a href="/star-wars-hjalmar.html" class="card-link">Se Star Wars-hjälmar &rarr;</a>
+        </article>
+
+        <article class="info-card">
+          <h3>Cosplay-props &amp; kit</h3>
+          <p>Mindre kit, repliker och rekvisita för cosplay och samling.</p>
+          <a href="/butik.html" class="card-link">Se kit &amp; props &rarr;</a>
+        </article>
+
+        <article class="info-card">
+          <h3>Displayställ</h3>
+          <p>3D-printade, anpassade displayställ och väggfästen för retro- och spelkonsoler.</p>
+          <a href="/displaystall-spelkonsoler.html" class="card-link">Se displayställ &rarr;</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- POPULÄRA PRODUKTER -->
+    <section class="home-products section-spacing" id="populara" aria-labelledby="heading-popular">
+      <div class="section-header">
+        <h2 id="heading-popular">Populära hjälmar just nu</h2>
+        <p class="section-intro">Några av våra mest beställda 3D-printade produkter i butiken.</p>
       </div>
 
-      <div class="panel">
-        <h3>Displayställ</h3>
-        <p>3D-printade displayställ för retro- och spelkonsoler.</p>
-        <a href="/displaystall-spelkonsoler.html">Se displayställ</a>
-      </div>
-    </div>
-  </section>
+      <div class="product-grid">
 
-  <!-- POPULÄRA PRODUKTER -->
-  <section class="home-products" id="populara">
-    <h2>Populära hjälmar just nu</h2>
-    <p class="home-products-sub">Några av de mest beställda produkterna i butiken.</p>
-
-    <div class="product-grid">
-
-      <!-- Darth Vader -->
-      <article class="product-card">
-        <a href="/produkter/vader-helmet/">
-          <div class="product-img-wrap">
-            <img src="/images/vader-helmet-1.jpg?v=1" alt="Darth Vader Hjälm – 3D-printat raw kit">
-            <span class="product-badge">Populär</span>
-          </div>
-        </a>
-        <div class="product-card-body">
-          <h3 class="product-title"><a href="/produkter/vader-helmet/">Darth Vader Hjälm</a></h3>
-          <p class="product-meta">Fullskalig 1:1-replika för cosplay och display. Levereras som rått kit i delar.</p>
-          <p class="product-price">Från <strong>1 500 kr</strong></p>
-          <a class="product-button" href="/produkter/vader-helmet/">Visa hjälmen</a>
-        </div>
-      </article>
-
-      <!-- Boba Fett -->
-      <article class="product-card">
-        <a href="/produkter/boba-fett/">
-          <div class="product-img-wrap">
-            <img src="/images/boba-fett-helmet1.webp?v=1" alt="Boba Fett Hjälm – 3D-printat raw kit">
-            <span class="product-badge product-badge--hot">Bästsäljare</span>
-          </div>
-        </a>
-        <div class="product-card-body">
-          <h3 class="product-title"><a href="/produkter/boba-fett/">Boba Fett Hjälm</a></h3>
-          <p class="product-meta">Ikonisk bounty hunter-hjälm. Rått 3D-printat kit redo för slipning och målning.</p>
-          <p class="product-price">Från <strong>1 600 kr</strong></p>
-          <a class="product-button" href="/produkter/boba-fett/">Visa hjälmen</a>
-        </div>
-      </article>
-
-      <!-- Clone Trooper Phase 2 -->
-      <article class="product-card">
-        <a href="/produkter/clone-trooper-phaze2/">
-          <div class="product-img-wrap">
-            <img src="/images/clone-trooper-helmet1.jpg?v=1" alt="Clone Trooper Hjälm Phase 2 – 3D-printat raw kit">
-            <span class="product-badge product-badge--new">Nyhet</span>
-          </div>
-        </a>
-        <div class="product-card-body">
-          <h3 class="product-title"><a href="/produkter/clone-trooper-phaze2/">Clone Trooper Hjälm – Phase 2</a></h3>
-          <p class="product-meta">Ikonisk Phase 2-hjälm känd från Revenge of the Sith. Rått 3D-printat kit redo för slipning och målning.</p>
-          <p class="product-price">Från <strong>1 500 kr</strong></p>
-          <a class="product-button" href="/produkter/clone-trooper-phaze2/">Visa hjälmen</a>
-        </div>
-      </article>
-
-              <!-- GameCube Ställ Enbart Konsol -->
+        <!-- Darth Vader -->
         <article class="product-card">
-          <a href="/produkter/gamecube-enbart-konsol-stall/">
-            <div class="product-img-wrap">
-              <img src="/images/2025-01-27_c5c0be11f0b4f.jpg?v=1" alt="Nintendo GameCube enbart konsol på vitt displayställ framifrån">
-              <span class="product-badge product-badge--new">Nyhet</span>
+          <a href="/produkter/vader-helmet/" class="card-link-wrapper" aria-label="Darth Vader Hjälm - Visa produkt">
+            <div class="card-image">
+              <img src="/images/vader-helmet-1.jpg?v=1" alt="Darth Vader Hjälm – 3D-printat raw kit" loading="lazy" decoding="async" width="400" height="300">
+              <span class="card-tag">Populär</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Darth Vader Hjälm</h3>
+              <p class="card-subtitle">Fullskalig 1:1-replika för cosplay och display. Levereras som rått kit i delar.</p>
+              <div class="price-row">
+                <span class="price-amount">Från <strong>1 500 kr</strong></span>
+              </div>
+              <span class="btn-card-action">Visa hjälmen &rarr;</span>
             </div>
           </a>
-          <div class="product-card-body">
-            <h3 class="product-title"><a href="/produkter/gamecube-enbart-konsol-stall/">GameCube Displayställ – Enbart Konsol</a></h3>
-            <p class="product-meta">Snyggt och minimalistiskt ställ för Nintendo GameCube. Snap-fit, inga verktyg.</p>
-            <p class="product-price">Från <strong>69 kr</strong></p>
-            <a class="product-button" href="/produkter/gamecube-enbart-konsol-stall/">Visa produkten</a>
-          </div>
         </article>
-    </div>
 
-    <p class="home-products-link">
-      <a href="/butik.html">→ Se hela butiken</a>
-    </p>
-  </section>
+        <!-- Boba Fett -->
+        <article class="product-card">
+          <a href="/produkter/boba-fett/" class="card-link-wrapper" aria-label="Boba Fett Hjälm - Visa produkt">
+            <div class="card-image">
+              <img src="/images/boba-fett-helmet1.webp?v=1" alt="Boba Fett Hjälm – 3D-printat raw kit" loading="lazy" decoding="async" width="400" height="300">
+              <span class="card-tag card-tag--hot">Bästsäljare</span>
+            </div>
 
-  <!-- BESTÄLLNING -->
-  <section class="how-it-works">
-    <h2>Så beställer du</h2>
-    <p class="section-intro">
-      Det ska vara enkelt att beställa ett 3D-printat hjälmkit.
-    </p>
+            <div class="card-body">
+              <h3 class="card-title">Boba Fett Hjälm</h3>
+              <p class="card-subtitle">Ikonisk bounty hunter-hjälm. Rått 3D-printat kit redo för slipning och målning.</p>
+              <div class="price-row">
+                <span class="price-amount">Från <strong>1 600 kr</strong></span>
+              </div>
+              <span class="btn-card-action">Visa hjälmen &rarr;</span>
+            </div>
+          </a>
+        </article>
 
-    <div class="grid-3col">
-      <div class="panel">
-        <h3>1. Välj modell</h3>
-        <p>Läs igenom produktsidan med bilder och info.</p>
+        <!-- Clone Trooper Phase 2 -->
+        <article class="product-card">
+          <a href="/produkter/clone-trooper-phaze2/" class="card-link-wrapper" aria-label="Clone Trooper Hjälm Phase 2 - Visa produkt">
+            <div class="card-image">
+              <img src="/images/clone-trooper-helmet1.jpg?v=1" alt="Clone Trooper Hjälm Phase 2 – 3D-printat raw kit" loading="lazy" decoding="async" width="400" height="300">
+              <span class="card-tag card-tag--new">Nyhet</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Clone Trooper Hjälm – Phase 2</h3>
+              <p class="card-subtitle">Ikonisk Phase 2-hjälm känd från Revenge of the Sith. Rått 3D-printat kit.</p>
+              <div class="price-row">
+                <span class="price-amount">Från <strong>1 500 kr</strong></span>
+              </div>
+              <span class="btn-card-action">Visa hjälmen &rarr;</span>
+            </div>
+          </a>
+        </article>
+
+        <!-- GameCube Ställ -->
+        <article class="product-card">
+          <a href="/produkter/gamecube-enbart-konsol-stall/" class="card-link-wrapper" aria-label="GameCube Displayställ Enbart Konsol - Visa produkt">
+            <div class="card-image">
+              <img src="/images/2025-01-27_c5c0be11f0b4f.jpg?v=1" alt="Nintendo GameCube enbart konsol på vitt displayställ" loading="lazy" decoding="async" width="400" height="300">
+              <span class="card-tag card-tag--new">Nyhet</span>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">GameCube Displayställ – Enbart Konsol</h3>
+              <p class="card-subtitle">Snyggt och minimalistiskt ställ för Nintendo GameCube. Snap-fit montering.</p>
+              <div class="price-row">
+                <span class="price-amount">Från <strong>69 kr</strong></span>
+              </div>
+              <span class="btn-card-action">Visa produkten &rarr;</span>
+            </div>
+          </a>
+        </article>
+
       </div>
 
-      <div class="panel">
-        <h3>2. Skicka beställning</h3>
-        <p>Fyll i formuläret med storlek och material.</p>
+      <div class="section-footer text-center">
+        <a href="/butik.html" class="btn btn-outline">&rarr; Se hela butikssortimentet</a>
+      </div>
+    </section>
+
+    <!-- HUR DET FUNGERAR -->
+    <section class="how-it-works section-spacing" aria-labelledby="heading-process">
+      <div class="section-header">
+        <h2 id="heading-process">Så beställer du</h2>
+        <p class="section-intro">
+          Det ska vara enkelt att beställa ett anpassat 3D-printat hjälmkit.
+        </p>
       </div>
 
-      <div class="panel">
-        <h3>3. Bekräftelse &amp; leverans</h3>
-        <p>Betala med Swish eller PayPal innan print.</p>
+      <ol class="process-steps">
+        <li class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Välj modell</h3>
+            <p>Läs igenom produktsidan med bilder, mått och tillgängliga alternativ.</p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Skicka beställning</h3>
+            <p>Fyll i formuläret med din storlek, önskat material och dina kontaktuppgifter.</p>
+          </div>
+        </li>
+
+        <li class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Bekräftelse &amp; leverans</h3>
+            <p>Betala enkelt med Swish eller PayPal innan vi startar din utskrift.</p>
+          </div>
+        </li>
+      </ol>
+
+      <div class="section-cta text-center">
+        <a class="btn btn-primary" href="/order.html">Gå till beställningsformulär</a>
       </div>
-    </div>
+    </section>
 
-    <div class="section-cta">
-      <a class="btn-primary" href="/order.html">Gå till beställning</a>
-    </div>
-  </section>
+    <!-- VIDEOSEKTION -->
+    <section class="video-section section-spacing" aria-labelledby="heading-video">
+      <div class="section-header">
+        <h2 id="heading-video">Se hur hjälmarna printas</h2>
+        <p class="section-intro">
+          Få en inblick i hantverket och processen bakom varje 3D-printat kit.
+        </p>
+      </div>
 
-  <!-- VIDEO -->
-  <section class="video-section">
-    <h2>Se hur hjälmarna printas</h2>
-    <p class="section-intro narrow">
-      Få en känsla för processen bakom varje kit.
-    </p>
+      <div class="video-embed-container">
+        <iframe
+          src="https://www.youtube.com/embed/u-61DsAdhAw"
+          title="SwePrint3D – Video som visar hur hjälmarna 3D-printas"
+          loading="lazy"
+          width="560"
+          height="315"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
 
-    <div class="video-embed">
-      <iframe
-        src="https://www.youtube.com/embed/u-61DsAdhAw"
-        title="SwePrint3D – så printas hjälmarna"
-        loading="lazy"
-        allowfullscreen>
-      </iframe>
-    </div>
-
-    <div class="section-cta">
-      <a class="btn-secondary" href="https://www.youtube.com/@Swe-Print3D-v2e/live" target="_blank" rel="noopener noreferrer">
-        Följ 3D-printningen live
-      </a>
-    </div>
-  </section>
+      <div class="section-cta text-center">
+        <a class="btn btn-secondary" href="https://www.youtube.com/@Swe-Print3D-v2e/live" target="_blank" rel="noopener noreferrer">
+          Följ 3D-printningen live på YouTube
+        </a>
+      </div>
+    </section>
+  </main>
 
 </div>
 
+<!-- REVEAL/SCROLL ANIMATIONER & HEADER BEHAVIOR -->
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('section:not(.hero)').forEach(function (s, i) {
-    s.classList.add('reveal');
-    if (i > 0) s.setAttribute('data-delay', Math.min(i, 4).toString());
-  });
+  // Intersection Observer för mjuka inladdningsanimationer
+  var reveals = document.querySelectorAll('section:not(.hero)');
+  
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-  var reveals = document.querySelectorAll('.reveal');
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
+    reveals.forEach(function (el, index) {
+      el.classList.add('reveal');
+      if (index > 0) el.setAttribute('data-delay', Math.min(index, 4).toString());
+      observer.observe(el);
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -36px 0px' });
-
-  reveals.forEach(function (el) {
-    observer.observe(el);
-  });
-
-  var header = document.querySelector('header');
-  function onScroll() {
-    if (!header) return;
-    header.classList.toggle('is-scrolled', window.scrollY > 20);
+  } else {
+    // Fallback för äldre webbläsare
+    reveals.forEach(function (el) {
+      el.classList.add('is-visible');
+    });
   }
 
-  onScroll();
+  // Prestanda-optimerad sticky header-effekt med requestAnimationFrame
+  var header = document.querySelector('header');
+  var ticking = false;
+
+  function onScroll() {
+    if (!ticking) {
+      window.requestAnimationFrame(function () {
+        if (header) {
+          header.classList.toggle('is-scrolled', window.scrollY > 20);
+        }
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }
+
   window.addEventListener('scroll', onScroll, { passive: true });
 });
 </script>
