@@ -1,33 +1,149 @@
 ---
 layout: default
-title: "Butik – 3D-printade cosplayhjälmar & kit"
+title: "Butik – 3D-printade hjälmar, raw kits & displayställ"
+description: "Utforska SwePrint3D:s 3D-printade hjälmar, cosplay raw kits, props och displayställ. Tillverkas på beställning i Sverige."
+permalink: /butik/
 ---
 
-<div style="padding: 40px 0 20px;">
-  <h1 style="font-size: 2rem; font-weight: 500; margin-bottom: 8px;">Butik</h1>
-  <p style="color: #666;">Alla produkter tillverkas och skickas från Sverige.</p>
-</div>
+<section class="shop-hero" aria-labelledby="shop-title">
+  <p class="section-eyebrow">SwePrint3D butik</p>
+  <h1 id="shop-title">3D-printade produkter för cosplay, display och samling</h1>
+  <p class="shop-hero__lead">Utforska fullskaliga raw kits, hjälmar, props och displayställ. Alla produkter tillverkas på beställning i Sverige.</p>
+  <nav class="shop-category-nav" aria-label="Produktkategorier">
+    <a href="#star-wars-hjalmar">Star Wars-hjälmar</a>
+    <a href="#clone-trooper">Clone Trooper</a>
+    <a href="#gaming-cosplay">Gaming &amp; cosplay</a>
+    <a href="#props-kit">Props &amp; kit</a>
+    <a href="#displaystall">Displayställ</a>
+  </nav>
+</section>
 
-<div class="product-grid-4col">
-  {% for produkt in site.produkter %}
-  <a href="{{ produkt.url }}" class="shop-card">
-    <div class="shop-card-image">
-      {% if produkt.tag %}
-        <span class="badge-tag">{{ produkt.tag }}</span>
-      {% endif %}
-      
-      {% if produkt.images and produkt.images.size > 0 %}
-        <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}" loading="lazy">
-      {% else %}
-        <img src="/images/logo.jpg" alt="{{ produkt.product_name }}" loading="lazy">
-      {% endif %}
-    </div>
+<section class="shop-trust-bar" aria-label="Fördelar med SwePrint3D">
+  <p><strong>Printat i Sverige</strong><span>Tillverkas på beställning</span></p>
+  <p><strong>Fysiska produkter</strong><span>Inga digitala STL-filer</span></p>
+  <p><strong>För cosplay &amp; samling</strong><span>Redo för montering och målning</span></p>
+</section>
 
-    <div class="shop-card-details">
-      <span class="vendor-name">SwePrint3D</span>
-      <h2 class="shop-card-title">{{ produkt.product_name }}</h2>
-      <div class="shop-card-price">Från {{ produkt.price_from }} kr</div>
+{% assign helmet_products = site.produkter | where: "product_type", "hjalm" %}
+{% assign display_products = site.produkter | where: "product_type", "konsolstall" %}
+{% assign featured_products = site.produkter | where: "featured", true %}
+
+<section class="shop-section" id="populart" aria-labelledby="popular-title">
+  <div class="shop-section__heading">
+    <div>
+      <p class="section-eyebrow">Utvalt sortiment</p>
+      <h2 id="popular-title">Populärt just nu</h2>
     </div>
-  </a>
-  {% endfor %}
-</div>
+    <a class="text-link" href="#alla-produkter">Se hela sortimentet <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="product-grid">
+    {% if featured_products.size > 0 %}
+      {% for product in featured_products limit: 8 %}
+        {% include product-card.html product=product %}
+      {% endfor %}
+    {% else %}
+      {% for product in site.produkter limit: 8 %}
+        {% include product-card.html product=product %}
+      {% endfor %}
+    {% endif %}
+  </div>
+</section>
+
+<section class="shop-section" id="star-wars-hjalmar" aria-labelledby="star-wars-title">
+  <div class="shop-section__heading">
+    <div>
+      <p class="section-eyebrow">Galaxens klassiker</p>
+      <h2 id="star-wars-title">Star Wars-hjälmar</h2>
+    </div>
+    <a class="text-link" href="{{ '/star-wars-hjalmar/' | relative_url }}">Se alla Star Wars-hjälmar <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="product-grid">
+    {% for product in site.produkter %}
+      {% if product.category == 'star-wars-hjalmar' and product.product_type == 'hjalm' %}
+        {% include product-card.html product=product %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="shop-section shop-section--tint" id="clone-trooper" aria-labelledby="clone-title">
+  <div class="shop-section__heading">
+    <div>
+      <p class="section-eyebrow">Republic armor</p>
+      <h2 id="clone-title">Clone Trooper-hjälmar</h2>
+    </div>
+    <a class="text-link" href="{{ '/clone-trooper-hjalmar/' | relative_url }}">Se alla Clone Trooper-hjälmar <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="product-grid">
+    {% for product in site.produkter %}
+      {% if product.category == 'clone-trooper' %}
+        {% include product-card.html product=product %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="shop-section" id="gaming-cosplay" aria-labelledby="gaming-title">
+  <div class="shop-section__heading">
+    <div>
+      <p class="section-eyebrow">Gaming &amp; kostymbyggen</p>
+      <h2 id="gaming-title">Gaming &amp; cosplay</h2>
+    </div>
+  </div>
+  <div class="product-grid">
+    {% for product in site.produkter %}
+      {% if product.category == 'gaming-cosplay' %}
+        {% include product-card.html product=product %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="shop-section shop-section--tint" id="props-kit" aria-labelledby="props-title">
+  <div class="shop-section__heading">
+    <div>
+      <p class="section-eyebrow">Detaljer till samlingen</p>
+      <h2 id="props-title">Props &amp; kit</h2>
+    </div>
+  </div>
+  <div class="product-grid">
+    {% for product in site.produkter %}
+      {% if product.category == 'props-kit' %}
+        {% include product-card.html product=product %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="shop-section" id="displaystall" aria-labelledby="display-title">
+  <div class="shop-section__heading">
+    <div>
+      <p class="section-eyebrow">Visa upp samlingen</p>
+      <h2 id="display-title">Displayställ för retrospel</h2>
+    </div>
+    <a class="text-link" href="{{ '/displaystall-spelkonsoler/' | relative_url }}">Se alla displayställ <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="product-grid">
+    {% for product in site.produkter %}
+      {% if product.category == 'displaystall' or product.product_type == 'konsolstall' %}
+        {% include product-card.html product=product %}
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
+
+<section class="shop-help" aria-labelledby="shop-help-title">
+  <div>
+    <p class="section-eyebrow">Ny hos SwePrint3D?</p>
+    <h2 id="shop-help-title">Allt du behöver innan du beställer</h2>
+    <p>Våra hjälmar och större kit säljs som fysiska 3D-printade raw kits. De är avsedda för montering, slipning, målning och egen finish.</p>
+  </div>
+  <div class="shop-help__links">
+    <a href="{{ '/ra-3d-printad-hjalm/' | relative_url }}">Vad är ett raw kit? <span aria-hidden="true">→</span></a>
+    <a href="{{ '/hjaelmstorlek/' | relative_url }}">Hitta rätt hjälmstorlek <span aria-hidden="true">→</span></a>
+    <a href="{{ '/priser-och-faq/' | relative_url }}">Priser, material &amp; FAQ <span aria-hidden="true">→</span></a>
+    <a href="{{ '/order/' | relative_url }}">Så beställer du <span aria-hidden="true">→</span></a>
+  </div>
+</section>
+
+<section id="alla-produkter" class="visually-hidden" aria-label="Alla produkter"></section>
