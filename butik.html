@@ -1,105 +1,33 @@
 ---
 layout: default
 title: "Butik – 3D-printade cosplayhjälmar & kit"
-description: "Köp 3D-printade Star Wars-hjälmar, cosplay-props och displayställ."
 ---
 
-<div class="store-container">
-  
-  <!-- SIDHUVUD / BREADCRUMB -->
-  <header class="store-header">
-    <nav class="breadcrumb">
-      <a href="/">Hem</a> / <span>Alla produkter</span>
-    </nav>
-    <h1 class="store-title">Alla produkter</h1>
-    <p class="store-count">{{ site.produkter.size }} produkter</p>
-  </header>
+<div style="padding: 40px 0 20px;">
+  <h1 style="font-size: 2rem; font-weight: 500; margin-bottom: 8px;">Butik</h1>
+  <p style="color: #666;">Alla produkter tillverkas och skickas från Sverige.</p>
+</div>
 
-  <!-- STORE LAYOUT (FILTER + GRID) -->
-  <div class="store-layout">
-    
-    <!-- SIDOPANEL: FILTER & KATEGORIER -->
-    <aside class="store-sidebar">
-      <div class="filter-group">
-        <h3>Kategorier</h3>
-        <ul class="filter-list">
-          <li><a href="#all" class="active">Alla produkter</a></li>
-          <li><a href="#helmets">Star Wars Hjälmar</a></li>
-          <li><a href="#kit-cards">Kit & Props</a></li>
-          <li><a href="#display-stands">Displayställ</a></li>
-        </ul>
-      </div>
-
-      <div class="filter-group">
-        <h3>Tillgänglighet</h3>
-        <label class="filter-checkbox">
-          <input type="checkbox" checked> I lager / Utskrift på beställning
-        </label>
-      </div>
-
-      <div class="filter-group">
-        <h3>Material</h3>
-        <label class="filter-checkbox"><input type="checkbox"> PLA+</label>
-        <label class="filter-checkbox"><input type="checkbox"> PETG</label>
-        <label class="filter-checkbox"><input type="checkbox"> Resin</label>
-      </div>
-    </aside>
-
-    <!-- HUVUDINNEHÅLL: PRODUKTER -->
-    <main class="store-products-wrapper">
+<div class="product-grid-4col">
+  {% for produkt in site.produkter %}
+  <a href="{{ produkt.url }}" class="shop-card">
+    <div class="shop-card-image">
+      {% if produkt.tag %}
+        <span class="badge-tag">{{ produkt.tag }}</span>
+      {% endif %}
       
-      <!-- TOPPBAR: SORTERING -->
-      <div class="store-toolbar">
-        <div class="sort-by">
-          <label for="sort">Sortera efter:</label>
-          <select id="sort">
-            <option value="featured">Utvalda</option>
-            <option value="price-asc">Pris: Lågt till Högt</option>
-            <option value="price-desc">Pris: Högt till Lågt</option>
-            <option value="title-asc">Alfabetiskt, A-Ö</option>
-          </select>
-        </div>
-      </div>
+      {% if produkt.images and produkt.images.size > 0 %}
+        <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}" loading="lazy">
+      {% else %}
+        <img src="/images/logo.jpg" alt="{{ produkt.product_name }}" loading="lazy">
+      {% endif %}
+    </div>
 
-      <!-- PRODUKTGRID (4 KOLUMNER) -->
-      <div class="product-grid-4col">
-        {% for produkt in site.produkter %}
-        <article class="shop-card">
-          <a href="{{ produkt.url }}" class="shop-card-link">
-            <div class="shop-card-image">
-              {% if produkt.tag %}
-                <span class="badge-tag">{{ produkt.tag }}</span>
-              {% endif %}
-              
-              {% if produkt.images and produkt.images.size > 0 %}
-                <img src="{{ produkt.images[0].src }}" alt="{{ produkt.product_name }}" loading="lazy" class="primary-img">
-                {% if produkt.images.size > 1 %}
-                  <img src="{{ produkt.images[1].src }}" alt="{{ produkt.product_name }}" loading="lazy" class="hover-img">
-                {% endif %}
-              {% else %}
-                <img src="/images/logo.jpg" alt="{{ produkt.product_name }}" loading="lazy">
-              {% endif %}
-            </div>
-
-            <div class="shop-card-details">
-              <span class="vendor-name">SwePrint3D</span>
-              <h2 class="shop-card-title">{{ produkt.product_name }}</h2>
-              <div class="shop-card-price">
-                <span class="price-from">Från</span>
-                <span class="price-amount">{{ produkt.price_from }} kr</span>
-              </div>
-            </div>
-          </a>
-        </article>
-        {% endfor %}
-      </div>
-
-      <!-- PAGINERING / LÄS MER -->
-      <footer class="pagination">
-        <span class="page-info">Visar 1–12 av {{ site.produkter.size }} produkter</span>
-      </footer>
-
-    </main>
-
-  </div>
+    <div class="shop-card-details">
+      <span class="vendor-name">SwePrint3D</span>
+      <h2 class="shop-card-title">{{ produkt.product_name }}</h2>
+      <div class="shop-card-price">Från {{ produkt.price_from }} kr</div>
+    </div>
+  </a>
+  {% endfor %}
 </div>
