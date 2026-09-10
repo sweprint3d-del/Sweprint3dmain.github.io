@@ -1,6 +1,9 @@
 ---
 layout: product
 category: helmets
+shop_category: star-wars-hjalmar
+featured: true
+badge: "Bästsäljare"
 
 title: "Darth Vader Hjälm – 3D-printad Star Wars-hjälm i skala 1:1"
 description: "Beställ en fullskalig Darth Vader-hjälm 3D-printad i Sverige. Rått 3D-printat kit i PLA, PETG eller ABS, redo för slipning och målning. Från 1500 kr."
